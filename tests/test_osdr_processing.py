@@ -119,16 +119,11 @@ class TestOSDRProcessing(unittest.TestCase):
         raw = RAW / "OSD-684/GLDS-615_rna_seq_differential_expression_GLbulkRNAseq.csv"
         processed = PROCESSED / "OSD-684/OSD-684_differential_expression.csv"
 
+        raw_headers, raw_rows = read_csv(raw)
         new_headers, new_rows = read_csv(processed)
 
-        # Raw source comparison is available in the private repository.
-        # The public release intentionally excludes raw research inputs.
-        if raw.is_file():
-            raw_headers, raw_rows = read_csv(raw)
-            self.assertEqual(raw_headers, new_headers)
-            self.assertEqual(raw_rows, new_rows)
-
-        # This processed-data check runs in both repositories.
+        self.assertEqual(raw_headers, new_headers)
+        self.assertEqual(raw_rows, new_rows)
         self.assertTrue(any(
             "NA" in row.values() for row in new_rows
         ))
@@ -136,11 +131,6 @@ class TestOSDRProcessing(unittest.TestCase):
     def test_osd684_normalized_values_are_preserved(self):
         raw = RAW / "OSD-684/GLDS-615_rna_seq_Normalized_Counts_GLbulkRNAseq.csv"
         processed = PROCESSED / "OSD-684/OSD-684_normalized_counts.csv"
-
-        if not raw.is_file():
-            self.skipTest(
-                "Raw OSDR source CSV is excluded from the public release"
-            )
 
         raw_headers, raw_rows = read_csv(raw)
         new_headers, new_rows = read_csv(processed)
@@ -164,18 +154,7 @@ class TestOSDRProcessing(unittest.TestCase):
             ),
         ]
 
-        available_checks = [
-            (path, expected_hash)
-            for path, expected_hash in checks
-            if path.is_file()
-        ]
-
-        if not available_checks:
-            self.skipTest(
-                "Raw OSDR source files are excluded from the public release"
-            )
-
-        for path, expected_hash in available_checks:
+        for path, expected_hash in checks:
             with self.subTest(file=path.name):
                 self.assertEqual(sha256(path), expected_hash)
 

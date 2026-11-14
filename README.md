@@ -149,7 +149,7 @@ The scripts support:
 - Resampling the global environmental maps to the Jezero elevation grid aligns their dimensions but does not create additional scientific spatial detail.
 - Terrain classification thresholds are project-defined categories for educational/game purposes, not official NASA rover safety limits.
 - Derived values are kept distinguishable from original NASA source data.
-- The original 2.12 GB global MOLA elevation TIFF is retained locally and excluded from GitHub due to its size.
+- The original global MOLA elevation source TIFF (`mola128_mola64_merge_90Nto90S_SimpleC_clon0.tif`, 46081 × 23041 pixels) is not included in this repository. The regional Jezero elevation and derived terrain products are included under `data/processed/mars_trek/`.
 
 ## Mission Evidence Mapping
 
@@ -177,9 +177,58 @@ The mission catalogue contains 100 missions. This does not mean every mission cu
 - [x] MOLA surface roughness processing.
 - [x] TES thermal inertia and dust map processing.
 - [x] Combined Jezero terrain and environmental JSON dataset.
+- [x] NASA CCMC DONKI space-weather event API integration (FLR, CME, GST, SEP).
 - [ ] Integration of terrain datasets into interactive gameplay.
 - [ ] Additional NASA data-source integrations.
 - [ ] Frontend and interactive gameplay implementation.
+
+## NASA CCMC DONKI Space Weather Integration
+
+The backend integrates NASA's Community Coordinated Modeling Center (CCMC)
+DONKI API for near-real-time solar and geomagnetic event information.
+
+Supported event categories:
+
+| Code | Event category |
+|---|---|
+| `FLR` | Solar flares |
+| `CME` | Coronal mass ejections |
+| `GST` | Geomagnetic storms |
+| `SEP` | Solar energetic particle events |
+
+### Endpoint
+
+`GET /api/donki/events`
+
+| Parameter | Default | Description |
+|---|---|---|
+| `event_type` | `FLR` | Event category: FLR, CME, GST, or SEP |
+| `start_date` | Six days before today | Inclusive start date |
+| `end_date` | Today | Inclusive end date |
+| `limit` | `100` | Maximum returned events (1–100) |
+
+Dates use `YYYY-MM-DD`. The API validates date order, rejects future end
+dates, and enforces the configured maximum date-range difference.
+
+Example:
+
+`GET /api/donki/events?event_type=FLR&start_date=2026-11-08&end_date=2026-11-14&limit=10`
+
+### Configuration
+
+Optional environment variables:
+
+- `DONKI_API_BASE_URL`
+- `DONKI_TIMEOUT_SECONDS`
+- `DONKI_MAX_DATE_RANGE_DAYS`
+- `DONKI_MAX_RESULTS`
+- `DONKI_MAX_RESPONSE_BYTES`
+
+Upstream errors are handled without exposing internal exception details.
+
+**Data-use limitation:** DONKI provides near-real-time space-weather
+information for research and prototyping. It is not an operational forecast
+or a spacecraft safety determination.
 
 ## Backend
 

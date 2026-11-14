@@ -112,6 +112,18 @@ class MissionAPITests(unittest.TestCase):
             for item in result["radlab_evidence"]
         ))
 
+    def test_m009_returns_mola_evidence(self):
+        response = self.client.get("/api/missions/M009/evidence")
+        self.assertEqual(response.status_code, 200)
+        result = response.json()
+        self.assertEqual(result["mola_evidence"][0]["mission_id"], "M009")
+        self.assertIn("mola", result["evidence_by_source"])
+
+    def test_m077_returns_mola_evidence(self):
+        result = self.client.get("/api/missions/M077/evidence").json()
+        self.assertEqual(result["mola_evidence"][0]["role"], "Terrain-aware rover navigation")
+        self.assertEqual(result["mola_evidence"][0]["region"], "Jezero Crater, Mars")
+
     def test_unknown_mission_returns_404(self):
         response = self.client.get("/api/missions/M999")
         self.assertEqual(response.status_code, 404)
@@ -127,7 +139,19 @@ class MissionAPITests(unittest.TestCase):
         self.assertEqual(result["radlab_mapped_mission_count"], 3)
         self.assertEqual(result["csa_source_count"], 7)
         self.assertEqual(result["csa_mapped_mission_count"], 10)
-        self.assertEqual(result["overall_mapped_mission_count"], 18)
+        self.assertEqual(result["mola_source_count"], 1)
+        self.assertEqual(result["mola_mapped_mission_count"], 10)
+        self.assertEqual(
+            result["mola_mapped_mission_ids"],
+            ["M009", "M014", "M040", "M042", "M044", "M072", "M077", "M078", "M094", "M096"],
+        )
+        self.assertEqual(result["overall_mapped_mission_count"], 28)
+
+    def test_existing_evidence_fields_remain_backward_compatible(self):
+        result = self.client.get("/api/missions/M053/evidence").json()
+        self.assertEqual(result["evidence_status"], "mapped")
+        self.assertEqual(result["evidence"], result["osdr_evidence"])
+        self.assertIn("simulation_boundary", result)
 
 
 if __name__ == "__main__":

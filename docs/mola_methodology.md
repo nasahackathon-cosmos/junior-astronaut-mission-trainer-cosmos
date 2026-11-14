@@ -100,7 +100,7 @@ The processed terrain data can support:
 
 ## 10. Generated Files
 
-- data/raw/mars_trek/: Original MOLA GeoTIFF files (local inputs; excluded from the public release)
+- data/raw/mars_trek/mola_roughness.tif: Available MOLA roughness source raster
 - data/processed/mars_trek/jezero_terrain.json: Elevation grid
 - data/processed/mars_trek/jezero_slope.json: Slope grid
 - data/processed/mars_trek/jezero_terrain_classification.json: Terrain categories

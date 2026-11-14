@@ -1,12 +1,17 @@
+import json
+import tempfile
 import unittest
+from pathlib import Path
+from unittest.mock import patch
 
-from src.backend.mission_data import (
+from backend.mission_data import (
     get_data_summary,
     get_mission,
     get_mission_evidence,
     list_missions,
     load_mission_data,
 )
+from backend import mission_data
 
 
 class MissionDataTests(unittest.TestCase):
@@ -149,7 +154,92 @@ class MissionDataTests(unittest.TestCase):
                 "M052", "M057", "M058", "M084", "M086",
             ],
         )
-        self.assertEqual(summary["overall_mapped_mission_count"], 18)
+        self.assertEqual(summary["overall_mapped_mission_count"], 28)
+
+    def test_mola_mapping_loads_successfully(self):
+        mapping = load_mission_data()["mola_mapping"]
+        self.assertEqual(mapping["module"], "MOLA Jezero Terrain Module")
+        self.assertEqual(mapping["mission_count"], len(mapping["missions"]))
+
+    def test_mola_has_exactly_ten_mappings(self):
+        self.assertEqual(len(load_mission_data()["mola_mapping"]["missions"]), 10)
+
+    def test_all_mola_missions_exist_in_catalogue(self):
+        data = load_mission_data()
+        catalogue_ids = {item["mission_id"] for item in data["catalogue"]["missions"]}
+        mola_ids = {item["mission_id"] for item in data["mola_mapping"]["missions"]}
+        self.assertEqual(len(mola_ids), 10)
+        self.assertTrue(mola_ids <= catalogue_ids)
+
+    def test_mola_mission_ids_are_unique(self):
+        missions = load_mission_data()["mola_mapping"]["missions"]
+        ids = [item["mission_id"] for item in missions]
+        self.assertEqual(len(ids), len(set(ids)))
+
+    def test_all_mola_dataset_files_exist(self):
+        data = load_mission_data()
+        for mapping in data["mola_mapping"]["missions"]:
+            for filename in mapping["datasets"]:
+                self.assertTrue((mission_data.MARS_TREK_DATA_DIR / filename).is_file())
+
+    def test_m009_returns_mola_evidence(self):
+        result = get_mission_evidence("M009")
+        self.assertEqual(len(result["mola_evidence"]), 1)
+        self.assertEqual(result["mola_evidence"][0]["mission_id"], "M009")
+        self.assertIn("mola", result["evidence_by_source"])
+        self.assertIn("mola", result["available_evidence_sources"])
+
+    def test_m077_returns_mola_evidence(self):
+        item = get_mission_evidence("M077")["mola_evidence"][0]
+        self.assertEqual(item["title"], "Terrain-aware rover navigation")
+        self.assertTrue(item["datasets"])
+        self.assertTrue(item["usage"])
+        self.assertTrue(item["limitation"])
+        self.assertTrue(item["data_type"])
+
+    def test_unmapped_mission_has_empty_mola_evidence(self):
+        self.assertEqual(get_mission_evidence("M001")["mola_evidence"], [])
+
+    def test_mola_limitations_coverage_and_categories_are_exposed(self):
+        result = get_mission_evidence("M009")
+        self.assertTrue(result["simulation_boundaries"]["mola"])
+        self.assertEqual(result["mola_context"]["region"], "Jezero Crater, Mars")
+        self.assertEqual(result["mola_context"]["coverage"]["longitude_approx"], [76.5, 78.5])
+        self.assertEqual(result["mola_context"]["terrain_categories"]["flat"], "0 to 5 degrees")
+        self.assertTrue(result["mola_evidence"][0]["limitation"])
+
+    def _load_with_modified_mola(self, modify):
+        with mission_data.MOLA_MAPPING_FILE.open(encoding="utf-8") as handle:
+            mapping = json.load(handle)
+        modify(mapping)
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "mola.json"
+            path.write_text(json.dumps(mapping), encoding="utf-8")
+            with patch.object(mission_data, "MOLA_MAPPING_FILE", path):
+                return load_mission_data()
+
+    def test_invalid_mola_mapping_count_raises(self):
+        with self.assertRaises(mission_data.MissionDataError):
+            self._load_with_modified_mola(lambda mapping: mapping.update({"mission_count": 9}))
+
+    def test_invalid_mola_mission_reference_raises(self):
+        def change(mapping):
+            mapping["missions"][0]["mission_id"] = "M999"
+        with self.assertRaises(mission_data.MissionDataError):
+            self._load_with_modified_mola(change)
+
+    def test_invalid_mola_dataset_reference_raises(self):
+        def change(mapping):
+            mapping["missions"][0]["datasets"] = ["../not-in-mars-trek.json"]
+        with self.assertRaises(mission_data.MissionDataError):
+            self._load_with_modified_mola(change)
+
+    def test_existing_sources_remain_available_with_mola(self):
+        m053 = get_mission_evidence("M053")
+        self.assertEqual(m053["evidence"][0]["source_id"], "OSD-654")
+        self.assertEqual(m053["radlab_evidence"], [])
+        self.assertEqual(m053["csa_evidence"], [])
+        self.assertEqual(get_mission_evidence("M032")["mola_evidence"], [])
 
     def test_csa_datasets_are_loaded_with_original_records(self):
         data = load_mission_data()

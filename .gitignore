@@ -31,3 +31,6 @@ Thumbs.db
 # Editors
 .vscode/
 .idea/
+
+# Mars Trek source rasters are not included in the public repository
+/mola_terrain_module/data/raw/

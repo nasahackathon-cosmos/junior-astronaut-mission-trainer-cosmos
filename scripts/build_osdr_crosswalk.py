@@ -1,0 +1,192 @@
+import csv
+import json
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+BASE = ROOT / "data/processed"
+CATALOGUE = BASE / "missions/mission_catalog.json"
+OUTPUT = BASE / "missions/osdr_mission_crosswalk.json"
+
+if not CATALOGUE.is_file():
+    raise SystemExit("Mission catalogue not found.")
+
+if OUTPUT.exists():
+    raise SystemExit("Crosswalk already exists; refusing to overwrite.")
+
+catalogue = json.loads(CATALOGUE.read_text(encoding="utf-8"))
+mission_ids = {m["mission_id"] for m in catalogue["missions"]}
+
+sources = [
+    {
+        "source_id": "OSD-654",
+        "related_dataset_id": None,
+        "title": "Toward countering muscle and bone loss with spaceflight: GSK3 as a potential target",
+        "study_url": "https://osdr.nasa.gov/bio/repo/data/studies/OSD-654",
+        "file": "data/processed/osdr/OSD-654/OSD-654_microCT_with_metadata.csv",
+        "assay": "Micro-computed tomography (microCT)",
+        "organism": "Mus musculus",
+        "measured_variables": [
+            "trabecular_separation_millimeter",
+            "trabecular_number_1_per_millimeter",
+            "degree_of_anisotropy",
+            "connective_density",
+            "cortical_thickness_millimeter",
+            "medullary_area_millimeter_squared",
+            "measurement_complete"
+        ],
+        "limitations": [
+            "Mouse research measurements, not human astronaut medical records.",
+            "Bone microstructure measurements are not a personal bone-health diagnosis.",
+            "Do not infer unmeasured clinical outcomes."
+        ]
+    },
+    {
+        "source_id": "OSD-684",
+        "related_dataset_id": "GLDS-615",
+        "title": "Skeletal-muscle tissue-chip spaceflight RNA sequencing study",
+        "study_url": "https://osdr.nasa.gov/bio/repo/data/studies/OSD-684",
+        "files": [
+            "data/processed/osdr/OSD-684/OSD-684_normalized_counts.csv",
+            "data/processed/osdr/OSD-684/OSD-684_differential_expression.csv",
+            "data/processed/osdr/OSD-684/OSD-684_sample_metadata.csv",
+            "data/processed/osdr/OSD-684/OSD-684_contrasts.csv"
+        ],
+        "assay": "RNA sequencing and differential gene-expression analysis",
+        "organism": "Homo sapiens",
+        "tissue": "Vastus Lateralis",
+        "sample_metadata_fields": [
+            "sample_id", "organism", "sex", "tissue",
+            "donor_age_group", "condition"
+        ],
+        "limitations": [
+            "Human skeletal-muscle tissue-chip research, not whole-body astronaut testing.",
+            "Gene expression is not a direct measurement of muscle strength.",
+            "Do not turn findings into individual exercise or medical prescriptions."
+        ]
+    }
+]
+
+mappings = [
+    {
+        "mission_id": "M053",
+        "source_ids": ["OSD-654"],
+        "evidence_role": "primary_direct",
+        "rationale": "Directly relevant mouse bone microstructure measurements support a bone-health research and comparison activity.",
+        "limitations": "Present as animal research, not human astronaut bone-density or diagnostic data."
+    },
+    {
+        "mission_id": "M054",
+        "source_ids": ["OSD-684"],
+        "evidence_role": "primary_direct",
+        "rationale": "Skeletal-muscle tissue-chip gene-expression research supports a muscle biology investigation.",
+        "limitations": "Gene expression is not a muscle-strength measurement or exercise prescription."
+    },
+    {
+        "mission_id": "M016",
+        "source_ids": ["OSD-654", "OSD-684"],
+        "evidence_role": "supporting",
+        "rationale": "Examples of real space-biology research datasets for an experiment laboratory."
+    },
+    {
+        "mission_id": "M018",
+        "source_ids": ["OSD-654", "OSD-684"],
+        "evidence_role": "background_only",
+        "rationale": "Research context for astronaut-health learning.",
+        "limitations": "Neither dataset is a personal astronaut health assessment."
+    },
+    {
+        "mission_id": "M028",
+        "source_ids": ["OSD-654", "OSD-684"],
+        "evidence_role": "supporting",
+        "rationale": "Suitable for a team comparison of different research questions, organisms, tissues and assay types."
+    },
+    {
+        "mission_id": "M055",
+        "source_ids": ["OSD-684"],
+        "optional_source_ids": ["OSD-654"],
+        "evidence_role": "supporting",
+        "rationale": "Can support a comparison of research observations and experimental groups.",
+        "limitations": "Do not imply the studies measured the same biological material or outcome."
+    },
+    {
+        "mission_id": "M058",
+        "source_ids": ["OSD-684"],
+        "evidence_role": "background_only",
+        "rationale": "Muscle biology research context for healthy-routine learning.",
+        "limitations": "Not a source of exercise prescriptions or proof of a particular routine's effectiveness."
+    },
+    {
+        "mission_id": "M010",
+        "source_ids": ["OSD-654", "OSD-684"],
+        "evidence_role": "background_only",
+        "rationale": "Optional research references in a post-landing learning activity.",
+        "limitations": "These datasets do not assess the actual health of the game's crew."
+    },
+    {
+        "mission_id": "M030",
+        "source_ids": ["OSD-654", "OSD-684"],
+        "evidence_role": "conditional_synthesis",
+        "rationale": "May cite findings from either study only if that study was actually used in the player's earlier activities.",
+        "limitations": "Do not claim that every player conducted both experiments."
+    }
+]
+
+not_supported = [
+    {
+        "mission_ids": ["M013", "M052", "M057", "M084"],
+        "reason": "The downloaded studies are not plant-growth experiments."
+    },
+    {
+        "mission_ids": ["M056"],
+        "reason": "Neither downloaded study directly investigates immune-system outcomes."
+    },
+    {
+        "mission_ids": ["M047", "M048", "M050", "M051", "M086"],
+        "reason": "These studies do not measure water, power, night-survival, waste or recycling resources."
+    },
+    {
+        "mission_ids": ["M032", "M033", "M034", "M035", "M036"],
+        "reason": "These studies do not provide the radiation-dose measurements needed for these activities."
+    },
+    {
+        "mission_ids": ["M038", "M039", "M040", "M041", "M042", "M043", "M044", "M049", "M070", "M072", "M077"],
+        "reason": "These studies are not planetary terrain, landing-site, sunlight or rover-operation datasets."
+    }
+]
+
+crosswalk = {
+    "title": "Junior Astronaut Mission Trainer — OSDR Evidence Crosswalk",
+    "version": "1.0",
+    "catalogue": "data/processed/missions/mission_catalog.json",
+    "evidence_policy": {
+        "primary_direct": "The study directly measures a biological subject or variable relevant to the mission's scientific learning objective.",
+        "supporting": "Useful as a research example, comparison or educational reference, but not a direct measurement of the gameplay outcome.",
+        "background_only": "Contextual learning reference; not evidence for the mission's simulated operational or health variables.",
+        "conditional_synthesis": "May be cited only when the player actually used the source in an earlier activity.",
+        "not_supported": "No direct dataset relationship is claimed."
+    },
+    "sources": sources,
+    "mappings": mappings,
+    "not_supported_examples": not_supported,
+    "simulation_boundary": [
+        "Inventory, oxygen, food, water, battery levels and resource consumption are game-state values unless separately sourced.",
+        "Fictional faults, damage, rewards and mission outcomes are simulations.",
+        "Do not present OSDR observations as live measurements from the player's Moon or Mars environment."
+    ]
+}
+
+for mapping in mappings:
+    if mapping["mission_id"] not in mission_ids:
+        raise SystemExit(f"Unknown mission ID: {mapping['mission_id']}")
+    for source_id in mapping["source_ids"] + mapping.get("optional_source_ids", []):
+        if source_id not in {s["source_id"] for s in sources}:
+            raise SystemExit(f"Unknown source ID: {source_id}")
+
+OUTPUT.parent.mkdir(parents=True, exist_ok=True)
+with OUTPUT.open("x", encoding="utf-8") as f:
+    json.dump(crosswalk, f, indent=2, ensure_ascii=False)
+
+print("Crosswalk created:", OUTPUT.relative_to(ROOT))
+print("Sources:", len(sources))
+print("Mission mappings:", len(mappings))
+print("Unsupported relationship groups:", len(not_supported))

@@ -1,0 +1,33 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# JavaScript
+node_modules/
+dist/
+build/
+.next/
+.turbo/
+
+# Raw research datasets
+data/raw/
+
+# Generated and temporary files
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/

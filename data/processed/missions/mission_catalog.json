@@ -1,0 +1,1955 @@
+{
+  "catalogue_name": "Junior Astronaut Mission Trainer",
+  "catalogue_version": "source-revised",
+  "mission_count": 100,
+  "provenance": {
+    "source_file": "Junior_Astronaut_Mission_Trainer_100_Missions_Age_7-12_Revised.docx",
+    "source_sha256": "118e9f1268b90d15742dd633b51d8cd2b5ec809b91d3444e9605cc61a4549753",
+    "source_type": "DOCX supplied by project team"
+  },
+  "official_resources": [
+    {
+      "resource": "NASA Open APIs",
+      "official_link": "https://api.nasa.gov/",
+      "purpose": "Portal for APOD, DONKI, NeoWs and other NASA APIs."
+    },
+    {
+      "resource": "DONKI",
+      "official_link": "https://ccmc.gsfc.nasa.gov/tools/DONKI/",
+      "purpose": "Space-weather event notifications, analyses and API access."
+    },
+    {
+      "resource": "NASA OSDR",
+      "official_link": "https://osdr.nasa.gov/bio/repo/",
+      "purpose": "Space biology and astronaut-health research archive; searchable by study keywords."
+    },
+    {
+      "resource": "RadLab",
+      "official_link": "https://visualization.osdr.nasa.gov/radlab/gui/data-api/",
+      "purpose": "Radiation dosimetry measurements and queryable data API; many readings are from ISS/spaceflight instruments."
+    },
+    {
+      "resource": "Mars Trek",
+      "official_link": "https://trek.nasa.gov/mars/",
+      "purpose": "Mars imagery, terrain, elevation, map layers and analysis tools."
+    },
+    {
+      "resource": "CSA food-production toolkit",
+      "official_link": "https://www.asc-csa.gc.ca/eng/youth-educators/toolkits/food-production/",
+      "purpose": "Educational toolkit for food production on the Moon and in remote areas."
+    },
+    {
+      "resource": "CSA STEM/youth resources",
+      "official_link": "https://www.asc-csa.gc.ca/eng/youth-educators/resources-stem-and-youth-organizations.asp",
+      "purpose": "Educational activities and STEM resources for youth organisations."
+    }
+  ],
+  "recommended_engine_metadata_fields": [
+    {
+      "field": "mission_id",
+      "purpose": "M001–M100; stable identifier"
+    },
+    {
+      "field": "planet",
+      "purpose": "Moon / Mars / Both / Transit"
+    },
+    {
+      "field": "category",
+      "purpose": "Space weather, survival, biology, astronomy, geology, robotics, communication, etc."
+    },
+    {
+      "field": "difficulty",
+      "purpose": "Easy / Medium / Hard"
+    },
+    {
+      "field": "prerequisites",
+      "purpose": "Unlocked equipment, prior discoveries, mission flags"
+    },
+    {
+      "field": "required_resources",
+      "purpose": "Power, water, food, rover, shelter, sample kit, etc."
+    },
+    {
+      "field": "data_source_ids",
+      "purpose": "One or more source catalogue IDs and the exact record/study/layer used"
+    },
+    {
+      "field": "data_timestamp_and_units",
+      "purpose": "Observation date/time, units and relevant metadata"
+    },
+    {
+      "field": "data_mode",
+      "purpose": "LIVE/ARCHIVED NASA DATA, DERIVED VALUE, or GAME SIMULATION"
+    },
+    {
+      "field": "eligible_conditions",
+      "purpose": "Planet, season/illumination, available equipment, mission progression"
+    },
+    {
+      "field": "choices_and_effects",
+      "purpose": "Explicit formulas and state changes; no hidden fabricated scientific values"
+    },
+    {
+      "field": "learning_objective",
+      "purpose": "What the child should understand after the mission"
+    },
+    {
+      "field": "reward",
+      "purpose": "Coins, badges, unlocks; purely game mechanics"
+    }
+  ],
+  "missions": [
+    {
+      "mission_id": "M001",
+      "title": "Spaceflight readiness: supplies and space weather",
+      "gameplay": "Inspect the starting inventory, review the latest DONKI event feed and decide whether to schedule an outdoor task or remain sheltered.",
+      "scientific_correction": "Use actual DONKI event records. Inventory quantities and astronaut consumption are game-state values; do not imply DONKI measures oxygen or food.",
+      "data_resource_links": [
+        "DONKI",
+        "NASA Open APIs"
+      ],
+      "data_status": "Mixed: live NASA data + simulated inventory",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Inspect the starting inventory, review the latest DONKI event feed and decide whether to schedule an outdoor task or remain sheltered.",
+        "Scientific correction / implementation: Use actual DONKI event records. Inventory quantities and astronaut consumption are game-state values; do not imply DONKI measures oxygen or food.",
+        "Data/resource links: DONKI  |  NASA Open APIs",
+        "Data status: Mixed: live NASA data + simulated inventory"
+      ]
+    },
+    {
+      "mission_id": "M002",
+      "title": "Grow food in a controlled space greenhouse",
+      "gameplay": "Set up a controlled growth experiment: choose a crop, water allocation, light cycle and nutrient plan; compare the result with a reference Earth-grown crop.",
+      "scientific_correction": "Replace 'lunar/Martian soil + UV' with a controlled growth chamber using safe substrate/nutrient solution and suitable plant lighting. UV is not a substitute for the full plant-growth light spectrum. Use CSA activities and research; growth outcomes are modelled.",
+      "data_resource_links": [
+        "CSA food toolkit",
+        "OSDR search",
+        "NASA plant research"
+      ],
+      "data_status": "Partial: research-backed learning + simulated crop growth",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Set up a controlled growth experiment: choose a crop, water allocation, light cycle and nutrient plan; compare the result with a reference Earth-grown crop.",
+        "Scientific correction / implementation: Replace 'lunar/Martian soil + UV' with a controlled growth chamber using safe substrate/nutrient solution and suitable plant lighting. UV is not a substitute for the full plant-growth light spectrum. Use CSA activities and research; growth outcomes are modelled.",
+        "Data/resource links: CSA food toolkit  |  OSDR search  |  NASA plant research",
+        "Data status: Partial: research-backed learning + simulated crop growth"
+      ]
+    },
+    {
+      "mission_id": "M003",
+      "title": "Day-night or eclipse detective",
+      "gameplay": "Observe a real or simulated sky event. Decide whether the scene is the ordinary day/night terminator, a solar eclipse, or a lunar eclipse; explain the geometry and send a report.",
+      "scientific_correction": "Correct the original premise: one half of Earth being lit and the other dark is the normal day/night boundary, not an eclipse. Only run a real eclipse scenario when an event and observer geometry support it.",
+      "data_resource_links": [
+        "NASA eclipse",
+        "NASA Open APIs",
+        "NASA APOD"
+      ],
+      "data_status": "Partial: real event catalogue/images + visual simulation",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Observe a real or simulated sky event. Decide whether the scene is the ordinary day/night terminator, a solar eclipse, or a lunar eclipse; explain the geometry and send a report.",
+        "Scientific correction / implementation: Correct the original premise: one half of Earth being lit and the other dark is the normal day/night boundary, not an eclipse. Only run a real eclipse scenario when an event and observer geometry support it.",
+        "Data/resource links: NASA eclipse  |  NASA Open APIs  |  NASA APOD",
+        "Data status: Partial: real event catalogue/images + visual simulation"
+      ]
+    },
+    {
+      "mission_id": "M004",
+      "title": "Fuel-system anomaly",
+      "gameplay": "A fuel pressure/temperature sensor in the fictional spacecraft reports an anomaly. Choose a safe diagnostic sequence and decide whether to isolate the affected line.",
+      "scientific_correction": "No supplied challenge dataset provides live fuel-tank telemetry. Label the fault and all sensor readings as a training simulation; avoid presenting invented telemetry as NASA observations.",
+      "data_resource_links": [
+        "NASA Open APIs",
+        "NASA Moon to Mars"
+      ],
+      "data_status": "Simulation: fictional engineering scenario",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: A fuel pressure/temperature sensor in the fictional spacecraft reports an anomaly. Choose a safe diagnostic sequence and decide whether to isolate the affected line.",
+        "Scientific correction / implementation: No supplied challenge dataset provides live fuel-tank telemetry. Label the fault and all sensor readings as a training simulation; avoid presenting invented telemetry as NASA observations.",
+        "Data/resource links: NASA Open APIs  |  NASA Moon to Mars",
+        "Data status: Simulation: fictional engineering scenario"
+      ]
+    },
+    {
+      "mission_id": "M005",
+      "title": "Communication link troubleshooting",
+      "gameplay": "Inspect signal status, antenna pointing and line-of-sight. Choose a troubleshooting action and send a short status packet when the link is available.",
+      "scientific_correction": "The challenge resources do not supply a live spacecraft communications network feed. Use Mars/Moon geometry only where available; simulate hardware fault and signal status.",
+      "data_resource_links": [
+        "NASA SCaN",
+        "Moon Trek",
+        "Mars Trek"
+      ],
+      "data_status": "Partial: geometry/background + simulated fault",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Inspect signal status, antenna pointing and line-of-sight. Choose a troubleshooting action and send a short status packet when the link is available.",
+        "Scientific correction / implementation: The challenge resources do not supply a live spacecraft communications network feed. Use Mars/Moon geometry only where available; simulate hardware fault and signal status.",
+        "Data/resource links: NASA SCaN  |  Moon Trek  |  Mars Trek",
+        "Data status: Partial: geometry/background + simulated fault"
+      ]
+    },
+    {
+      "mission_id": "M006",
+      "title": "Earth sends a hazard bulletin: asteroid tracking",
+      "gameplay": "Read a real near-Earth object record and explain what closest-approach distance and relative velocity mean. Decide whether the fictional spacecraft route needs a review.",
+      "scientific_correction": "NeoWs describes near-Earth objects and Earth close approaches; it does not prove that an asteroid is on a collision course with the player's spacecraft. Do not label a harmless close approach as an impact warning.",
+      "data_resource_links": [
+        "NASA NEO",
+        "NASA Open APIs"
+      ],
+      "data_status": "Partial: real NEO catalogue + fictional mission decision",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Read a real near-Earth object record and explain what closest-approach distance and relative velocity mean. Decide whether the fictional spacecraft route needs a review.",
+        "Scientific correction / implementation: NeoWs describes near-Earth objects and Earth close approaches; it does not prove that an asteroid is on a collision course with the player's spacecraft. Do not label a harmless close approach as an impact warning.",
+        "Data/resource links: NASA NEO  |  NASA Open APIs",
+        "Data status: Partial: real NEO catalogue + fictional mission decision"
+      ]
+    },
+    {
+      "mission_id": "M007",
+      "title": "Micrometeoroid impact drill",
+      "gameplay": "During a simulated observation period, a small impact damages an external panel. Use the available repair kit and life/health rules to respond.",
+      "scientific_correction": "Replace 'asteroid attack' with a clearly labelled simulated micrometeoroid/debris impact drill. A ten-life/ten-minute recharge mechanic is game design, not NASA hazard data.",
+      "data_resource_links": [
+        "NASA Moon to Mars",
+        "NASA PDS"
+      ],
+      "data_status": "Simulation: fictional impact and damage",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: During a simulated observation period, a small impact damages an external panel. Use the available repair kit and life/health rules to respond.",
+        "Scientific correction / implementation: Replace 'asteroid attack' with a clearly labelled simulated micrometeoroid/debris impact drill. A ten-life/ten-minute recharge mechanic is game design, not NASA hazard data.",
+        "Data/resource links: NASA Moon to Mars  |  NASA PDS",
+        "Data status: Simulation: fictional impact and damage"
+      ]
+    },
+    {
+      "mission_id": "M008",
+      "title": "Deep-space observation night",
+      "gameplay": "Explore selected NASA APOD images and answer short questions about galaxies, nebulae, stars or other astronomical objects.",
+      "scientific_correction": "Use actual APOD metadata/image/explanation. Curate age-appropriate content and preserve image credits/copyright notices.",
+      "data_resource_links": [
+        "NASA APOD",
+        "NASA Image Library"
+      ],
+      "data_status": "Real imagery + educational quiz",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Explore selected NASA APOD images and answer short questions about galaxies, nebulae, stars or other astronomical objects.",
+        "Scientific correction / implementation: Use actual APOD metadata/image/explanation. Curate age-appropriate content and preserve image credits/copyright notices.",
+        "Data/resource links: NASA APOD  |  NASA Image Library",
+        "Data status: Real imagery + educational quiz"
+      ]
+    },
+    {
+      "mission_id": "M009",
+      "title": "Landing-site and descent decision",
+      "gameplay": "Compare a small set of candidate landing zones using terrain, slope/elevation and illumination layers; choose a site and respond to a simulated landing warning.",
+      "scientific_correction": "Use Moon Trek for Moon or Mars Trek for Mars. Landing dynamics and failures are not directly supplied by these portals; label those parts as simulation.",
+      "data_resource_links": [
+        "Moon Trek",
+        "Mars Trek"
+      ],
+      "data_status": "Partial: real terrain + simulated landing",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Compare a small set of candidate landing zones using terrain, slope/elevation and illumination layers; choose a site and respond to a simulated landing warning.",
+        "Scientific correction / implementation: Use Moon Trek for Moon or Mars Trek for Mars. Landing dynamics and failures are not directly supplied by these portals; label those parts as simulation.",
+        "Data/resource links: Moon Trek  |  Mars Trek",
+        "Data status: Partial: real terrain + simulated landing"
+      ]
+    },
+    {
+      "mission_id": "M010",
+      "title": "Post-landing spacecraft and crew check",
+      "gameplay": "Run a post-landing checklist: power, pressure, thermal status, supplies and crew wellness. Identify which readings need attention.",
+      "scientific_correction": "The listed sources do not provide telemetry for the fictional spacecraft or individual child-player. Use a clearly marked simulated dashboard; OSDR supplies research context, not a personal diagnosis.",
+      "data_resource_links": [
+        "OSDR search",
+        "RadLab",
+        "NASA astronaut health"
+      ],
+      "data_status": "Partial: real research context + simulated status",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Run a post-landing checklist: power, pressure, thermal status, supplies and crew wellness. Identify which readings need attention.",
+        "Scientific correction / implementation: The listed sources do not provide telemetry for the fictional spacecraft or individual child-player. Use a clearly marked simulated dashboard; OSDR supplies research context, not a personal diagnosis.",
+        "Data/resource links: OSDR search  |  RadLab  |  NASA astronaut health",
+        "Data status: Partial: real research context + simulated status"
+      ]
+    },
+    {
+      "mission_id": "M011",
+      "title": "Restore power and place solar panels",
+      "gameplay": "Choose a panel location and orientation using local illumination/terrain information; allocate power to essential systems.",
+      "scientific_correction": "Moon Trek can support lunar location/illumination analysis; Mars Trek supports Mars terrain. Power output, battery charge and repair cost must be calculated by the game model.",
+      "data_resource_links": [
+        "Moon Trek",
+        "Mars Trek"
+      ],
+      "data_status": "Partial: real maps + simulated electrical system",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Choose a panel location and orientation using local illumination/terrain information; allocate power to essential systems.",
+        "Scientific correction / implementation: Moon Trek can support lunar location/illumination analysis; Mars Trek supports Mars terrain. Power output, battery charge and repair cost must be calculated by the game model.",
+        "Data/resource links: Moon Trek  |  Mars Trek",
+        "Data status: Partial: real maps + simulated electrical system"
+      ]
+    },
+    {
+      "mission_id": "M012",
+      "title": "Build the first habitat modules",
+      "gameplay": "Choose how to allocate a limited material budget among shelter, greenhouse, power storage and life-support modules.",
+      "scientific_correction": "Use actual terrain context and real research for design explanations. The supplied resources do not provide a complete habitat bill of materials or validated resource-consumption model; mark costs and capacity as game assumptions.",
+      "data_resource_links": [
+        "Mars Trek",
+        "Moon Trek",
+        "CSA food toolkit",
+        "NASA Moon to Mars"
+      ],
+      "data_status": "Partial: real context + simulated construction",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Choose how to allocate a limited material budget among shelter, greenhouse, power storage and life-support modules.",
+        "Scientific correction / implementation: Use actual terrain context and real research for design explanations. The supplied resources do not provide a complete habitat bill of materials or validated resource-consumption model; mark costs and capacity as game assumptions.",
+        "Data/resource links: Mars Trek  |  Moon Trek  |  CSA food toolkit  |  NASA Moon to Mars",
+        "Data status: Partial: real context + simulated construction"
+      ]
+    },
+    {
+      "mission_id": "M013",
+      "title": "Compare plant growth in space and on Earth",
+      "gameplay": "Review plant-growth research and compare a simulated crop's growth stages under two controlled conditions.",
+      "scientific_correction": "OSDR is a research archive, not a live crop-growth sensor feed. Cite the specific study used; avoid claiming the player's simulated growth rate is a NASA measurement.",
+      "data_resource_links": [
+        "OSDR search",
+        "CSA food toolkit",
+        "NASA plant research"
+      ],
+      "data_status": "Partial: published research + simulated experiment",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Review plant-growth research and compare a simulated crop's growth stages under two controlled conditions.",
+        "Scientific correction / implementation: OSDR is a research archive, not a live crop-growth sensor feed. Cite the specific study used; avoid claiming the player's simulated growth rate is a NASA measurement.",
+        "Data/resource links: OSDR search  |  CSA food toolkit  |  NASA plant research",
+        "Data status: Partial: published research + simulated experiment"
+      ]
+    },
+    {
+      "mission_id": "M014",
+      "title": "Rover exploration and crater investigation",
+      "gameplay": "Send a rover to a mapped feature, inspect real terrain imagery and compare the location with documented lunar/Martian mission observations.",
+      "scientific_correction": "Use Mars Trek for Mars; Moon Trek/PDS for Moon. Historical mission tracks and artifacts should be shown only when verified in mission archives; do not imply the rover physically visits another mission's hardware.",
+      "data_resource_links": [
+        "Mars Trek",
+        "Moon Trek",
+        "NASA PDS",
+        "NASA Mars rover"
+      ],
+      "data_status": "Real maps/archives + simulated rover movement",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Send a rover to a mapped feature, inspect real terrain imagery and compare the location with documented lunar/Martian mission observations.",
+        "Scientific correction / implementation: Use Mars Trek for Mars; Moon Trek/PDS for Moon. Historical mission tracks and artifacts should be shown only when verified in mission archives; do not imply the rover physically visits another mission's hardware.",
+        "Data/resource links: Mars Trek  |  Moon Trek  |  NASA PDS  |  NASA Mars rover",
+        "Data status: Real maps/archives + simulated rover movement"
+      ]
+    },
+    {
+      "mission_id": "M015",
+      "title": "Track the local sunrise and sunset",
+      "gameplay": "Record the local solar position and compare the length of daylight at the chosen outpost.",
+      "scientific_correction": "Correct the original '16 sunrises in 24 hours': that is not a lunar or Martian surface cycle. A lunar solar day is about 29.5 Earth days; a Martian sol is about 24 h 39 min. Model location/season/terrain appropriately.",
+      "data_resource_links": [
+        "NASA Moon facts",
+        "NASA Mars facts",
+        "Moon Trek",
+        "Mars Trek"
+      ],
+      "data_status": "Real planetary facts + calculated/simulated scene",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Record the local solar position and compare the length of daylight at the chosen outpost.",
+        "Scientific correction / implementation: Correct the original '16 sunrises in 24 hours': that is not a lunar or Martian surface cycle. A lunar solar day is about 29.5 Earth days; a Martian sol is about 24 h 39 min. Model location/season/terrain appropriately.",
+        "Data/resource links: NASA Moon facts  |  NASA Mars facts  |  Moon Trek  |  Mars Trek",
+        "Data status: Real planetary facts + calculated/simulated scene"
+      ]
+    },
+    {
+      "mission_id": "M016",
+      "title": "Biology and technology experiment lab",
+      "gameplay": "Choose a published space-biology study to investigate, then run a simplified classroom-style experiment or data interpretation activity.",
+      "scientific_correction": "OSDR contains published research datasets. The player's experiment is educational simulation unless a specific real study's measurements are actually loaded and cited.",
+      "data_resource_links": [
+        "OSDR search",
+        "CSA food toolkit"
+      ],
+      "data_status": "Real research + simulated experiment",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Choose a published space-biology study to investigate, then run a simplified classroom-style experiment or data interpretation activity.",
+        "Scientific correction / implementation: OSDR contains published research datasets. The player's experiment is educational simulation unless a specific real study's measurements are actually loaded and cited.",
+        "Data/resource links: OSDR search  |  CSA food toolkit",
+        "Data status: Real research + simulated experiment"
+      ]
+    },
+    {
+      "mission_id": "M017",
+      "title": "Regolith sample and construction test",
+      "gameplay": "Collect a simulated sample from two mapped locations, compare documented regolith properties and test a proposed brick/construction recipe.",
+      "scientific_correction": "Do not treat map colour as a chemical assay. Link each composition claim to an actual sample/instrument study. Brick performance is a simulation unless supported by a cited experiment.",
+      "data_resource_links": [
+        "Moon Trek",
+        "Mars Trek",
+        "NASA PDS",
+        "NASA regolith"
+      ],
+      "data_status": "Partial: mapping/archive + simulated processing",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Collect a simulated sample from two mapped locations, compare documented regolith properties and test a proposed brick/construction recipe.",
+        "Scientific correction / implementation: Do not treat map colour as a chemical assay. Link each composition claim to an actual sample/instrument study. Brick performance is a simulation unless supported by a cited experiment.",
+        "Data/resource links: Moon Trek  |  Mars Trek  |  NASA PDS  |  NASA regolith",
+        "Data status: Partial: mapping/archive + simulated processing"
+      ]
+    },
+    {
+      "mission_id": "M018",
+      "title": "Astronaut health and exercise check",
+      "gameplay": "Review why exercise, nutrition and monitoring matter during spaceflight; answer questions based on a selected OSDR study.",
+      "scientific_correction": "OSDR supports research learning, not personal medical advice or a real-time health check. Keep player health values fictional and age-appropriate.",
+      "data_resource_links": [
+        "OSDR search",
+        "NASA astronaut health",
+        "CSA food toolkit"
+      ],
+      "data_status": "Real research + simulated fitness",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Review why exercise, nutrition and monitoring matter during spaceflight; answer questions based on a selected OSDR study.",
+        "Scientific correction / implementation: OSDR supports research learning, not personal medical advice or a real-time health check. Keep player health values fictional and age-appropriate.",
+        "Data/resource links: OSDR search  |  NASA astronaut health  |  CSA food toolkit",
+        "Data status: Real research + simulated fitness"
+      ]
+    },
+    {
+      "mission_id": "M019",
+      "title": "Earth, Moon and Mars comparison lab",
+      "gameplay": "Compare gravity, day length, atmosphere and environmental conditions using cited planetary reference values.",
+      "scientific_correction": "Use NASA planetary facts and mission resources. Avoid using RadLab ISS readings as if they were Moon/Mars surface radiation readings.",
+      "data_resource_links": [
+        "NASA Moon facts",
+        "NASA Mars facts",
+        "Mars Trek",
+        "Moon Trek",
+        "RadLab"
+      ],
+      "data_status": "Real reference data; comparison calculation",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Compare gravity, day length, atmosphere and environmental conditions using cited planetary reference values.",
+        "Scientific correction / implementation: Use NASA planetary facts and mission resources. Avoid using RadLab ISS readings as if they were Moon/Mars surface radiation readings.",
+        "Data/resource links: NASA Moon facts  |  NASA Mars facts  |  Mars Trek  |  Moon Trek  |  RadLab",
+        "Data status: Real reference data; comparison calculation"
+      ]
+    },
+    {
+      "mission_id": "M020",
+      "title": "Birthday in space: ration planning",
+      "gameplay": "Celebrate with a shelf-stable/dehydrated treat from the fictional manifest; choose a portion while keeping the crew's nutrition plan balanced.",
+      "scientific_correction": "The birthday is story content. Food type/portion and nutrition values should be sourced from CSA food-education material or clearly labelled fictional inventory; no NASA dataset records this character's birthday.",
+      "data_resource_links": [
+        "CSA food toolkit",
+        "OSDR search"
+      ],
+      "data_status": "Story + simulated inventory",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Celebrate with a shelf-stable/dehydrated treat from the fictional manifest; choose a portion while keeping the crew's nutrition plan balanced.",
+        "Scientific correction / implementation: The birthday is story content. Food type/portion and nutrition values should be sourced from CSA food-education material or clearly labelled fictional inventory; no NASA dataset records this character's birthday.",
+        "Data/resource links: CSA food toolkit  |  OSDR search",
+        "Data status: Story + simulated inventory"
+      ]
+    },
+    {
+      "mission_id": "M021",
+      "title": "Could this exoplanet be Earth-like?",
+      "gameplay": "Compare confirmed exoplanet properties such as radius, mass, orbital period and host-star information; decide what 'Earth-like' can and cannot mean.",
+      "scientific_correction": "Do not call a planet habitable solely because it is Earth-sized or in a habitable zone. Use confirmed archive values and explain uncertainty.",
+      "data_resource_links": [
+        "Exoplanet Archive",
+        "Exoplanet TAP"
+      ],
+      "data_status": "Real catalogue + evidence-based quiz",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Compare confirmed exoplanet properties such as radius, mass, orbital period and host-star information; decide what 'Earth-like' can and cannot mean.",
+        "Scientific correction / implementation: Do not call a planet habitable solely because it is Earth-sized or in a habitable zone. Use confirmed archive values and explain uncertainty.",
+        "Data/resource links: Exoplanet Archive  |  Exoplanet TAP",
+        "Data status: Real catalogue + evidence-based quiz"
+      ]
+    },
+    {
+      "mission_id": "M022",
+      "title": "Aurora and airglow investigation",
+      "gameplay": "Study real aurora/airglow imagery and explain the role of charged particles and atmospheric gases; compare Earth and Mars examples.",
+      "scientific_correction": "Do not assume an Earth-like aurora occurs on the Moon. DONKI gives solar-event context, not a local aurora forecast at the outpost. Use verified planetary observations/images.",
+      "data_resource_links": [
+        "DONKI",
+        "NASA Image Library",
+        "NASA astronomy",
+        "NASA PDS"
+      ],
+      "data_status": "Partial: real events/imagery + explanatory simulation",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Study real aurora/airglow imagery and explain the role of charged particles and atmospheric gases; compare Earth and Mars examples.",
+        "Scientific correction / implementation: Do not assume an Earth-like aurora occurs on the Moon. DONKI gives solar-event context, not a local aurora forecast at the outpost. Use verified planetary observations/images.",
+        "Data/resource links: DONKI  |  NASA Image Library  |  NASA astronomy  |  NASA PDS",
+        "Data status: Partial: real events/imagery + explanatory simulation"
+      ]
+    },
+    {
+      "mission_id": "M023",
+      "title": "Food reserve and one-time Earth request",
+      "gameplay": "Check food reserves, compare them with the configured ration plan, and decide whether to use the single in-game Earth resupply request.",
+      "scientific_correction": "The one-message limit is a game rule, not a real NASA communication rule. Food needs and reserve depletion are simulated using disclosed assumptions and CSA learning resources.",
+      "data_resource_links": [
+        "CSA food toolkit",
+        "OSDR search",
+        "NASA SCaN"
+      ],
+      "data_status": "Partial: educational reference + simulated stock",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Check food reserves, compare them with the configured ration plan, and decide whether to use the single in-game Earth resupply request.",
+        "Scientific correction / implementation: The one-message limit is a game rule, not a real NASA communication rule. Food needs and reserve depletion are simulated using disclosed assumptions and CSA learning resources.",
+        "Data/resource links: CSA food toolkit  |  OSDR search  |  NASA SCaN",
+        "Data status: Partial: educational reference + simulated stock"
+      ]
+    },
+    {
+      "mission_id": "M024",
+      "title": "Moon: investigate human-made lunar artifacts / Mars: rover recovery",
+      "gameplay": "Moon path: identify documented human-made objects or mission landing-site evidence and discuss responsible heritage protection. Mars path: use Mars Trek imagery to plan a simulated search for a disabled rover and recover its sample.",
+      "scientific_correction": "Correct 'clear all lunar debris': do not claim a complete debris inventory or instruct indiscriminate removal of historical artifacts. Mars rover recovery is a game scenario; Mars Trek provides terrain, not live rover control.",
+      "data_resource_links": [
+        "Moon Trek",
+        "NASA PDS",
+        "Mars Trek",
+        "NASA Mars rover"
+      ],
+      "data_status": "Partial: real maps/archive + simulated recovery",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Moon path: identify documented human-made objects or mission landing-site evidence and discuss responsible heritage protection. Mars path: use Mars Trek imagery to plan a simulated search for a disabled rover and recover its sample.",
+        "Scientific correction / implementation: Correct 'clear all lunar debris': do not claim a complete debris inventory or instruct indiscriminate removal of historical artifacts. Mars rover recovery is a game scenario; Mars Trek provides terrain, not live rover control.",
+        "Data/resource links: Moon Trek  |  NASA PDS  |  Mars Trek  |  NASA Mars rover",
+        "Data status: Partial: real maps/archive + simulated recovery"
+      ]
+    },
+    {
+      "mission_id": "M025",
+      "title": "Resupply vehicle arrival",
+      "gameplay": "A fictional cargo craft arrives in the story. Inspect its manifest, prioritise essential deliveries and update inventory.",
+      "scientific_correction": "No listed challenge resource provides a live future cargo-delivery schedule to the player's outpost. Make arrival and manifest explicitly fictional; NASA Image Library can provide credited reference imagery.",
+      "data_resource_links": [
+        "NASA Image Library",
+        "CSA food toolkit"
+      ],
+      "data_status": "Simulation/story; imagery is real",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: A fictional cargo craft arrives in the story. Inspect its manifest, prioritise essential deliveries and update inventory.",
+        "Scientific correction / implementation: No listed challenge resource provides a live future cargo-delivery schedule to the player's outpost. Make arrival and manifest explicitly fictional; NASA Image Library can provide credited reference imagery.",
+        "Data/resource links: NASA Image Library  |  CSA food toolkit",
+        "Data status: Simulation/story; imagery is real"
+      ]
+    },
+    {
+      "mission_id": "M026",
+      "title": "Greenhouse pressure or cooling fault",
+      "gameplay": "Diagnose a simulated greenhouse fault and decide whether to protect seedlings, conserve water or divert power to repairs.",
+      "scientific_correction": "CSA toolkit and OSDR support plant/food learning; neither provides live telemetry for this fictional greenhouse. Fault values and plant losses are simulated.",
+      "data_resource_links": [
+        "CSA food toolkit",
+        "OSDR search"
+      ],
+      "data_status": "Partial: research context + simulated fault",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Diagnose a simulated greenhouse fault and decide whether to protect seedlings, conserve water or divert power to repairs.",
+        "Scientific correction / implementation: CSA toolkit and OSDR support plant/food learning; neither provides live telemetry for this fictional greenhouse. Fault values and plant losses are simulated.",
+        "Data/resource links: CSA food toolkit  |  OSDR search",
+        "Data status: Partial: research context + simulated fault"
+      ]
+    },
+    {
+      "mission_id": "M027",
+      "title": "A second explorer arrives",
+      "gameplay": "Meet a fictional astronaut from another mission, exchange safety information and agree on shared habitat rules.",
+      "scientific_correction": "Pure narrative mission. Do not imply a real astronaut is currently present at the Moon/Mars outpost.",
+      "data_resource_links": [
+        "NASA Image Library",
+        "NASA Moon to Mars"
+      ],
+      "data_status": "Story mission; optional real reference imagery",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Meet a fictional astronaut from another mission, exchange safety information and agree on shared habitat rules.",
+        "Scientific correction / implementation: Pure narrative mission. Do not imply a real astronaut is currently present at the Moon/Mars outpost.",
+        "Data/resource links: NASA Image Library  |  NASA Moon to Mars",
+        "Data status: Story mission; optional real reference imagery"
+      ]
+    },
+    {
+      "mission_id": "M028",
+      "title": "Team science: conduct a joint experiment",
+      "gameplay": "Choose a published space-biology or planetary-science question and work with the new character to interpret the data.",
+      "scientific_correction": "Use actual OSDR/PDS records for the learning content. Teamwork, dialogue and experiment outcomes are game simulation.",
+      "data_resource_links": [
+        "OSDR search",
+        "NASA PDS",
+        "Mars Trek"
+      ],
+      "data_status": "Real data interpretation + story",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Choose a published space-biology or planetary-science question and work with the new character to interpret the data.",
+        "Scientific correction / implementation: Use actual OSDR/PDS records for the learning content. Teamwork, dialogue and experiment outcomes are game simulation.",
+        "Data/resource links: OSDR search  |  NASA PDS  |  Mars Trek",
+        "Data status: Real data interpretation + story"
+      ]
+    },
+    {
+      "mission_id": "M029",
+      "title": "Prepare for departure",
+      "gameplay": "Run a departure checklist: habitat shutdown, sample manifest, power and life-support status, route and communication plan.",
+      "scientific_correction": "For the Moon, use the lunar map/visibility context. A crew landing on Mars and returning to Earth within this 30-day game is not a realistic mission timeline; either make the Mars ending a 'prepare for future return window' or explicitly label the compressed return as arcade fiction.",
+      "data_resource_links": [
+        "Moon Trek",
+        "Mars Trek",
+        "NASA SCaN",
+        "NASA Moon to Mars"
+      ],
+      "data_status": "Partial; Mars timeline must be clearly fictional/compressed",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Run a departure checklist: habitat shutdown, sample manifest, power and life-support status, route and communication plan.",
+        "Scientific correction / implementation: For the Moon, use the lunar map/visibility context. A crew landing on Mars and returning to Earth within this 30-day game is not a realistic mission timeline; either make the Mars ending a 'prepare for future return window' or explicitly label the compressed return as arcade fiction.",
+        "Data/resource links: Moon Trek  |  Mars Trek  |  NASA SCaN  |  NASA Moon to Mars",
+        "Data status: Partial; Mars timeline must be clearly fictional/compressed"
+      ]
+    },
+    {
+      "mission_id": "M030",
+      "title": "Final mission report and return/hand-over",
+      "gameplay": "Compile verified discoveries, compare starting and ending resource states, cite NASA observations and submit a mission report. For Mars, complete a safe-habitat handover or future-return plan rather than implying a realistic 30-day round trip.",
+      "scientific_correction": "Separate actual NASA observations from player choices and simulated outcomes. Do not state a real Mars return vehicle is available in 30 days.",
+      "data_resource_links": [
+        "OSDR",
+        "RadLab",
+        "DONKI",
+        "Moon Trek",
+        "Mars Trek",
+        "NASA PDS"
+      ],
+      "data_status": "Real source-backed report + simulated mission outcome",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Compile verified discoveries, compare starting and ending resource states, cite NASA observations and submit a mission report. For Mars, complete a safe-habitat handover or future-return plan rather than implying a realistic 30-day round trip.",
+        "Scientific correction / implementation: Separate actual NASA observations from player choices and simulated outcomes. Do not state a real Mars return vehicle is available in 30 days.",
+        "Data/resource links: OSDR  |  RadLab  |  DONKI  |  Moon Trek  |  Mars Trek  |  NASA PDS",
+        "Data status: Real source-backed report + simulated mission outcome"
+      ]
+    },
+    {
+      "mission_id": "M031",
+      "title": "Solar flare watch",
+      "gameplay": "Load a real DONKI solar-flare event, inspect its timestamp/classification and decide whether the fictional crew should postpone an EVA.",
+      "scientific_correction": "A flare record is not a direct dose measurement at the outpost. The risk response is a training scenario.",
+      "data_resource_links": [
+        "DONKI",
+        "NASA Open APIs"
+      ],
+      "data_status": "Real event + simulated operational response",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Load a real DONKI solar-flare event, inspect its timestamp/classification and decide whether the fictional crew should postpone an EVA.",
+        "Scientific correction / implementation: A flare record is not a direct dose measurement at the outpost. The risk response is a training scenario.",
+        "Data/resource links: DONKI  |  NASA Open APIs",
+        "Data status: Real event + simulated operational response"
+      ]
+    },
+    {
+      "mission_id": "M032",
+      "title": "Radiation dose detective",
+      "gameplay": "Explore RadLab time-series readings and compare absorbed-dose-rate and dose-equivalent-rate fields for selected ISS instruments.",
+      "scientific_correction": "RadLab measurements are from instruments/trajectories represented in its archive, including ISS; do not relabel them as lunar/Martian surface readings.",
+      "data_resource_links": [
+        "RadLab"
+      ],
+      "data_status": "Real archived measurements + interpretation",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Explore RadLab time-series readings and compare absorbed-dose-rate and dose-equivalent-rate fields for selected ISS instruments.",
+        "Scientific correction / implementation: RadLab measurements are from instruments/trajectories represented in its archive, including ISS; do not relabel them as lunar/Martian surface readings.",
+        "Data/resource links: RadLab",
+        "Data status: Real archived measurements + interpretation"
+      ]
+    },
+    {
+      "mission_id": "M033",
+      "title": "CME alert and mission planning",
+      "gameplay": "Inspect a DONKI CME record/analysis and choose a simulated shelter/operations plan.",
+      "scientific_correction": "DONKI provides event analyses/notifications; it does not guarantee a specific local dose or spacecraft impact.",
+      "data_resource_links": [
+        "DONKI"
+      ],
+      "data_status": "Real event + simulated response",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Inspect a DONKI CME record/analysis and choose a simulated shelter/operations plan.",
+        "Scientific correction / implementation: DONKI provides event analyses/notifications; it does not guarantee a specific local dose or spacecraft impact.",
+        "Data/resource links: DONKI",
+        "Data status: Real event + simulated response"
+      ]
+    },
+    {
+      "mission_id": "M034",
+      "title": "Solar energetic particle event",
+      "gameplay": "Review a DONKI SEP event and explain why energetic particles matter to crews and electronics; select a precaution in the game.",
+      "scientific_correction": "Use RadLab only for the measurement context it actually contains; do not claim it records the same SEP at the player's location.",
+      "data_resource_links": [
+        "DONKI",
+        "RadLab"
+      ],
+      "data_status": "Real event/archived dose context + simulation",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Review a DONKI SEP event and explain why energetic particles matter to crews and electronics; select a precaution in the game.",
+        "Scientific correction / implementation: Use RadLab only for the measurement context it actually contains; do not claim it records the same SEP at the player's location.",
+        "Data/resource links: DONKI  |  RadLab",
+        "Data status: Real event/archived dose context + simulation"
+      ]
+    },
+    {
+      "mission_id": "M035",
+      "title": "Which radiation chart is stronger?",
+      "gameplay": "Compare real RadLab readings, units and time windows; identify why instrument, location and unit matter.",
+      "scientific_correction": "Do not mix absorbed dose rate (µGy/h) with dose equivalent rate (µSv/h) as if they were identical.",
+      "data_resource_links": [
+        "RadLab"
+      ],
+      "data_status": "Real data interpretation",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Compare real RadLab readings, units and time windows; identify why instrument, location and unit matter.",
+        "Scientific correction / implementation: Do not mix absorbed dose rate (µGy/h) with dose equivalent rate (µSv/h) as if they were identical.",
+        "Data/resource links: RadLab",
+        "Data status: Real data interpretation"
+      ]
+    },
+    {
+      "mission_id": "M036",
+      "title": "Design a radiation-safe shelter",
+      "gameplay": "Choose a shelter location and material strategy in a fictional habitat; explain shielding trade-offs using radiation research context.",
+      "scientific_correction": "Challenge resources support RadLab measurement exploration, but do not provide a validated Moon/Mars shelter design calculator. Clearly mark the design as conceptual.",
+      "data_resource_links": [
+        "RadLab",
+        "NASA Moon to Mars",
+        "Mars Trek",
+        "Moon Trek"
+      ],
+      "data_status": "Partial + simulated engineering",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Choose a shelter location and material strategy in a fictional habitat; explain shielding trade-offs using radiation research context.",
+        "Scientific correction / implementation: Challenge resources support RadLab measurement exploration, but do not provide a validated Moon/Mars shelter design calculator. Clearly mark the design as conceptual.",
+        "Data/resource links: RadLab  |  NASA Moon to Mars  |  Mars Trek  |  Moon Trek",
+        "Data status: Partial + simulated engineering"
+      ]
+    },
+    {
+      "mission_id": "M037",
+      "title": "Write the space-weather bulletin",
+      "gameplay": "Use a real DONKI event record to write a short mission-control bulletin with event type, time and cautious implications.",
+      "scientific_correction": "Do not turn a past event into a current alert. Show the event date and whether it is historical or current.",
+      "data_resource_links": [
+        "DONKI"
+      ],
+      "data_status": "Real data-driven communication task",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Use a real DONKI event record to write a short mission-control bulletin with event type, time and cautious implications.",
+        "Scientific correction / implementation: Do not turn a past event into a current alert. Show the event date and whether it is historical or current.",
+        "Data/resource links: DONKI",
+        "Data status: Real data-driven communication task"
+      ]
+    },
+    {
+      "mission_id": "M038",
+      "title": "Choose a lunar landing zone",
+      "gameplay": "Compare two Moon locations using terrain and illumination context; select a safer candidate for a fictional lander.",
+      "scientific_correction": "Moon Trek is a supplementary NASA portal, not named in the supplied challenge list. Do not claim it is one of the listed challenge resources.",
+      "data_resource_links": [
+        "Moon Trek",
+        "LRO PDS"
+      ],
+      "data_status": "Supplementary NASA data + simulated decision",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Compare two Moon locations using terrain and illumination context; select a safer candidate for a fictional lander.",
+        "Scientific correction / implementation: Moon Trek is a supplementary NASA portal, not named in the supplied challenge list. Do not claim it is one of the listed challenge resources.",
+        "Data/resource links: Moon Trek  |  LRO PDS",
+        "Data status: Supplementary NASA data + simulated decision"
+      ]
+    },
+    {
+      "mission_id": "M039",
+      "title": "Crater detective",
+      "gameplay": "Inspect real lunar or Martian crater imagery and infer which features may indicate impact processes.",
+      "scientific_correction": "Use actual map imagery and source metadata; the player's interpretation is a learning task.",
+      "data_resource_links": [
+        "Moon Trek",
+        "Mars Trek",
+        "NASA PDS"
+      ],
+      "data_status": "Real imagery + quiz",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Inspect real lunar or Martian crater imagery and infer which features may indicate impact processes.",
+        "Scientific correction / implementation: Use actual map imagery and source metadata; the player's interpretation is a learning task.",
+        "Data/resource links: Moon Trek  |  Mars Trek  |  NASA PDS",
+        "Data status: Real imagery + quiz"
+      ]
+    },
+    {
+      "mission_id": "M040",
+      "title": "Rover route planner",
+      "gameplay": "Plot a route across mapped Mars terrain while avoiding steep slopes or rough-looking regions.",
+      "scientific_correction": "Mars Trek supports terrain analysis; a safe route requires chosen layer/scale and should not be described as a certified autonomous navigation path.",
+      "data_resource_links": [
+        "Mars Trek"
+      ],
+      "data_status": "Real terrain + simulated route planning",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Plot a route across mapped Mars terrain while avoiding steep slopes or rough-looking regions.",
+        "Scientific correction / implementation: Mars Trek supports terrain analysis; a safe route requires chosen layer/scale and should not be described as a certified autonomous navigation path.",
+        "Data/resource links: Mars Trek",
+        "Data status: Real terrain + simulated route planning"
+      ]
+    },
+    {
+      "mission_id": "M041",
+      "title": "Lunar polar water-ice investigation",
+      "gameplay": "Explore lunar polar science and compare evidence layers or published observations relevant to possible water ice.",
+      "scientific_correction": "Do not claim a visible map pixel directly proves accessible water ice. Cite the specific LRO/mission dataset and its limitations.",
+      "data_resource_links": [
+        "Moon Trek",
+        "LRO PDS",
+        "NASA PDS"
+      ],
+      "data_status": "Supplementary NASA observations + evidence interpretation",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Explore lunar polar science and compare evidence layers or published observations relevant to possible water ice.",
+        "Scientific correction / implementation: Do not claim a visible map pixel directly proves accessible water ice. Cite the specific LRO/mission dataset and its limitations.",
+        "Data/resource links: Moon Trek  |  LRO PDS  |  NASA PDS",
+        "Data status: Supplementary NASA observations + evidence interpretation"
+      ]
+    },
+    {
+      "mission_id": "M042",
+      "title": "Explore a Giant Mars Crater",
+      "gameplay": "Fly over Jezero Crater on a colourful map. Tap three picture clues and learn how scientists investigate whether water shaped this landscape long ago.",
+      "scientific_correction": "Mars Trek provides real Mars maps and terrain. Teach evidence for ancient water; do not claim life has been found.",
+      "data_resource_links": [
+        "Mars Trek",
+        "NASA Mars rover"
+      ],
+      "data_status": "Real Mars imagery + guided discovery",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Fly over Jezero Crater on a colourful map. Tap three picture clues and learn how scientists investigate whether water shaped this landscape long ago.",
+        "Scientific correction / implementation: Mars Trek provides real Mars maps and terrain. Teach evidence for ancient water; do not claim life has been found.",
+        "Data/resource links: Mars Trek  |  NASA Mars rover",
+        "Data status: Real Mars imagery + guided discovery"
+      ]
+    },
+    {
+      "mission_id": "M043",
+      "title": "Map a research target",
+      "gameplay": "Choose a mapped feature and create a coordinate-based target card with source layer, scale and reason for study.",
+      "scientific_correction": "A selected point is a game research target, not a claim that NASA has designated it unexplored.",
+      "data_resource_links": [
+        "Mars Trek",
+        "Moon Trek"
+      ],
+      "data_status": "Real map + player-generated target",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Choose a mapped feature and create a coordinate-based target card with source layer, scale and reason for study.",
+        "Scientific correction / implementation: A selected point is a game research target, not a claim that NASA has designated it unexplored.",
+        "Data/resource links: Mars Trek  |  Moon Trek",
+        "Data status: Real map + player-generated target"
+      ]
+    },
+    {
+      "mission_id": "M044",
+      "title": "Select a base location",
+      "gameplay": "Rank candidate locations using terrain, illumination and access to a chosen research target.",
+      "scientific_correction": "No supplied resource computes a complete habitat suitability score. Expose the game's scoring criteria and call it a simplified model.",
+      "data_resource_links": [
+        "Mars Trek",
+        "Moon Trek",
+        "RadLab"
+      ],
+      "data_status": "Real terrain context + simulated score",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Rank candidate locations using terrain, illumination and access to a chosen research target.",
+        "Scientific correction / implementation: No supplied resource computes a complete habitat suitability score. Expose the game's scoring criteria and call it a simplified model.",
+        "Data/resource links: Mars Trek  |  Moon Trek  |  RadLab",
+        "Data status: Real terrain context + simulated score"
+      ]
+    },
+    {
+      "mission_id": "M045",
+      "title": "Battery priority puzzle",
+      "gameplay": "Given a fictional power budget, choose which systems remain on and justify the priority order.",
+      "scientific_correction": "No challenge-listed resource provides the player's habitat battery telemetry or a universal power budget. All watt-hours and consumption are game parameters.",
+      "data_resource_links": [
+        "Mars Trek",
+        "Moon Trek"
+      ],
+      "data_status": "Simulation; real maps may inform solar context",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Given a fictional power budget, choose which systems remain on and justify the priority order.",
+        "Scientific correction / implementation: No challenge-listed resource provides the player's habitat battery telemetry or a universal power budget. All watt-hours and consumption are game parameters.",
+        "Data/resource links: Mars Trek  |  Moon Trek",
+        "Data status: Simulation; real maps may inform solar context"
+      ]
+    },
+    {
+      "mission_id": "M046",
+      "title": "Find and isolate an oxygen leak",
+      "gameplay": "Inspect a fictional pressure/oxygen warning, isolate a module and choose an emergency procedure.",
+      "scientific_correction": "No listed dataset measures oxygen inside this fictional habitat. Use transparent, adjustable training values; do not present them as measured NASA values.",
+      "data_resource_links": [
+        "NASA Moon to Mars",
+        "CSA STEM resources"
+      ],
+      "data_status": "Simulation + educational explanation",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Inspect a fictional pressure/oxygen warning, isolate a module and choose an emergency procedure.",
+        "Scientific correction / implementation: No listed dataset measures oxygen inside this fictional habitat. Use transparent, adjustable training values; do not present them as measured NASA values.",
+        "Data/resource links: NASA Moon to Mars  |  CSA STEM resources",
+        "Data status: Simulation + educational explanation"
+      ]
+    },
+    {
+      "mission_id": "M047",
+      "title": "Water allocation challenge",
+      "gameplay": "Allocate a limited water store among drinking, hygiene and controlled crop use; explain recycling trade-offs.",
+      "scientific_correction": "The supplied CSA food toolkit supports food/water education, but does not provide live habitat tank readings or a universal daily quota. Label inventory numbers as game assumptions.",
+      "data_resource_links": [
+        "CSA food toolkit",
+        "CSA STEM resources"
+      ],
+      "data_status": "Educational reference + simulation",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Allocate a limited water store among drinking, hygiene and controlled crop use; explain recycling trade-offs.",
+        "Scientific correction / implementation: The supplied CSA food toolkit supports food/water education, but does not provide live habitat tank readings or a universal daily quota. Label inventory numbers as game assumptions.",
+        "Data/resource links: CSA food toolkit  |  CSA STEM resources",
+        "Data status: Educational reference + simulation"
+      ]
+    },
+    {
+      "mission_id": "M048",
+      "title": "Power versus life support",
+      "gameplay": "Choose between two competing simulated loads and see how the choice affects the next mission's available energy.",
+      "scientific_correction": "All load values and consequences are game-engine assumptions unless tied to a cited engineering study. Avoid claiming NASA provides a single universal oxygen-generator wattage.",
+      "data_resource_links": [
+        "CSA STEM resources",
+        "NASA Moon to Mars"
+      ],
+      "data_status": "Simulation",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Choose between two competing simulated loads and see how the choice affects the next mission's available energy.",
+        "Scientific correction / implementation: All load values and consequences are game-engine assumptions unless tied to a cited engineering study. Avoid claiming NASA provides a single universal oxygen-generator wattage.",
+        "Data/resource links: CSA STEM resources  |  NASA Moon to Mars",
+        "Data status: Simulation"
+      ]
+    },
+    {
+      "mission_id": "M049",
+      "title": "Find the Sunniest Spot",
+      "gameplay": "Look at a map with three possible solar-panel spots. Pick where panels might get the most sunlight, then watch a simple day/night animation.",
+      "scientific_correction": "Use planetary map and illumination context where available. The energy score is a simplified game calculation, not measured NASA power output.",
+      "data_resource_links": [
+        "Moon Trek",
+        "Mars Trek",
+        "NASA Moon facts"
+      ],
+      "data_status": "Real map context + simplified energy game",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Look at a map with three possible solar-panel spots. Pick where panels might get the most sunlight, then watch a simple day/night animation.",
+        "Scientific correction / implementation: Use planetary map and illumination context where available. The energy score is a simplified game calculation, not measured NASA power output.",
+        "Data/resource links: Moon Trek  |  Mars Trek  |  NASA Moon facts",
+        "Data status: Real map context + simplified energy game"
+      ]
+    },
+    {
+      "mission_id": "M050",
+      "title": "Survive the long lunar night",
+      "gameplay": "Prepare a lunar outpost for a long night by allocating stored energy and reducing non-essential loads.",
+      "scientific_correction": "Do not use the Mars sol or ISS orbit cycle for a lunar surface night. Use NASA Moon facts and a location-specific illumination model.",
+      "data_resource_links": [
+        "NASA Moon facts",
+        "Moon Trek"
+      ],
+      "data_status": "Real planetary context + simulated energy management",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Prepare a lunar outpost for a long night by allocating stored energy and reducing non-essential loads.",
+        "Scientific correction / implementation: Do not use the Mars sol or ISS orbit cycle for a lunar surface night. Use NASA Moon facts and a location-specific illumination model.",
+        "Data/resource links: NASA Moon facts  |  Moon Trek",
+        "Data status: Real planetary context + simulated energy management"
+      ]
+    },
+    {
+      "mission_id": "M051",
+      "title": "Waste and recycling plan",
+      "gameplay": "Sort a fictional waste manifest and decide which streams could be reused, stored or safely processed.",
+      "scientific_correction": "No listed challenge dataset provides waste production telemetry for this habitat. Amounts and recycling efficiencies are simulation parameters.",
+      "data_resource_links": [
+        "CSA STEM resources",
+        "NASA Moon to Mars"
+      ],
+      "data_status": "Simulation + educational content",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Sort a fictional waste manifest and decide which streams could be reused, stored or safely processed.",
+        "Scientific correction / implementation: No listed challenge dataset provides waste production telemetry for this habitat. Amounts and recycling efficiencies are simulation parameters.",
+        "Data/resource links: CSA STEM resources  |  NASA Moon to Mars",
+        "Data status: Simulation + educational content"
+      ]
+    },
+    {
+      "mission_id": "M052",
+      "title": "Plant growth study",
+      "gameplay": "Search OSDR for a relevant plant/spaceflight study and identify organism, experiment conditions and reported outcome.",
+      "scientific_correction": "OSDR studies vary; do not assume every study is a lunar greenhouse experiment or directly transferable to lunar gravity.",
+      "data_resource_links": [
+        "OSDR search",
+        "CSA food toolkit"
+      ],
+      "data_status": "Real published research",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Search OSDR for a relevant plant/spaceflight study and identify organism, experiment conditions and reported outcome.",
+        "Scientific correction / implementation: OSDR studies vary; do not assume every study is a lunar greenhouse experiment or directly transferable to lunar gravity.",
+        "Data/resource links: OSDR search  |  CSA food toolkit",
+        "Data status: Real published research"
+      ]
+    },
+    {
+      "mission_id": "M053",
+      "title": "Bone health investigation",
+      "gameplay": "Use OSDR search results to explore a study on bone changes in spaceflight and explain why exercise/nutrition are important.",
+      "scientific_correction": "Avoid diagnosing the character or asserting one study predicts an individual player's bone loss.",
+      "data_resource_links": [
+        "OSDR search",
+        "NASA astronaut health"
+      ],
+      "data_status": "Real published research + quiz",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Use OSDR search results to explore a study on bone changes in spaceflight and explain why exercise/nutrition are important.",
+        "Scientific correction / implementation: Avoid diagnosing the character or asserting one study predicts an individual player's bone loss.",
+        "Data/resource links: OSDR search  |  NASA astronaut health",
+        "Data status: Real published research + quiz"
+      ]
+    },
+    {
+      "mission_id": "M054",
+      "title": "Muscle maintenance mission",
+      "gameplay": "Review a spaceflight muscle-related study and choose a fictional exercise schedule for the character.",
+      "scientific_correction": "The selected exercise plan is gameplay, not a medical prescription. Use study-specific conclusions and age-appropriate explanations.",
+      "data_resource_links": [
+        "OSDR search",
+        "NASA astronaut health"
+      ],
+      "data_status": "Real research + simulation",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Review a spaceflight muscle-related study and choose a fictional exercise schedule for the character.",
+        "Scientific correction / implementation: The selected exercise plan is gameplay, not a medical prescription. Use study-specific conclusions and age-appropriate explanations.",
+        "Data/resource links: OSDR search  |  NASA astronaut health",
+        "Data status: Real research + simulation"
+      ]
+    },
+    {
+      "mission_id": "M055",
+      "title": "Space Biology: Spot the Difference",
+      "gameplay": "Compare two simple picture cards about a science experiment on Earth and in space. Find three differences and learn what researchers wanted to discover.",
+      "scientific_correction": "Choose one real OSDR study and simplify its research question. Explain that ISS studies are not exactly the same as living on the Moon or Mars.",
+      "data_resource_links": [
+        "OSDR search"
+      ],
+      "data_status": "Real published study + child-friendly comparison",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Compare two simple picture cards about a science experiment on Earth and in space. Find three differences and learn what researchers wanted to discover.",
+        "Scientific correction / implementation: Choose one real OSDR study and simplify its research question. Explain that ISS studies are not exactly the same as living on the Moon or Mars.",
+        "Data/resource links: OSDR search",
+        "Data status: Real published study + child-friendly comparison"
+      ]
+    },
+    {
+      "mission_id": "M056",
+      "title": "Immune system research briefing",
+      "gameplay": "Find an OSDR study related to immune response and summarise the research question and limitations.",
+      "scientific_correction": "Do not infer an astronaut's current immune status from an archive study.",
+      "data_resource_links": [
+        "OSDR search",
+        "NASA astronaut health"
+      ],
+      "data_status": "Real research interpretation",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Find an OSDR study related to immune response and summarise the research question and limitations.",
+        "Scientific correction / implementation: Do not infer an astronaut's current immune status from an archive study.",
+        "Data/resource links: OSDR search  |  NASA astronaut health",
+        "Data status: Real research interpretation"
+      ]
+    },
+    {
+      "mission_id": "M057",
+      "title": "Save the Little Space Plants!",
+      "gameplay": "A few cartoon seedlings look unhappy. Check their water, light and growing space. Choose what to fix first, then watch a short growth animation.",
+      "scientific_correction": "Use CSA food-production material and a relevant OSDR plant study for facts. Seedling health and recovery are simulated, not live NASA greenhouse readings.",
+      "data_resource_links": [
+        "CSA food toolkit",
+        "OSDR search"
+      ],
+      "data_status": "Research-informed plant-care game + simulated seedlings",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: A few cartoon seedlings look unhappy. Check their water, light and growing space. Choose what to fix first, then watch a short growth animation.",
+        "Scientific correction / implementation: Use CSA food-production material and a relevant OSDR plant study for facts. Seedling health and recovery are simulated, not live NASA greenhouse readings.",
+        "Data/resource links: CSA food toolkit  |  OSDR search",
+        "Data status: Research-informed plant-care game + simulated seedlings"
+      ]
+    },
+    {
+      "mission_id": "M058",
+      "title": "Healthy astronaut routine",
+      "gameplay": "Create a balanced fictional routine with exercise, sleep and food; answer questions based on human-spaceflight research.",
+      "scientific_correction": "No individual health data is provided. Keep health scores fictional and do not give medical advice.",
+      "data_resource_links": [
+        "OSDR search",
+        "NASA astronaut health",
+        "CSA food toolkit"
+      ],
+      "data_status": "Research-informed simulation",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Create a balanced fictional routine with exercise, sleep and food; answer questions based on human-spaceflight research.",
+        "Scientific correction / implementation: No individual health data is provided. Keep health scores fictional and do not give medical advice.",
+        "Data/resource links: OSDR search  |  NASA astronaut health  |  CSA food toolkit",
+        "Data status: Research-informed simulation"
+      ]
+    },
+    {
+      "mission_id": "M059",
+      "title": "Galaxy shape challenge",
+      "gameplay": "Classify selected NASA images as spiral, elliptical or irregular and read the image explanation.",
+      "scientific_correction": "Use credited NASA imagery and accurate captions; image classification is a quiz.",
+      "data_resource_links": [
+        "NASA APOD",
+        "NASA Image Library",
+        "NASA astronomy"
+      ],
+      "data_status": "Real imagery + quiz",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Classify selected NASA images as spiral, elliptical or irregular and read the image explanation.",
+        "Scientific correction / implementation: Use credited NASA imagery and accurate captions; image classification is a quiz.",
+        "Data/resource links: NASA APOD  |  NASA Image Library  |  NASA astronomy",
+        "Data status: Real imagery + quiz"
+      ]
+    },
+    {
+      "mission_id": "M060",
+      "title": "Nebula nursery",
+      "gameplay": "Explore a NASA image of a nebula and identify what astronomers study about star formation.",
+      "scientific_correction": "An APOD image is not necessarily a quantitative dataset; use the linked explanation and credited image.",
+      "data_resource_links": [
+        "NASA APOD",
+        "NASA Image Library"
+      ],
+      "data_status": "Real imagery + learning",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Explore a NASA image of a nebula and identify what astronomers study about star formation.",
+        "Scientific correction / implementation: An APOD image is not necessarily a quantitative dataset; use the linked explanation and credited image.",
+        "Data/resource links: NASA APOD  |  NASA Image Library",
+        "Data status: Real imagery + learning"
+      ]
+    },
+    {
+      "mission_id": "M061",
+      "title": "Constellation perspective",
+      "gameplay": "Identify a constellation from an Earth-sky chart and learn why constellations are apparent patterns from our viewpoint.",
+      "scientific_correction": "Do not imply constellations are physically close groups or that the exact Earth pattern appears unchanged from Mars/Moon.",
+      "data_resource_links": [
+        "NASA astronomy",
+        "NASA APOD"
+      ],
+      "data_status": "Educational astronomy content",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Identify a constellation from an Earth-sky chart and learn why constellations are apparent patterns from our viewpoint.",
+        "Scientific correction / implementation: Do not imply constellations are physically close groups or that the exact Earth pattern appears unchanged from Mars/Moon.",
+        "Data/resource links: NASA astronomy  |  NASA APOD",
+        "Data status: Educational astronomy content"
+      ]
+    },
+    {
+      "mission_id": "M062",
+      "title": "Build a Star's Life Story",
+      "gameplay": "Put picture cards in order: a star is born, shines for a long time and eventually changes. Match each stage with a NASA space picture.",
+      "scientific_correction": "Use NASA educational explanations and credited images. Keep it simple: stars do not all end in the same way.",
+      "data_resource_links": [
+        "NASA astronomy",
+        "NASA Image Library",
+        "NASA APOD"
+      ],
+      "data_status": "Real educational material + sequencing game",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Put picture cards in order: a star is born, shines for a long time and eventually changes. Match each stage with a NASA space picture.",
+        "Scientific correction / implementation: Use NASA educational explanations and credited images. Keep it simple: stars do not all end in the same way.",
+        "Data/resource links: NASA astronomy  |  NASA Image Library  |  NASA APOD",
+        "Data status: Real educational material + sequencing game"
+      ]
+    },
+    {
+      "mission_id": "M063",
+      "title": "Exoplanet detective",
+      "gameplay": "Query confirmed exoplanet records and compare measured radius, mass, orbital period and host star.",
+      "scientific_correction": "Earth-sized does not equal Earth-like or habitable. Display discovery/reference uncertainty and use confirmed planets rather than unverified candidates unless labelled.",
+      "data_resource_links": [
+        "Exoplanet Archive",
+        "Exoplanet TAP"
+      ],
+      "data_status": "Real catalogue",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Query confirmed exoplanet records and compare measured radius, mass, orbital period and host star.",
+        "Scientific correction / implementation: Earth-sized does not equal Earth-like or habitable. Display discovery/reference uncertainty and use confirmed planets rather than unverified candidates unless labelled.",
+        "Data/resource links: Exoplanet Archive  |  Exoplanet TAP",
+        "Data status: Real catalogue"
+      ]
+    },
+    {
+      "mission_id": "M064",
+      "title": "Black-hole evidence lab",
+      "gameplay": "Inspect NASA images/visualisations and explain what the image represents and how black holes are inferred.",
+      "scientific_correction": "Avoid implying a black hole is photographed as a normal visible surface; distinguish direct image products, simulations and artist concepts.",
+      "data_resource_links": [
+        "NASA Image Library",
+        "NASA astronomy",
+        "NASA APOD"
+      ],
+      "data_status": "Real imagery/visualisation + explanation",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Inspect NASA images/visualisations and explain what the image represents and how black holes are inferred.",
+        "Scientific correction / implementation: Avoid implying a black hole is photographed as a normal visible surface; distinguish direct image products, simulations and artist concepts.",
+        "Data/resource links: NASA Image Library  |  NASA astronomy  |  NASA APOD",
+        "Data status: Real imagery/visualisation + explanation"
+      ]
+    },
+    {
+      "mission_id": "M065",
+      "title": "How far is a light-year?",
+      "gameplay": "Compare distances to selected astronomical objects and solve a short scale/distance puzzle.",
+      "scientific_correction": "Use cited NASA astronomy explanations; do not invent precise object distances from image appearance.",
+      "data_resource_links": [
+        "NASA astronomy",
+        "NASA APOD"
+      ],
+      "data_status": "Educational science + calculation",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Compare distances to selected astronomical objects and solve a short scale/distance puzzle.",
+        "Scientific correction / implementation: Use cited NASA astronomy explanations; do not invent precise object distances from image appearance.",
+        "Data/resource links: NASA astronomy  |  NASA APOD",
+        "Data status: Educational science + calculation"
+      ]
+    },
+    {
+      "mission_id": "M066",
+      "title": "Near-Earth object tracker",
+      "gameplay": "Search NASA NeoWs for a real asteroid and inspect its approach date and available orbital fields.",
+      "scientific_correction": "Closest approach to Earth is not a collision prediction and does not indicate a threat to the player's spacecraft.",
+      "data_resource_links": [
+        "NASA NEO",
+        "NASA Open APIs"
+      ],
+      "data_status": "Real catalogue",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Search NASA NeoWs for a real asteroid and inspect its approach date and available orbital fields.",
+        "Scientific correction / implementation: Closest approach to Earth is not a collision prediction and does not indicate a threat to the player's spacecraft.",
+        "Data/resource links: NASA NEO  |  NASA Open APIs",
+        "Data status: Real catalogue"
+      ]
+    },
+    {
+      "mission_id": "M067",
+      "title": "Asteroid size and uncertainty",
+      "gameplay": "Compare recorded estimated sizes for selected NEOs and discuss why estimates may have ranges/uncertainty.",
+      "scientific_correction": "Do not use a single estimated diameter as an exact physical measurement; show uncertainty when the API provides it.",
+      "data_resource_links": [
+        "NASA NEO",
+        "NASA Open APIs"
+      ],
+      "data_status": "Real catalogue + data-literacy task",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Compare recorded estimated sizes for selected NEOs and discuss why estimates may have ranges/uncertainty.",
+        "Scientific correction / implementation: Do not use a single estimated diameter as an exact physical measurement; show uncertainty when the API provides it.",
+        "Data/resource links: NASA NEO  |  NASA Open APIs",
+        "Data status: Real catalogue + data-literacy task"
+      ]
+    },
+    {
+      "mission_id": "M068",
+      "title": "Comet anatomy",
+      "gameplay": "Explore a NASA mission image/data product and identify nucleus, coma and tail where visible.",
+      "scientific_correction": "Use a specific NASA mission archive item; the challenge resources do not include a dedicated comet API.",
+      "data_resource_links": [
+        "NASA PDS",
+        "NASA Image Library",
+        "NASA solar system"
+      ],
+      "data_status": "Supplementary NASA archive + quiz",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Explore a NASA mission image/data product and identify nucleus, coma and tail where visible.",
+        "Scientific correction / implementation: Use a specific NASA mission archive item; the challenge resources do not include a dedicated comet API.",
+        "Data/resource links: NASA PDS  |  NASA Image Library  |  NASA solar system",
+        "Data status: Supplementary NASA archive + quiz"
+      ]
+    },
+    {
+      "mission_id": "M069",
+      "title": "Impact crater comparison",
+      "gameplay": "Compare real lunar/Martian crater images and identify rims, ejecta and central features where present.",
+      "scientific_correction": "Do not infer impact age or composition from appearance alone without supporting scientific data.",
+      "data_resource_links": [
+        "Moon Trek",
+        "Mars Trek",
+        "NASA PDS"
+      ],
+      "data_status": "Real imagery + interpretation",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Compare real lunar/Martian crater images and identify rims, ejecta and central features where present.",
+        "Scientific correction / implementation: Do not infer impact age or composition from appearance alone without supporting scientific data.",
+        "Data/resource links: Moon Trek  |  Mars Trek  |  NASA PDS",
+        "Data status: Real imagery + interpretation"
+      ]
+    },
+    {
+      "mission_id": "M070",
+      "title": "Martian dust-storm operations drill",
+      "gameplay": "Use Mars environmental/mission context to respond to a clearly labelled simulated dust-storm scenario affecting visibility and solar power.",
+      "scientific_correction": "Mars Trek is terrain/imagery, not a live local dust-storm forecast. Use a separately sourced historical weather dataset if a real event is required; otherwise simulate.",
+      "data_resource_links": [
+        "Mars Trek",
+        "NASA Mars facts"
+      ],
+      "data_status": "Simulation with real planetary context",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Use Mars environmental/mission context to respond to a clearly labelled simulated dust-storm scenario affecting visibility and solar power.",
+        "Scientific correction / implementation: Mars Trek is terrain/imagery, not a live local dust-storm forecast. Use a separately sourced historical weather dataset if a real event is required; otherwise simulate.",
+        "Data/resource links: Mars Trek  |  NASA Mars facts",
+        "Data status: Simulation with real planetary context"
+      ]
+    },
+    {
+      "mission_id": "M071",
+      "title": "Fix the Space Base!",
+      "gameplay": "A cartoon warning light flashes. Choose what to check first: an outside panel, the power box or the safe room. Earn a repair badge for a sensible choice.",
+      "scientific_correction": "The damage and warning are fictional. NASA sources provide background, not a live fault report for this pretend base.",
+      "data_resource_links": [
+        "NASA Moon to Mars",
+        "NASA Image Library"
+      ],
+      "data_status": "Fictional repair puzzle + real reference images",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: A cartoon warning light flashes. Choose what to check first: an outside panel, the power box or the safe room. Earn a repair badge for a sensible choice.",
+        "Scientific correction / implementation: The damage and warning are fictional. NASA sources provide background, not a live fault report for this pretend base.",
+        "Data/resource links: NASA Moon to Mars  |  NASA Image Library",
+        "Data status: Fictional repair puzzle + real reference images"
+      ]
+    },
+    {
+      "mission_id": "M072",
+      "title": "Hazard-aware exploration route",
+      "gameplay": "Choose between two mapped rover routes and compare distance, slope and roughness indicators where supported.",
+      "scientific_correction": "Mars Trek can support Mars terrain analysis; Moon Trek is supplementary for lunar terrain. Risk score and rover failure probability are game calculations.",
+      "data_resource_links": [
+        "Mars Trek",
+        "Moon Trek"
+      ],
+      "data_status": "Real terrain + simulated risk",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Choose between two mapped rover routes and compare distance, slope and roughness indicators where supported.",
+        "Scientific correction / implementation: Mars Trek can support Mars terrain analysis; Moon Trek is supplementary for lunar terrain. Risk score and rover failure probability are game calculations.",
+        "Data/resource links: Mars Trek  |  Moon Trek",
+        "Data status: Real terrain + simulated risk"
+      ]
+    },
+    {
+      "mission_id": "M073",
+      "title": "Rover instrument identification",
+      "gameplay": "Inspect NASA rover images and identify visible instruments/components using official mission descriptions.",
+      "scientific_correction": "Use the image's mission/date/caption; do not infer an instrument identity from an unclear crop.",
+      "data_resource_links": [
+        "NASA Mars rover",
+        "NASA Curiosity",
+        "NASA Image Library"
+      ],
+      "data_status": "Real mission imagery",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Inspect NASA rover images and identify visible instruments/components using official mission descriptions.",
+        "Scientific correction / implementation: Use the image's mission/date/caption; do not infer an instrument identity from an unclear crop.",
+        "Data/resource links: NASA Mars rover  |  NASA Curiosity  |  NASA Image Library",
+        "Data status: Real mission imagery"
+      ]
+    },
+    {
+      "mission_id": "M074",
+      "title": "Choose a rock sample target",
+      "gameplay": "Select a mapped/geologically interesting target and explain why a rover might study it; compare with real sample science.",
+      "scientific_correction": "The player's selected sample is fictional unless a specific actual sample record is loaded. Mars Trek map layers alone do not provide a physical sample.",
+      "data_resource_links": [
+        "Mars Trek",
+        "NASA PDS",
+        "NASA Mars rover"
+      ],
+      "data_status": "Real context + simulated sample choice",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Select a mapped/geologically interesting target and explain why a rover might study it; compare with real sample science.",
+        "Scientific correction / implementation: The player's selected sample is fictional unless a specific actual sample record is loaded. Mars Trek map layers alone do not provide a physical sample.",
+        "Data/resource links: Mars Trek  |  NASA PDS  |  NASA Mars rover",
+        "Data status: Real context + simulated sample choice"
+      ]
+    },
+    {
+      "mission_id": "M075",
+      "title": "Help the Rover's Robot Arm",
+      "gameplay": "The rover's pretend robot arm is stuck. Choose a safe first step: stop moving, check the tool or ask the team for help. Then learn what rover arms do.",
+      "scientific_correction": "The fault is fictional. Official rover pages explain real robotic-arm jobs; no live fault telemetry is being used.",
+      "data_resource_links": [
+        "NASA Mars rover",
+        "NASA Curiosity",
+        "NASA Image Library"
+      ],
+      "data_status": "Fictional troubleshooting + real rover facts",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: The rover's pretend robot arm is stuck. Choose a safe first step: stop moving, check the tool or ask the team for help. Then learn what rover arms do.",
+        "Scientific correction / implementation: The fault is fictional. Official rover pages explain real robotic-arm jobs; no live fault telemetry is being used.",
+        "Data/resource links: NASA Mars rover  |  NASA Curiosity  |  NASA Image Library",
+        "Data status: Fictional troubleshooting + real rover facts"
+      ]
+    },
+    {
+      "mission_id": "M076",
+      "title": "Meet a Mars Helicopter!",
+      "gameplay": "Explore official pictures of the Mars helicopter mission. Match the helicopter to its job and answer why flying on Mars is difficult.",
+      "scientific_correction": "Use historical NASA mission information. Do not imply the helicopter is currently flying or create new flight records.",
+      "data_resource_links": [
+        "NASA Mars rover",
+        "NASA Image Library",
+        "NASA PDS"
+      ],
+      "data_status": "Real historical mission information + matching quiz",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Explore official pictures of the Mars helicopter mission. Match the helicopter to its job and answer why flying on Mars is difficult.",
+        "Scientific correction / implementation: Use historical NASA mission information. Do not imply the helicopter is currently flying or create new flight records.",
+        "Data/resource links: NASA Mars rover  |  NASA Image Library  |  NASA PDS",
+        "Data status: Real historical mission information + matching quiz"
+      ]
+    },
+    {
+      "mission_id": "M077",
+      "title": "Terrain-aware rover navigation",
+      "gameplay": "Use Mars Trek terrain layers to plan a route between two selected map points and explain the trade-off.",
+      "scientific_correction": "A route drawn in the portal is a planning exercise, not a certified autonomous route or real rover command.",
+      "data_resource_links": [
+        "Mars Trek"
+      ],
+      "data_status": "Real terrain + simulated navigation",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Use Mars Trek terrain layers to plan a route between two selected map points and explain the trade-off.",
+        "Scientific correction / implementation: A route drawn in the portal is a planning exercise, not a certified autonomous route or real rover command.",
+        "Data/resource links: Mars Trek",
+        "Data status: Real terrain + simulated navigation"
+      ]
+    },
+    {
+      "mission_id": "M078",
+      "title": "Recover the lost sample",
+      "gameplay": "Use a fictional last-known rover position and Mars Trek imagery to plan a search area and return route.",
+      "scientific_correction": "The rover failure, coordinates and sample are fictional. Label coordinates as scenario data, not NASA telemetry.",
+      "data_resource_links": [
+        "Mars Trek",
+        "NASA Mars rover"
+      ],
+      "data_status": "Simulation + real terrain",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Use a fictional last-known rover position and Mars Trek imagery to plan a search area and return route.",
+        "Scientific correction / implementation: The rover failure, coordinates and sample are fictional. Label coordinates as scenario data, not NASA telemetry.",
+        "Data/resource links: Mars Trek  |  NASA Mars rover",
+        "Data status: Simulation + real terrain"
+      ]
+    },
+    {
+      "mission_id": "M079",
+      "title": "Robot energy budget",
+      "gameplay": "Choose a rover route and instrument activity within a fictional battery budget; compare science value versus energy cost.",
+      "scientific_correction": "The energy budget is game-created unless a specific rover's published engineering data is sourced. Do not use ISS RadLab as rover battery data.",
+      "data_resource_links": [
+        "Mars Trek",
+        "NASA Mars rover"
+      ],
+      "data_status": "Simulation + terrain",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Choose a rover route and instrument activity within a fictional battery budget; compare science value versus energy cost.",
+        "Scientific correction / implementation: The energy budget is game-created unless a specific rover's published engineering data is sourced. Do not use ISS RadLab as rover battery data.",
+        "Data/resource links: Mars Trek  |  NASA Mars rover",
+        "Data status: Simulation + terrain"
+      ]
+    },
+    {
+      "mission_id": "M080",
+      "title": "What Are Moon Dust and Mars Dust?",
+      "gameplay": "Use a magnifying-glass activity to look at pictures of rocky ground from the Moon and Mars. Sort clues into 'rock', 'dust' and 'soil-like material'.",
+      "scientific_correction": "Explain that regolith is not the same as garden soil. A picture alone cannot reveal the full chemical makeup.",
+      "data_resource_links": [
+        "Moon Trek",
+        "Mars Trek",
+        "NASA PDS"
+      ],
+      "data_status": "Real imagery + sorting activity",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Use a magnifying-glass activity to look at pictures of rocky ground from the Moon and Mars. Sort clues into 'rock', 'dust' and 'soil-like material'.",
+        "Scientific correction / implementation: Explain that regolith is not the same as garden soil. A picture alone cannot reveal the full chemical makeup.",
+        "Data/resource links: Moon Trek  |  Mars Trek  |  NASA PDS",
+        "Data status: Real imagery + sorting activity"
+      ]
+    },
+    {
+      "mission_id": "M081",
+      "title": "Can We Build with Moon Dust?",
+      "gameplay": "Try a virtual building puzzle. Choose pretend Moon-material blocks and see which little bridge or wall shape stays standing in the game.",
+      "scientific_correction": "Explain that lunar soil is called regolith and that construction methods are being studied. The game's strength test is fictional unless tied to a specific experiment.",
+      "data_resource_links": [
+        "NASA regolith",
+        "NASA ISRU",
+        "NASA PDS"
+      ],
+      "data_status": "Research background + virtual building puzzle",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Try a virtual building puzzle. Choose pretend Moon-material blocks and see which little bridge or wall shape stays standing in the game.",
+        "Scientific correction / implementation: Explain that lunar soil is called regolith and that construction methods are being studied. The game's strength test is fictional unless tied to a specific experiment.",
+        "Data/resource links: NASA regolith  |  NASA ISRU  |  NASA PDS",
+        "Data status: Research background + virtual building puzzle"
+      ]
+    },
+    {
+      "mission_id": "M082",
+      "title": "Lunar polar resource investigation",
+      "gameplay": "Compare lunar polar locations and learn why permanently shadowed regions are scientifically interesting for volatile-resource studies.",
+      "scientific_correction": "Do not claim accessible ice reserves from a visual map alone; cite the specific measurement/mission study and explain uncertainty.",
+      "data_resource_links": [
+        "Moon Trek",
+        "LRO PDS",
+        "NASA PDS"
+      ],
+      "data_status": "Supplementary NASA data + interpretation",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Compare lunar polar locations and learn why permanently shadowed regions are scientifically interesting for volatile-resource studies.",
+        "Scientific correction / implementation: Do not claim accessible ice reserves from a visual map alone; cite the specific measurement/mission study and explain uncertainty.",
+        "Data/resource links: Moon Trek  |  LRO PDS  |  NASA PDS",
+        "Data status: Supplementary NASA data + interpretation"
+      ]
+    },
+    {
+      "mission_id": "M083",
+      "title": "Make Oxygen: A Space Science Puzzle",
+      "gameplay": "Put picture cards in order to show how future explorers might try to make useful materials from Moon or Mars resources. Choose the equipment they may need.",
+      "scientific_correction": "Present this as a future-technology idea, not a working oxygen machine or measured supply. It is a simplified concept activity.",
+      "data_resource_links": [
+        "NASA ISRU",
+        "NASA Moon to Mars"
+      ],
+      "data_status": "Real technology concept + sequencing puzzle",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Put picture cards in order to show how future explorers might try to make useful materials from Moon or Mars resources. Choose the equipment they may need.",
+        "Scientific correction / implementation: Present this as a future-technology idea, not a working oxygen machine or measured supply. It is a simplified concept activity.",
+        "Data/resource links: NASA ISRU  |  NASA Moon to Mars",
+        "Data status: Real technology concept + sequencing puzzle"
+      ]
+    },
+    {
+      "mission_id": "M084",
+      "title": "Greenhouse layout planner",
+      "gameplay": "Arrange crop area, lighting, water storage and access routes within a small habitat footprint.",
+      "scientific_correction": "CSA toolkit supports food-production learning; layout, crop yield and resource budgets are game rules.",
+      "data_resource_links": [
+        "CSA food toolkit",
+        "OSDR search"
+      ],
+      "data_status": "Research-informed simulation",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Arrange crop area, lighting, water storage and access routes within a small habitat footprint.",
+        "Scientific correction / implementation: CSA toolkit supports food-production learning; layout, crop yield and resource budgets are game rules.",
+        "Data/resource links: CSA food toolkit  |  OSDR search",
+        "Data status: Research-informed simulation"
+      ]
+    },
+    {
+      "mission_id": "M085",
+      "title": "Build Your Tiny Space Base",
+      "gameplay": "You have a small set of building blocks. Choose what to build first: a safe room, a plant corner or a power station. See how each choice helps the crew.",
+      "scientific_correction": "Building blocks and costs are game rules. NASA/CSA sources explain why food, power and shelter matter; this is not a NASA-approved habitat design.",
+      "data_resource_links": [
+        "CSA STEM resources",
+        "CSA food toolkit",
+        "NASA Moon to Mars"
+      ],
+      "data_status": "Educational references + simple building game",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: You have a small set of building blocks. Choose what to build first: a safe room, a plant corner or a power station. See how each choice helps the crew.",
+        "Scientific correction / implementation: Building blocks and costs are game rules. NASA/CSA sources explain why food, power and shelter matter; this is not a NASA-approved habitat design.",
+        "Data/resource links: CSA STEM resources  |  CSA food toolkit  |  NASA Moon to Mars",
+        "Data status: Educational references + simple building game"
+      ]
+    },
+    {
+      "mission_id": "M086",
+      "title": "Close the loop: recycling challenge",
+      "gameplay": "Sort water/food/waste resource streams and choose a simplified recycling plan.",
+      "scientific_correction": "The challenge resources do not provide complete recycling efficiencies for this fictional habitat. Use only sourced values if adding numeric efficiencies.",
+      "data_resource_links": [
+        "CSA food toolkit",
+        "CSA STEM resources"
+      ],
+      "data_status": "Educational simulation",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Sort water/food/waste resource streams and choose a simplified recycling plan.",
+        "Scientific correction / implementation: The challenge resources do not provide complete recycling efficiencies for this fictional habitat. Use only sourced values if adding numeric efficiencies.",
+        "Data/resource links: CSA food toolkit  |  CSA STEM resources",
+        "Data status: Educational simulation"
+      ]
+    },
+    {
+      "mission_id": "M087",
+      "title": "Can We See Earth from Here?",
+      "gameplay": "Look at a Moon or Mars map and a cartoon sky. Guess whether Earth would be above the horizon from the pretend base, then learn how hills or a planet can block the view.",
+      "scientific_correction": "Use map/location context where possible. The answer is a simplified game model, not a live communication status.",
+      "data_resource_links": [
+        "Moon Trek",
+        "Mars Trek",
+        "NASA SCaN"
+      ],
+      "data_status": "Map context + line-of-sight activity",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Look at a Moon or Mars map and a cartoon sky. Guess whether Earth would be above the horizon from the pretend base, then learn how hills or a planet can block the view.",
+        "Scientific correction / implementation: Use map/location context where possible. The answer is a simplified game model, not a live communication status.",
+        "Data/resource links: Moon Trek  |  Mars Trek  |  NASA SCaN",
+        "Data status: Map context + line-of-sight activity"
+      ]
+    },
+    {
+      "mission_id": "M088",
+      "title": "Why is Mars messaging delayed?",
+      "gameplay": "Send a message to a fictional Earth control centre and wait through a configurable light-time delay; explain why instant chat is unrealistic.",
+      "scientific_correction": "The delay in the game should be calculated from Earth-Mars distance for the selected scenario or clearly labelled illustrative; do not claim SCaN is a live message feed.",
+      "data_resource_links": [
+        "NASA SCaN",
+        "NASA solar system"
+      ],
+      "data_status": "Science-based calculation + simulation",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Send a message to a fictional Earth control centre and wait through a configurable light-time delay; explain why instant chat is unrealistic.",
+        "Scientific correction / implementation: The delay in the game should be calculated from Earth-Mars distance for the selected scenario or clearly labelled illustrative; do not claim SCaN is a live message feed.",
+        "Data/resource links: NASA SCaN  |  NASA solar system",
+        "Data status: Science-based calculation + simulation"
+      ]
+    },
+    {
+      "mission_id": "M089",
+      "title": "Decode a mission transmission",
+      "gameplay": "Decode a fictional signal using a simple pattern/cipher and identify the sender's status.",
+      "scientific_correction": "Pure puzzle mission; no NASA dataset required. Do not present the encoded message as an intercepted real transmission.",
+      "data_resource_links": [
+        "NASA SCaN (background only)"
+      ],
+      "data_status": "Simulation/puzzle",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Decode a fictional signal using a simple pattern/cipher and identify the sender's status.",
+        "Scientific correction / implementation: Pure puzzle mission; no NASA dataset required. Do not present the encoded message as an intercepted real transmission.",
+        "Data/resource links: NASA SCaN (background only)",
+        "Data status: Simulation/puzzle"
+      ]
+    },
+    {
+      "mission_id": "M090",
+      "title": "Uh-oh! Earth Can't Hear Us",
+      "gameplay": "The pretend radio stops working. Choose to check the antenna, wait for a signal or save the message. Learn that space messages can take time.",
+      "scientific_correction": "The outage is fictional. NASA SCaN explains communication concepts; do not present the pretend outage as a live NASA network problem.",
+      "data_resource_links": [
+        "NASA SCaN",
+        "Moon Trek",
+        "Mars Trek"
+      ],
+      "data_status": "Communication puzzle + real background",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: The pretend radio stops working. Choose to check the antenna, wait for a signal or save the message. Learn that space messages can take time.",
+        "Scientific correction / implementation: The outage is fictional. NASA SCaN explains communication concepts; do not present the pretend outage as a live NASA network problem.",
+        "Data/resource links: NASA SCaN  |  Moon Trek  |  Mars Trek",
+        "Data status: Communication puzzle + real background"
+      ]
+    },
+    {
+      "mission_id": "M091",
+      "title": "Navigate using celestial references",
+      "gameplay": "Learn how spacecraft use stars/Sun and other references for orientation; solve a simplified attitude/orientation puzzle.",
+      "scientific_correction": "Do not present a classroom star puzzle as an operational spacecraft navigation system.",
+      "data_resource_links": [
+        "NASA astronomy",
+        "NASA SCaN"
+      ],
+      "data_status": "Educational simulation",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Learn how spacecraft use stars/Sun and other references for orientation; solve a simplified attitude/orientation puzzle.",
+        "Scientific correction / implementation: Do not present a classroom star puzzle as an operational spacecraft navigation system.",
+        "Data/resource links: NASA astronomy  |  NASA SCaN",
+        "Data status: Educational simulation"
+      ]
+    },
+    {
+      "mission_id": "M092",
+      "title": "Mission-control triage",
+      "gameplay": "Read a set of simulated system alerts and prioritise crew safety, power, pressure and communication tasks.",
+      "scientific_correction": "All alerts are fictional. Use the challenge's science resources for explanations, not as the source of fabricated telemetry.",
+      "data_resource_links": [
+        "OSDR",
+        "RadLab",
+        "DONKI",
+        "CSA STEM resources"
+      ],
+      "data_status": "Simulation with real reference material",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Read a set of simulated system alerts and prioritise crew safety, power, pressure and communication tasks.",
+        "Scientific correction / implementation: All alerts are fictional. Use the challenge's science resources for explanations, not as the source of fabricated telemetry.",
+        "Data/resource links: OSDR  |  RadLab  |  DONKI  |  CSA STEM resources",
+        "Data status: Simulation with real reference material"
+      ]
+    },
+    {
+      "mission_id": "M093",
+      "title": "Send a Space Postcard to Earth",
+      "gameplay": "Choose a real picture from Mars Trek, APOD or a NASA space-biology story. Add 'Today I discovered…' and send it to the pretend Earth team.",
+      "scientific_correction": "The image and caption must match the cited source. Sending the postcard is a game action, not a real spacecraft transmission.",
+      "data_resource_links": [
+        "Mars Trek",
+        "NASA APOD",
+        "OSDR search",
+        "NASA SCaN"
+      ],
+      "data_status": "Real NASA content + pretend message",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Choose a real picture from Mars Trek, APOD or a NASA space-biology story. Add 'Today I discovered…' and send it to the pretend Earth team.",
+        "Scientific correction / implementation: The image and caption must match the cited source. Sending the postcard is a game action, not a real spacecraft transmission.",
+        "Data/resource links: Mars Trek  |  NASA APOD  |  OSDR search  |  NASA SCaN",
+        "Data status: Real NASA content + pretend message"
+      ]
+    },
+    {
+      "mission_id": "M094",
+      "title": "Could There Have Been Water on Mars?",
+      "gameplay": "Explore Jezero Crater and find three clues that help scientists investigate whether water once flowed there. Choose the most interesting clue.",
+      "scientific_correction": "Teach evidence for ancient water and past environments. Do not claim NASA has discovered life on Mars.",
+      "data_resource_links": [
+        "Mars Trek",
+        "NASA Mars rover"
+      ],
+      "data_status": "Real mission imagery + evidence-spotting",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Explore Jezero Crater and find three clues that help scientists investigate whether water once flowed there. Choose the most interesting clue.",
+        "Scientific correction / implementation: Teach evidence for ancient water and past environments. Do not claim NASA has discovered life on Mars.",
+        "Data/resource links: Mars Trek  |  NASA Mars rover",
+        "Data status: Real mission imagery + evidence-spotting"
+      ]
+    },
+    {
+      "mission_id": "M095",
+      "title": "Moon or Mars? Space Super Compare",
+      "gameplay": "Play a picture quiz: which world has a longer day, which has a thin atmosphere, and where can you see familiar craters? Collect two badges.",
+      "scientific_correction": "Use NASA planetary facts. Do not compare ISS radiation readings with Moon/Mars surface radiation as if they were the same measurement.",
+      "data_resource_links": [
+        "NASA Moon facts",
+        "NASA Mars facts",
+        "Mars Trek",
+        "RadLab"
+      ],
+      "data_status": "Real facts + quiz; RadLab is only an example of spaceflight dosimetry",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Play a picture quiz: which world has a longer day, which has a thin atmosphere, and where can you see familiar craters? Collect two badges.",
+        "Scientific correction / implementation: Use NASA planetary facts. Do not compare ISS radiation readings with Moon/Mars surface radiation as if they were the same measurement.",
+        "Data/resource links: NASA Moon facts  |  NASA Mars facts  |  Mars Trek  |  RadLab",
+        "Data status: Real facts + quiz; RadLab is only an example of spaceflight dosimetry"
+      ]
+    },
+    {
+      "mission_id": "M096",
+      "title": "Pick a Place for Your Space Camp",
+      "gameplay": "Compare two or three map spots. Pick the place that looks easiest to reach and explain your choice using simple clues such as flat ground or sunlight.",
+      "scientific_correction": "Use real Mars Trek or Moon Trek map layers. The game's 'best place' score is a simplified activity, not an official NASA landing decision.",
+      "data_resource_links": [
+        "Mars Trek",
+        "Moon Trek"
+      ],
+      "data_status": "Real maps + simple game scoring",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Compare two or three map spots. Pick the place that looks easiest to reach and explain your choice using simple clues such as flat ground or sunlight.",
+        "Scientific correction / implementation: Use real Mars Trek or Moon Trek map layers. The game's 'best place' score is a simplified activity, not an official NASA landing decision.",
+        "Data/resource links: Mars Trek  |  Moon Trek",
+        "Data status: Real maps + simple game scoring"
+      ]
+    },
+    {
+      "mission_id": "M097",
+      "title": "Space Mission Memory Lane",
+      "gameplay": "Put picture cards of famous Moon and Mars missions in order. Match a rover to Mars and a lunar lander to the Moon to unlock a badge.",
+      "scientific_correction": "Use official NASA mission pages and credited images. Keep the timeline short and age-appropriate.",
+      "data_resource_links": [
+        "NASA Image Library",
+        "NASA Moon to Mars",
+        "NASA Mars rover"
+      ],
+      "data_status": "Real mission history + matching game",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Put picture cards of famous Moon and Mars missions in order. Match a rover to Mars and a lunar lander to the Moon to unlock a badge.",
+        "Scientific correction / implementation: Use official NASA mission pages and credited images. Keep the timeline short and age-appropriate.",
+        "Data/resource links: NASA Image Library  |  NASA Moon to Mars  |  NASA Mars rover",
+        "Data status: Real mission history + matching game"
+      ]
+    },
+    {
+      "mission_id": "M098",
+      "title": "Space Weather Colour Match",
+      "gameplay": "Match picture cards showing a solar flare, a cloud of solar material and fast particles from the Sun. Look at one real DONKI event card and choose a pretend mission action.",
+      "scientific_correction": "DONKI event names and dates are real. The choice is a learning game, not a real safety instruction or local radiation forecast.",
+      "data_resource_links": [
+        "DONKI"
+      ],
+      "data_status": "Real event example + simulation",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Match picture cards showing a solar flare, a cloud of solar material and fast particles from the Sun. Look at one real DONKI event card and choose a pretend mission action.",
+        "Scientific correction / implementation: DONKI event names and dates are real. The choice is a learning game, not a real safety instruction or local radiation forecast.",
+        "Data/resource links: DONKI",
+        "Data status: Real event example + simulation"
+      ]
+    },
+    {
+      "mission_id": "M099",
+      "title": "Space Detective: Fact or Space Myth?",
+      "gameplay": "Read five short statements about the Moon, Mars and space pictures. Tap FACT or MYTH, then reveal a child-friendly explanation and source.",
+      "scientific_correction": "Use only checkable claims from the linked NASA/CSA pages. Show the source beside each answer.",
+      "data_resource_links": [
+        "NASA Moon facts",
+        "NASA Mars facts",
+        "NASA APOD",
+        "CSA food toolkit"
+      ],
+      "data_status": "Real facts + simple quiz",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Read five short statements about the Moon, Mars and space pictures. Tap FACT or MYTH, then reveal a child-friendly explanation and source.",
+        "Scientific correction / implementation: Use only checkable claims from the linked NASA/CSA pages. Show the source beside each answer.",
+        "Data/resource links: NASA Moon facts  |  NASA Mars facts  |  NASA APOD  |  CSA food toolkit",
+        "Data status: Real facts + simple quiz"
+      ]
+    },
+    {
+      "mission_id": "M100",
+      "title": "Mission Control: The Big Space Challenge",
+      "gameplay": "Complete three mini-games: spot a space-weather event, choose a safe map location and pack important supplies. Earn one star for each task and make a mission badge.",
+      "scientific_correction": "Use a real DONKI event and real map or food-growing facts. Supplies, stars and story outcomes are game values; never invent a NASA warning.",
+      "data_resource_links": [
+        "DONKI",
+        "Mars Trek",
+        "CSA food toolkit"
+      ],
+      "data_status": "Real examples + clearly labelled game choices",
+      "additional_details": [],
+      "source_paragraphs": [
+        "Gameplay: Complete three mini-games: spot a space-weather event, choose a safe map location and pack important supplies. Earn one star for each task and make a mission badge.",
+        "Scientific correction / implementation: Use a real DONKI event and real map or food-growing facts. Supplies, stars and story outcomes are game values; never invent a NASA warning.",
+        "Data/resource links: DONKI  |  Mars Trek  |  CSA food toolkit",
+        "Data status: Real examples + clearly labelled game choices"
+      ]
+    }
+  ]
+}

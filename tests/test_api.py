@@ -55,6 +55,28 @@ class MissionAPITests(unittest.TestCase):
         self.assertEqual(result["overall_evidence_status"], "not_mapped")
         self.assertEqual(result["evidence"], [])
         self.assertEqual(result["radlab_evidence"], [])
+        self.assertEqual(result["csa_evidence"], [])
+
+    def test_m047_returns_csa_food_production_references(self):
+        response = self.client.get("/api/missions/M047/evidence")
+        self.assertEqual(response.status_code, 200)
+        result = response.json()
+
+        self.assertEqual(result["evidence_status"], "not_mapped")
+        self.assertEqual(result["overall_evidence_status"], "mapped")
+        self.assertEqual(
+            {item["source_id"] for item in result["csa_evidence"]},
+            {"CSA-WATER-MANAGEMENT", "CSA-LUNAR-AGRICULTURE"},
+        )
+
+        water_source = next(
+            item["source"]
+            for item in result["csa_evidence"]
+            if item["source_id"] == "CSA-WATER-MANAGEMENT"
+        )
+        self.assertEqual(
+            len(water_source["dataset"]["records"]), 3
+        )
 
     def test_m032_returns_artemis_radlab_evidence(self):
         response = self.client.get("/api/missions/M032/evidence")
@@ -103,7 +125,9 @@ class MissionAPITests(unittest.TestCase):
         self.assertEqual(result["mapped_mission_count"], 9)
         self.assertEqual(result["radlab_source_count"], 3)
         self.assertEqual(result["radlab_mapped_mission_count"], 3)
-        self.assertEqual(result["overall_mapped_mission_count"], 12)
+        self.assertEqual(result["csa_source_count"], 7)
+        self.assertEqual(result["csa_mapped_mission_count"], 10)
+        self.assertEqual(result["overall_mapped_mission_count"], 18)
 
 
 if __name__ == "__main__":

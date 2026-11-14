@@ -1,0 +1,117 @@
+{
+  "dataset": "space_food_nutrition",
+  "description": "Astronaut dietary energy, nutritional considerations, food selection and preservation.",
+  "source_organization": "Canadian Space Agency",
+  "records": [
+    {
+      "category": "daily_energy",
+      "description": "Reported daily energy intake for astronauts.",
+      "value": {
+        "min": 1900,
+        "max": 3200,
+        "unit": "kcal/day"
+      },
+      "qualification": "Depends on individual crewmember requirements.",
+      "source": {
+        "title": "Eating in space",
+        "url": "https://www.asc-csa.gc.ca/eng/astronauts/living-in-space/eating-in-space.asp"
+      }
+    },
+    {
+      "category": "nutritional_requirements",
+      "requirements": [
+        "balanced_diet",
+        "adequate_nutrition",
+        "food_variety"
+      ],
+      "purpose": "Maintain astronaut health during space missions.",
+      "source": {
+        "title": "Eating in space",
+        "url": "https://www.asc-csa.gc.ca/eng/astronauts/living-in-space/eating-in-space.asp"
+      }
+    },
+    {
+      "category": "food_selection_criteria",
+      "criteria": [
+        "compact",
+        "lightweight",
+        "nutritious",
+        "tasty",
+        "minimal_crumbs",
+        "shelf_stable"
+      ],
+      "explanation": "Space food must fit spacecraft constraints, contribute to crew health, remain suitable throughout the mission and minimize floating crumbs.",
+      "source": {
+        "title": "Eating in space",
+        "url": "https://www.asc-csa.gc.ca/eng/astronauts/living-in-space/eating-in-space.asp"
+      }
+    },
+    {
+      "category": "food_preservation",
+      "methods": [
+        {
+          "method": "fresh",
+          "examples": [
+            "fruits",
+            "vegetables"
+          ]
+        },
+        {
+          "method": "natural_form",
+          "examples": [
+            "nuts",
+            "tortillas"
+          ]
+        },
+        {
+          "method": "dried",
+          "examples": [
+            "dried fruit",
+            "dried beef"
+          ]
+        },
+        {
+          "method": "irradiated",
+          "examples": [
+            "chicken breast",
+            "smoked turkey"
+          ]
+        },
+        {
+          "method": "rehydratable",
+          "examples": [
+            "spinach",
+            "juices",
+            "beverages"
+          ]
+        },
+        {
+          "method": "thermostabilized",
+          "examples": [
+            "tuna salads",
+            "vanilla flan"
+          ]
+        }
+      ],
+      "purpose": "Preserve food for spaceflight missions.",
+      "source": {
+        "title": "Eating in space",
+        "url": "https://www.asc-csa.gc.ca/eng/astronauts/living-in-space/eating-in-space.asp"
+      }
+    },
+    {
+      "category": "psychological_wellbeing",
+      "factors": [
+        "food_variety",
+        "food_quality",
+        "food_quantity",
+        "cultural_food_preferences"
+      ],
+      "purpose": "Support crew morale, appetite and overall well-being during isolated missions.",
+      "source": {
+        "title": "Eating in space",
+        "url": "https://www.asc-csa.gc.ca/eng/astronauts/living-in-space/eating-in-space.asp"
+      }
+    }
+  ]
+}

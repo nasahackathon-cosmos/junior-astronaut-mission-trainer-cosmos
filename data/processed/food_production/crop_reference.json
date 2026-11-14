@@ -1,0 +1,173 @@
+{
+  "dataset": "crop_reference",
+  "description": "Potential space crops, reported nutrients, growth durations and processing requirements.",
+  "source": {
+    "title": "Interplanetary Farming",
+    "organization": "Canadian Space Agency",
+    "url": "https://www.asc-csa.gc.ca/eng/youth-educators/toolkits/food-production/",
+    "source_type": "educational_reference"
+  },
+  "records": [
+    {
+      "crop": "Soybean",
+      "nutrients": [
+        "protein",
+        "carbohydrates",
+        "fats",
+        "calcium",
+        "magnesium",
+        "iron",
+        "folate"
+      ],
+      "growth_days": {
+        "min": 45,
+        "max": 65
+      },
+      "processing_before_consumption": "Boil in shell",
+      "source_page": 2
+    },
+    {
+      "crop": "Lettuce (Green Leaf)",
+      "nutrients": [
+        "vitamin K",
+        "vitamin A",
+        "vitamin C"
+      ],
+      "growth_days": {
+        "min": 21,
+        "max": 28
+      },
+      "processing_before_consumption": "None",
+      "source_page": 2
+    },
+    {
+      "crop": "Carrot",
+      "nutrients": [
+        "vitamin A",
+        "vitamin K",
+        "potassium",
+        "carbohydrates",
+        "fibre"
+      ],
+      "growth_days": {
+        "min": 70,
+        "max": 80
+      },
+      "processing_before_consumption": "None",
+      "source_page": 2
+    },
+    {
+      "crop": "Sweet potato",
+      "nutrients": [
+        "vitamin A",
+        "vitamin C",
+        "carbohydrates",
+        "vitamin B6",
+        "thiamin",
+        "riboflavin",
+        "potassium",
+        "magnesium",
+        "fibre"
+      ],
+      "growth_days": {
+        "min": 90,
+        "max": 170
+      },
+      "processing_before_consumption": "Boil or cook",
+      "source_page": 2
+    },
+    {
+      "crop": "Chickpea",
+      "nutrients": [
+        "protein",
+        "carbohydrates",
+        "fats",
+        "magnesium",
+        "manganese",
+        "iron",
+        "folate",
+        "fibre"
+      ],
+      "growth_stages": [
+        {
+          "stage": "immature_shell_beans",
+          "growth_days": 80,
+          "consumption": "Eat fresh"
+        },
+        {
+          "stage": "dried_beans",
+          "growth_days": 100,
+          "consumption": "Cook before consumption"
+        }
+      ],
+      "processing_before_consumption": "Eat fresh at 80 days, or cook at or after 100 days",
+      "source_page": 2
+    },
+    {
+      "crop": "Tomato",
+      "nutrients": [
+        "carbohydrates",
+        "vitamin A",
+        "vitamin C",
+        "vitamin K",
+        "fibre"
+      ],
+      "growth_days": {
+        "min": 50,
+        "max": 90
+      },
+      "processing_before_consumption": "None",
+      "source_page": 2
+    },
+    {
+      "crop": "Wheat",
+      "nutrients": [
+        "carbohydrates",
+        "protein",
+        "iron",
+        "magnesium",
+        "phosphorus",
+        "B vitamins",
+        "folate",
+        "zinc",
+        "manganese",
+        "selenium"
+      ],
+      "growth_days": {
+        "min": 213,
+        "max": 244
+      },
+      "approximate_duration": "7–8 months",
+      "processing_before_consumption": "Grind into flour",
+      "source_page": 2
+    },
+    {
+      "crop": "Dill",
+      "nutrients": [
+        "vitamin A",
+        "vitamin C",
+        "manganese",
+        "fibre"
+      ],
+      "growth_days": {
+        "min": 90,
+        "max": 90
+      },
+      "processing_before_consumption": "None",
+      "source_page": 2
+    },
+    {
+      "crop": "Basil",
+      "nutrients": [
+        "vitamin K",
+        "vitamin A"
+      ],
+      "growth_days": {
+        "min": 75,
+        "max": 75
+      },
+      "processing_before_consumption": "None",
+      "source_page": 2
+    }
+  ]
+}

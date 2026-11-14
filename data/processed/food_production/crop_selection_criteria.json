@@ -1,0 +1,52 @@
+{
+  "dataset": "crop_selection_criteria",
+  "description": "Factors to consider when selecting crops for space missions.",
+  "source": {
+    "title": "Interplanetary Farming",
+    "organization": "Canadian Space Agency",
+    "url": "https://www.asc-csa.gc.ca/eng/youth-educators/toolkits/food-production/",
+    "source_type": "educational_reference"
+  },
+  "records": [
+    {
+      "criterion": "pollination_ability",
+      "description": "Ability of the crop to pollinate.",
+      "source_page": 2
+    },
+    {
+      "criterion": "edible_biomass",
+      "description": "Amount or proportion of the plant that is edible.",
+      "source_page": 2
+    },
+    {
+      "criterion": "nutritional_value",
+      "description": "Nutritional contribution of the crop.",
+      "source_page": 2
+    },
+    {
+      "criterion": "ease_of_growth",
+      "description": "How easily the crop can be grown.",
+      "source_page": 2
+    },
+    {
+      "criterion": "plant_size",
+      "description": "Physical size of the crop.",
+      "source_page": 2
+    },
+    {
+      "criterion": "crew_preferences",
+      "description": "Crew likes and dislikes, including flavour, texture and appearance.",
+      "source_page": 2
+    },
+    {
+      "criterion": "environmental_requirements",
+      "description": "Light, nutrients, temperature, water, humidity and air requirements.",
+      "source_page": 2
+    },
+    {
+      "criterion": "time_to_harvest",
+      "description": "Time required before the crop can be harvested.",
+      "source_page": 2
+    }
+  ]
+}

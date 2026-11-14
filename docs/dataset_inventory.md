@@ -130,3 +130,54 @@ The private research workspace also contains combined measurement tables, instru
 
 **Research reference:** George et al., *Space radiation measurements during the Artemis I lunar mission*, Nature 634, 48–52 (2024).
 https://doi.org/10.1038/s41586-024-07927-7
+
+## 6. Canadian Space Agency — Food Production Toolkit
+
+**Source organization:** Canadian Space Agency (CSA)
+
+**Main reference:** Interplanetary Farming
+https://www.asc-csa.gc.ca/eng/youth-educators/toolkits/food-production/
+
+### Structured reference files
+
+| Processed file | Records | Contents |
+|---|---:|---|
+| `crop_reference.json` | 9 | Potential space crops, nutrients, growth durations and preparation requirements |
+| `crop_selection_criteria.json` | 8 | Factors for selecting crops for space missions |
+| `iss_plant_growth_systems.json` | 3 | ISS plant-growth systems and research |
+| `lunar_agriculture_challenges.json` | 6 | Lunar agriculture challenges and possible solutions |
+| `water_management.json` | 3 | Water collection, recovery, recycling and availability |
+| `space_farming_methods.json` | 4 | Hydroponics, controlled-environment agriculture and space-farming initiatives |
+| `space_food_nutrition.json` | 5 | Astronaut dietary energy, nutrition, food selection and preservation |
+
+**Total:** 38 structured reference records across seven JSON files.
+
+### Supplementary CSA references
+
+- [Growing healthy food in space and in remote areas](https://www.asc-csa.gc.ca/eng/sciences/food-production/growing-healthy-food-in-space-and-remote-areas.asp)
+- [Eating in space](https://www.asc-csa.gc.ca/eng/astronauts/living-in-space/eating-in-space.asp)
+- [Deep Space Food Challenge](https://www.asc-csa.gc.ca/eng/sciences/food-production/deep-space-food-challenge.asp)
+- [Naurvik project in Nunavut](https://www.asc-csa.gc.ca/eng/sciences/food-production/naurvik-project-in-nunavut.asp)
+- [The water cycle presented by David Saint-Jacques](https://www.asc-csa.gc.ca/eng/multimedia/search/video/18321)
+
+### Intended educational use
+
+The collection supports educational explanations and mission-planning activities involving:
+
+- Crop selection and plant-growth timelines.
+- ISS plant cultivation and controlled growing environments.
+- Lunar agriculture constraints, including light, water, radiation, atmosphere, temperature and regolith.
+- Water recovery and resource recycling.
+- Astronaut food requirements, preservation and dietary variety.
+- Hydroponics and resource-efficient food production.
+
+### Scientific limitations
+
+- These are educational and technical reference materials, not a unified experimental mission dataset.
+- Crop growth durations are reference values and should not be treated as guaranteed growth times under lunar or Martian conditions.
+- Do not invent crop-specific water consumption, nutrient concentrations, yields or cultivation parameters where the sources do not provide them.
+- The lunar temperature values in the source require verification; preserve the original reported values and flag the apparent sign ambiguity rather than silently correcting them.
+- The ISS water-recycling reference does not provide a quantitative recovery rate in the extracted material.
+- CSA challenge concepts and terrestrial demonstrations must not be presented as systems already deployed on the Moon or Mars.
+
+Use this collection as cross-mission educational reference material. Keep simulated game resources and outcomes separate from source-backed scientific facts.

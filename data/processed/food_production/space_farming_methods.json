@@ -1,0 +1,71 @@
+{
+  "dataset": "space_farming_methods",
+  "description": "Space agriculture techniques, controlled growing environments and documented food production initiatives.",
+  "source_organization": "Canadian Space Agency",
+  "records": [
+    {
+      "method": "Hydroponics",
+      "category": "soilless_cultivation",
+      "description": "A food production approach that grows plants without conventional soil, using a controlled growing system.",
+      "documented_application": {
+        "project": "Naurvik",
+        "location": "Gjoa Haven, Nunavut, Canada",
+        "system": "Three converted shipping-container pods",
+        "purpose": "Year-round fresh food production",
+        "first_harvest": [
+          "butter lettuce",
+          "microgreens"
+        ]
+      },
+      "source": {
+        "title": "Naurvik project in Nunavut",
+        "url": "https://www.asc-csa.gc.ca/eng/sciences/food-production/naurvik-project-in-nunavut.asp"
+      }
+    },
+    {
+      "method": "Controlled Environment Agriculture",
+      "abbreviation": "CEA",
+      "category": "controlled_environment_farming",
+      "description": "Growing food in an enclosed or semi-enclosed environment where conditions are managed to support crop production.",
+      "controlled_parameters": [
+        "light",
+        "temperature",
+        "humidity"
+      ],
+      "purpose": "Support food production in harsh or remote environments.",
+      "source": {
+        "title": "Growing healthy food in space and in remote areas",
+        "url": "https://www.asc-csa.gc.ca/eng/sciences/food-production/growing-healthy-food-in-space-and-remote-areas.asp"
+      }
+    },
+    {
+      "method": "Aeroponics",
+      "category": "soilless_cultivation",
+      "description": "A potential alternative to conventional lunar soil-based plant cultivation.",
+      "documented_application": "Identified as a potential growing approach in the Interplanetary Farming educational reference.",
+      "source": {
+        "title": "Interplanetary Farming",
+        "url": "https://www.asc-csa.gc.ca/eng/youth-educators/activities/fitness-and-nutrition/interplanetary-farming.asp",
+        "source_page": 3
+      }
+    },
+    {
+      "method": "Resource-efficient food production",
+      "category": "advanced_food_production",
+      "description": "Developing food production technologies that minimize resource inputs while maximizing safe and nutritious food.",
+      "design_priorities": [
+        "minimize_material_inputs",
+        "minimize_energy_inputs",
+        "minimize_water_inputs",
+        "maximize_food_safety",
+        "maximize_nutritional_value",
+        "maximize_palatable_food_production"
+      ],
+      "related_initiative": "Deep Space Food Challenge",
+      "source": {
+        "title": "Deep Space Food Challenge",
+        "url": "https://www.asc-csa.gc.ca/eng/sciences/food-production/deep-space-food-challenge.asp"
+      }
+    }
+  ]
+}

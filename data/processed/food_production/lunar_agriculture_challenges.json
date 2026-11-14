@@ -1,0 +1,72 @@
+{
+  "dataset": "lunar_agriculture_challenges",
+  "description": "Environmental challenges and potential solutions for growing food on the Moon.",
+  "source": {
+    "title": "Interplanetary Farming",
+    "organization": "Canadian Space Agency",
+    "url": "https://www.asc-csa.gc.ca/eng/youth-educators/toolkits/food-production/",
+    "source_type": "educational_reference"
+  },
+  "records": [
+    {
+      "challenge": "water",
+      "problem": "Liquid water is not easily available on the Moon.",
+      "context": "Water is accessible near the lunar poles, but additional water may need to be provided.",
+      "possible_solution": [
+        "Provide additional water",
+        "Develop water supply and management systems"
+      ],
+      "source_page": 3
+    },
+    {
+      "challenge": "light",
+      "problem": "Lunar daylight cycles differ significantly from Earth.",
+      "context": "At the equator, one Moon-day is 28 Earth-days, with approximately 14 Earth-days of light and 14 Earth-days of darkness. The South Pole has almost constant sunlight.",
+      "possible_solution": [
+        "Use artificial lighting systems as needed"
+      ],
+      "source_page": 3
+    },
+    {
+      "challenge": "radiation",
+      "problem": "The Moon lacks a magnetic field and is exposed to space radiation.",
+      "possible_solution": [
+        "Grow plants in enclosed areas",
+        "Shield plants from harmful radiation"
+      ],
+      "source_page": 3
+    },
+    {
+      "challenge": "atmosphere",
+      "problem": "The Moon does not have an atmosphere.",
+      "possible_solution": [
+        "Provide atmospheric gases required for plant growth"
+      ],
+      "source_page": 3
+    },
+    {
+      "challenge": "temperature",
+      "problem": "Extreme temperature variations create challenges for plant cultivation.",
+      "reported_context": {
+        "location": "Lunar equator",
+        "day_temperature_c": 120,
+        "night_temperature_c": 130,
+        "verification_status": "Source value requires verification; sign convention may be missing."
+      },
+      "possible_solution": [
+        "Use temperature regulation systems"
+      ],
+      "source_page": 3
+    },
+    {
+      "challenge": "soil",
+      "problem": "Lunar regolith lacks the necessary nutrients for plant growth and has a fine-dust texture.",
+      "possible_solution": [
+        "Use hydroponic systems",
+        "Use aeroponic systems",
+        "Grow plants in controlled environments such as greenhouses"
+      ],
+      "source_page": 3
+    }
+  ]
+}

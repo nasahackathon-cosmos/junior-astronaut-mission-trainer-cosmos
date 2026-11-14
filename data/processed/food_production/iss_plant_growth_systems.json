@@ -1,0 +1,65 @@
+{
+  "dataset": "iss_plant_growth_systems",
+  "description": "Plant cultivation systems and research on the International Space Station.",
+  "source": {
+    "title": "Interplanetary Farming",
+    "organization": "Canadian Space Agency",
+    "url": "https://www.asc-csa.gc.ca/eng/youth-educators/toolkits/food-production/",
+    "source_type": "educational_reference"
+  },
+  "records": [
+    {
+      "system": "Veggie",
+      "location": "International Space Station",
+      "purpose": "Study plant growth and function in weightlessness.",
+      "method": "Seeds are germinated and grown using plant pillows.",
+      "plant_pillows": {
+        "prepared_on_earth": true,
+        "contents": [
+          "clay",
+          "fertilizer",
+          "seeds"
+        ],
+        "preparation": "Precise amounts of clay, fertilizer and seeds."
+      },
+      "research_goals": [
+        "Understand plant growth in weightlessness",
+        "Study changes in nutritional value",
+        "Investigate psychological benefits for crew"
+      ],
+      "source_page": 3
+    },
+    {
+      "system": "Advanced Plant Habitat (APH)",
+      "location": "International Space Station",
+      "purpose": "Grow and study a variety of plants in a controlled growth chamber.",
+      "environmental_controls": [
+        "temperature",
+        "oxygen",
+        "carbon dioxide"
+      ],
+      "lighting": {
+        "technology": "LED",
+        "colours": [
+          "white",
+          "red",
+          "blue",
+          "green"
+        ],
+        "purpose": "Tailor lighting to the needs of different plants."
+      },
+      "adjustable_settings": true,
+      "source_page": 3
+    },
+    {
+      "system": "Future space plant systems",
+      "purpose": "Potentially support crew through fresh food, oxygen and recycled water.",
+      "potential_benefits": [
+        "fresh food",
+        "oxygen supply",
+        "water recycling"
+      ],
+      "source_page": 3
+    }
+  ]
+}

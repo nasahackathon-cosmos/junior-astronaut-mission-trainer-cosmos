@@ -1,7 +1,6 @@
-
 # Junior Astronaut Mission Trainer — COSMOS
 
-An educational mission-training experience designed to help children aged 7–12 explore space science, astronaut health, radiation, and mission decision-making through NASA-backed research data and interactive learning.
+An educational mission-training experience designed for children aged 7–12 to explore space science, astronaut health, radiation, and mission decision-making through NASA-backed research data and interactive learning.
 
 ## Project Overview
 
@@ -53,6 +52,7 @@ The project connects NASA research datasets with a 100-mission educational catal
 - Supports educational charts and comparisons using instrument measurements.
 
 **Research reference:** George et al., *Space radiation measurements during the Artemis I lunar mission*, Nature 634, 48–52 (2024).
+
 [Read the research paper](https://doi.org/10.1038/s41586-024-07927-7)
 
 **Important scientific boundaries:**
@@ -62,53 +62,94 @@ The project connects NASA research datasets with a 100-mission educational catal
 - Simulated shelter outcomes are educational simulations, not measured proof of shielding effectiveness.
 - Published research interpretations must remain distinct from our own calculated event-window summaries.
 
+### 4. Canadian Space Agency — Food Production Toolkit
 
-### 4. NASA Mars Trek — MOLA and TES Jezero Terrain Datasets
+**Official resource:** [CSA Space Food Production Toolkit](https://www.asc-csa.gc.ca/eng/youth-educators/toolkits/food-production/)
 
-**Source portal:** [NASA Mars Trek](https://trek.nasa.gov/mars/)
+**Source document:** *Interplanetary Farming*.
 
-**Study area:** Jezero Crater, Mars.
+**Mission mapping:**
+- M013, M052, M057, M084 — Direct plant-growth and greenhouse educational references.
+- M047 — Direct references for water allocation and lunar water challenges.
+- M086 — Supporting reference for the water-recycling portion only.
+- M016 — Supporting examples of plant-growth systems and experiments.
+- M018, M058 — Background references for space-food nutrition.
+- M028 — Optional crop-research example.
 
-**Dataset module:** [MOLA Terrain Module](https://github.com/nasahackathon-cosmos/junior-astronaut-mission-trainer-cosmos/tree/main/mola_terrain_module)
+**How we use it:**
+- Provides crop-growth reference information and crop-selection criteria.
+- Introduces plant-growth systems used in space research, including the ISS Veggie and Advanced Plant Habitat.
+- Explores space-farming methods, nutrition, and water management.
+- Describes challenges relevant to lunar agriculture, including water availability, lighting cycles, radiation, temperature, and nutrient-poor regolith.
+
+**Important scientific boundaries:**
+- Educational references to plant-growth systems do not establish that a crop has been successfully cultivated on the Moon.
+- Naurvik is a terrestrial hydroponics project in Gjoa Haven, not a lunar farm.
+- The source material does not establish universal crop yields, water-use rates, nutrient-solution parameters, or water-recovery percentages; these must not be invented.
+- Any gameplay values or farming outcomes not directly measured in the cited research are simulations.
+- A temperature figure in the source material concerning lunar nighttime conditions requires verification before being used as a factual gameplay value.
+
+### 5. NASA Mars Trek — MOLA and TES Jezero Terrain Datasets
+
+**Data source:** NASA Mars Trek — [Mars Trek Portal](https://trek.nasa.gov/mars/)
+
+**Terrain study area:** Jezero Crater, Mars.
+
+**Data location:** `data/processed/mars_trek/`
 
 **How we use it:**
 
-- Processes MOLA elevation data for the Jezero Crater region.
-- Derives terrain slope and project-defined terrain classifications.
-- Includes surface roughness, thermal inertia, and TES dust map layers.
-- Provides a combined JSON dataset for educational terrain exploration.
-- Supports future rover navigation, terrain difficulty, and mission decision-making scenarios.
+This project processes NASA Mars Global Surveyor (MGS) MOLA elevation data and Mars Global Surveyor Thermal Emission Spectrometer (TES) environmental map layers to create a structured terrain dataset for the Jezero region.
 
-**Processed dataset details:**
+The processed dataset contains six data categories:
 
-- Grid dimensions: 296 × 257.
-- Total grid points: 76,072.
-- Elevation, slope, and terrain classification.
-- Roughness map layers at 0.6 km, 2.4 km, and 9.2 km scales.
-- Thermal inertia RGB and alpha channels.
+| Dataset | Description | Potential educational/game use |
+|---|---|---|
+| Elevation | MOLA surface elevation in metres | Explore Martian terrain height and depressions |
+| Slope | Derived surface slope in degrees | Estimate terrain steepness |
+| Terrain classification | Flat, moderate and steep categories | Identify different terrain difficulty levels |
+| Surface roughness | MOLA global roughness RGB map | Explore surface texture at different scales |
+| Thermal inertia | TES colourized thermal inertia map | Explore Martian surface thermal properties |
+| Dust | TES global dust colourized map | Explore Martian dust distribution |
+
+**Combined dataset:**
+
+[View Jezero Combined Terrain JSON](data/processed/mars_trek/jezero_combined_terrain.json)
+
+The combined dataset contains:
+- 296 rows × 257 columns.
+- Geographic latitude and longitude coordinates.
+- Elevation and derived slope values.
+- Terrain classification.
+- Surface roughness RGB layers at 0.6 km, 2.4 km and 9.2 km scales.
+- TES thermal inertia RGB and alpha channels.
 - TES dust RGB channels.
 
-**Dataset files:**
-- [Combined Jezero terrain JSON](mola_terrain_module/data/processed/jezero_combined_terrain.json)
-- [Elevation](mola_terrain_module/data/processed/jezero_terrain.json)
-- [Slope](mola_terrain_module/data/processed/jezero_slope.json)
-- [Terrain classification](mola_terrain_module/data/processed/jezero_terrain_classification.json)
-- [Surface roughness](mola_terrain_module/data/processed/jezero_roughness.json)
-- [Thermal inertia](mola_terrain_module/data/processed/jezero_thermal_inertia.json)
-- [TES dust](mola_terrain_module/data/processed/jezero_tes_dust.json)
+**Individual datasets:**
+- [Jezero Elevation JSON](data/processed/mars_trek/jezero_terrain.json)
+- [Jezero Slope JSON](data/processed/mars_trek/jezero_slope.json)
+- [Terrain Classification JSON](data/processed/mars_trek/jezero_terrain_classification.json)
+- [Surface Roughness JSON](data/processed/mars_trek/jezero_roughness.json)
+- [Thermal Inertia JSON](data/processed/mars_trek/jezero_thermal_inertia.json)
+- [TES Dust JSON](data/processed/mars_trek/jezero_tes_dust.json)
 
-**Processing resources:**
-- [Python processing scripts](mola_terrain_module/scripts/)
-- [MOLA methodology](mola_terrain_module/docs/mola_methodology.md)
-- [Jezero terrain visualization](mola_terrain_module/visualizations/jezero_terrain_map.png)
+**Processing scripts:**
 
-**Important scientific boundaries:**
+[View MOLA processing scripts](scripts/)
 
-- The roughness, thermal inertia, and dust RGB layers are colorized map values, not calibrated physical measurements.
-- Resampling map layers to matching grid dimensions does not create additional spatial resolution.
-- Terrain classification thresholds are project-defined educational categories, not official NASA rover safety standards.
-- The original approximately 2.12 GB global MOLA TIFF is not included in this public repository.
-- The TIFF conversion scripts require their corresponding source rasters, which are not bundled. The processed JSON outputs are included.
+The scripts support:
+- Slope calculation from elevation data.
+- Slope-based terrain classification.
+- Conversion of roughness, thermal inertia and dust maps into JSON.
+- Validation of dimensions and geographic coordinate alignment.
+- Combination of the processed layers into one terrain dataset.
+
+**Scientific limitations and data integrity:**
+- Roughness, thermal inertia and dust inputs are colourized RGB maps, not calibrated physical measurements in the combined JSON.
+- Resampling the global environmental maps to the Jezero elevation grid aligns their dimensions but does not create additional scientific spatial detail.
+- Terrain classification thresholds are project-defined categories for educational/game purposes, not official NASA rover safety limits.
+- Derived values are kept distinguishable from original NASA source data.
+- The original 2.12 GB global MOLA elevation TIFF is retained locally and excluded from GitHub due to its size.
 
 ## Mission Evidence Mapping
 
@@ -127,10 +168,16 @@ The mission catalogue contains 100 missions. This does not mean every mission cu
 - [x] 100-mission catalogue.
 - [x] NASA OSDR mission evidence integration.
 - [x] NASA RadLab event-data processing and mission crosswalk.
+- [x] CSA food-production reference datasets and mission crosswalk.
 - [x] Backend mission and evidence APIs.
 - [x] Evidence-source validation.
 - [x] Backend API and mission-data tests.
-- [x] NASA Mars Trek Jezero terrain dataset processing (MOLA and TES layers).
+- [x] NASA Mars Trek Jezero terrain dataset processing.
+- [x] MOLA elevation, slope and terrain classification.
+- [x] MOLA surface roughness processing.
+- [x] TES thermal inertia and dust map processing.
+- [x] Combined Jezero terrain and environmental JSON dataset.
+- [ ] Integration of terrain datasets into interactive gameplay.
 - [ ] Additional NASA data-source integrations.
 - [ ] Frontend and interactive gameplay implementation.
 
@@ -152,19 +199,20 @@ API documentation is available at `/docs` when the server is running.
 ```text
 .
 ├── data/
-│   ├── processed/
-│   │   ├── missions/
-│   │   └── radlab/
-│   └── raw/                 # Excluded from version control
+│   ├── raw/                 # Original research data; excluded from Git
+│   │   ├── osdr/
+│   │   └── mars_trek/
+│   └── processed/
+│       ├── missions/
+│       ├── osdr/
+│       ├── radlab/
+│       ├── food_production/
+│       └── mars_trek/
 ├── docs/
-├── scripts/
+│   └── visualizations/
+├── scripts/                 # Existing project and Mars Trek scripts
 ├── src/
 │   └── backend/
-├── mola_terrain_module/
-│   ├── data/processed/
-│   ├── docs/
-│   ├── scripts/
-│   └── visualizations/
 └── tests/
 ```
 
@@ -173,15 +221,16 @@ API documentation is available at `/docs` when the server is running.
 - Original research measurements are kept distinct from derived summaries.
 - Missing measurements are not treated as zero.
 - Simulated game values are not presented as real NASA measurements.
-- Raw datasets and credentials are excluded from the public release.
+- Large original datasets may be retained locally rather than committed to Git.
 - Dataset attribution and source references are maintained in project documentation.
+- Colourized map values are not treated as calibrated scientific measurements without supporting metadata.
 
 ## Documentation
 
 - [Dataset Inventory](docs/dataset_inventory.md)
 - [Mission Dataset Mapping](docs/mission_dataset_mapping.md)
 - [RadLab Data Notes](docs/radlab_data_notes.md)
-- [MOLA Terrain Methodology](mola_terrain_module/docs/mola_methodology.md)
+- [MOLA Terrain Methodology](docs/mola_methodology.md)
 
 ## Disclaimer
 

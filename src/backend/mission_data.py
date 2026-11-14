@@ -1,4 +1,4 @@
-"""Read-only access to the mission catalogue, OSDR and RadLab evidence."""
+"""Read-only access to mission data and independent research/reference sources."""
 
 import hashlib
 import json
@@ -11,6 +11,8 @@ DATA_DIR = ROOT / "data" / "processed" / "missions"
 CATALOGUE_FILE = DATA_DIR / "mission_catalog.json"
 CROSSWALK_FILE = DATA_DIR / "osdr_mission_crosswalk.json"
 RADLAB_CROSSWALK_FILE = DATA_DIR / "radlab_mission_crosswalk_v1.json"
+CSA_CROSSWALK_FILE = DATA_DIR / "csa_food_production_crosswalk.json"
+CSA_DATA_DIR = ROOT / "data" / "processed" / "food_production"
 
 
 class MissionDataError(Exception):
@@ -101,6 +103,7 @@ def load_mission_data() -> dict[str, Any]:
     catalogue = _load_json(CATALOGUE_FILE)
     osdr_crosswalk = _load_json(CROSSWALK_FILE)
     radlab_crosswalk = _load_json(RADLAB_CROSSWALK_FILE)
+    csa_crosswalk = _load_json(CSA_CROSSWALK_FILE)
 
     missions = catalogue.get("missions")
     if not isinstance(missions, list):
@@ -119,6 +122,35 @@ def load_mission_data() -> dict[str, Any]:
 
     _validate_crosswalk(osdr_crosswalk, "OSDR", known_missions)
     _validate_crosswalk(radlab_crosswalk, "RadLab", known_missions)
+    _validate_crosswalk(csa_crosswalk, "CSA", known_missions)
+
+    # CSA sources point to independent educational-reference datasets.
+    # Resolve and validate each path before loading its records.
+    csa_data_root = CSA_DATA_DIR.resolve()
+
+    for source in csa_crosswalk["sources"]:
+        filename = source.get("file")
+        if not isinstance(filename, str) or not filename:
+            raise MissionDataError(
+                "CSA crosswalk source is missing a valid dataset filename."
+            )
+
+        dataset_path = (csa_data_root / filename).resolve()
+        if dataset_path.parent != csa_data_root:
+            raise MissionDataError(
+                f"CSA dataset path is outside the food-production directory: "
+                f"{filename}"
+            )
+
+        dataset = _load_json(dataset_path)
+        records = dataset.get("records")
+        if not isinstance(records, list):
+            raise MissionDataError(
+                f"CSA dataset must contain a records list: {dataset_path}"
+            )
+
+        # Preserve the original dataset metadata and record structure.
+        source["dataset"] = dataset
 
     # The RadLab crosswalk records the exact catalogue version it was
     # generated against. Check that relationship when the hash is present.
@@ -135,6 +167,7 @@ def load_mission_data() -> dict[str, Any]:
         "catalogue": catalogue,
         "crosswalk": osdr_crosswalk,
         "radlab_crosswalk": radlab_crosswalk,
+        "csa_crosswalk": csa_crosswalk,
     }
 
 
@@ -184,7 +217,7 @@ def _get_evidence_for_source(
 
 def get_mission_evidence(mission_id: str) -> dict[str, Any] | None:
     """
-    Return evidence from OSDR and RadLab without merging their crosswalks.
+    Return independent OSDR, RadLab, and CSA reference collections.
 
     The legacy `evidence` and `evidence_status` fields retain their original
     OSDR-only meaning for backward compatibility.
@@ -209,8 +242,13 @@ def get_mission_evidence(mission_id: str) -> dict[str, Any] | None:
     radlab_evidence = _get_evidence_for_source(
         mission_id, data["radlab_crosswalk"]
     )
+    csa_evidence = _get_evidence_for_source(
+        mission_id, data["csa_crosswalk"]
+    )
 
-    has_any_evidence = bool(osdr_evidence or radlab_evidence)
+    has_any_evidence = bool(
+        osdr_evidence or radlab_evidence or csa_evidence
+    )
 
     return {
         "mission_id": mission_id,
@@ -222,9 +260,11 @@ def get_mission_evidence(mission_id: str) -> dict[str, Any] | None:
         # Explicit independent evidence collections.
         "osdr_evidence": osdr_evidence,
         "radlab_evidence": radlab_evidence,
+        "csa_evidence": csa_evidence,
         "evidence_by_source": {
             "osdr": osdr_evidence,
             "radlab": radlab_evidence,
+            "csa": csa_evidence,
         },
 
         # Combined availability is reported separately.
@@ -236,6 +276,7 @@ def get_mission_evidence(mission_id: str) -> dict[str, Any] | None:
             for name, records in (
                 ("osdr", osdr_evidence),
                 ("radlab", radlab_evidence),
+                ("csa", csa_evidence),
             )
             if records
         ],
@@ -250,6 +291,9 @@ def get_mission_evidence(mission_id: str) -> dict[str, Any] | None:
             "radlab": data["radlab_crosswalk"].get(
                 "simulation_boundary", []
             ),
+            "csa": data["csa_crosswalk"].get(
+                "simulation_boundary", []
+            ),
         },
     }
 
@@ -260,6 +304,7 @@ def get_data_summary() -> dict[str, Any]:
     catalogue = data["catalogue"]
     osdr = data["crosswalk"]
     radlab = data["radlab_crosswalk"]
+    csa = data["csa_crosswalk"]
 
     osdr_mapped_ids = {
         item["mission_id"] for item in osdr["mappings"]
@@ -267,8 +312,13 @@ def get_data_summary() -> dict[str, Any]:
     radlab_mapped_ids = {
         item["mission_id"] for item in radlab["mappings"]
     }
+    csa_mapped_ids = {
+        item["mission_id"] for item in csa["mappings"]
+    }
 
-    all_mapped_ids = osdr_mapped_ids | radlab_mapped_ids
+    all_mapped_ids = (
+        osdr_mapped_ids | radlab_mapped_ids | csa_mapped_ids
+    )
 
     return {
         "mission_count": len(catalogue["missions"]),
@@ -282,6 +332,13 @@ def get_data_summary() -> dict[str, Any]:
         "radlab_source_count": len(radlab["sources"]),
         "radlab_mapped_mission_count": len(radlab_mapped_ids),
         "radlab_mapped_mission_ids": sorted(radlab_mapped_ids),
+
+        # CSA educational-reference datasets.
+        "csa_source_count": len(csa["sources"]),
+        "csa_mapped_mission_count": len(csa_mapped_ids),
+        "csa_mapped_mission_ids": sorted(csa_mapped_ids),
+
+        # Combined unique mission coverage across all three sources.
         "overall_mapped_mission_count": len(all_mapped_ids),
         "overall_mapped_mission_ids": sorted(all_mapped_ids),
     }

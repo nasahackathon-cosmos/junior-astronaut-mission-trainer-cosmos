@@ -1,0 +1,184 @@
+{
+  "title": "Junior Astronaut Mission Trainer — CSA Food Production Crosswalk",
+  "version": "1.0",
+  "source_organization": "Canadian Space Agency",
+  "main_source": "https://www.asc-csa.gc.ca/eng/youth-educators/toolkits/food-production/",
+  "catalogue": "data/processed/missions/mission_catalog.json",
+  "evidence_policy": {
+    "direct_reference": "A documented educational reference directly relevant to the mission's learning activity; not necessarily experimental evidence.",
+    "supporting": "A useful supporting educational reference that does not directly measure the simulated mission outcome.",
+    "background_only": "Contextual information for learning, not evidence for a simulated operational or health outcome.",
+    "optional": "An optional reference that may be used in an activity but is not part of the core mission mapping."
+  },
+  "simulation_boundary": [
+    "CSA educational references do not establish crop performance in lunar or Martian environments.",
+    "Do not infer crop yields, water consumption, energy consumption, or nutritional sufficiency without supporting data.",
+    "Do not invent numerical water-recovery rates.",
+    "Player resource inventories, crop yields, and greenhouse outcomes must remain labelled as simulations.",
+    "CSA water-recovery material does not establish general waste sorting or processing performance."
+  ],
+  "sources": [
+    {
+      "source_id": "CSA-CROP-REFERENCE",
+      "file": "crop_reference.json",
+      "title": "CSA Crop Reference"
+    },
+    {
+      "source_id": "CSA-CROP-SELECTION",
+      "file": "crop_selection_criteria.json",
+      "title": "CSA Crop Selection Criteria"
+    },
+    {
+      "source_id": "CSA-ISS-PLANT-SYSTEMS",
+      "file": "iss_plant_growth_systems.json",
+      "title": "ISS Plant Growth Systems"
+    },
+    {
+      "source_id": "CSA-LUNAR-AGRICULTURE",
+      "file": "lunar_agriculture_challenges.json",
+      "title": "Lunar Agriculture Challenges"
+    },
+    {
+      "source_id": "CSA-FARMING-METHODS",
+      "file": "space_farming_methods.json",
+      "title": "Space Farming Methods"
+    },
+    {
+      "source_id": "CSA-SPACE-NUTRITION",
+      "file": "space_food_nutrition.json",
+      "title": "Space Food and Nutrition"
+    },
+    {
+      "source_id": "CSA-WATER-MANAGEMENT",
+      "file": "water_management.json",
+      "title": "Space Water Management"
+    }
+  ],
+  "mappings": [
+    {
+      "mission_id": "M013",
+      "source_ids": [
+        "CSA-CROP-REFERENCE",
+        "CSA-CROP-SELECTION",
+        "CSA-ISS-PLANT-SYSTEMS",
+        "CSA-FARMING-METHODS"
+      ],
+      "evidence_role": "direct_reference",
+      "rationale": "CSA crop and plant-growth references support the mission's plant-growth or greenhouse-planning learning activities.",
+      "limitations": [
+        "These are educational references, not direct measurements of crop performance in lunar or Martian environments.",
+        "Crop growth durations are reference values, not guaranteed mission outcomes."
+      ]
+    },
+    {
+      "mission_id": "M052",
+      "source_ids": [
+        "CSA-CROP-REFERENCE",
+        "CSA-CROP-SELECTION",
+        "CSA-ISS-PLANT-SYSTEMS",
+        "CSA-FARMING-METHODS"
+      ],
+      "evidence_role": "direct_reference",
+      "rationale": "CSA crop and plant-growth references support the mission's plant-growth or greenhouse-planning learning activities.",
+      "limitations": [
+        "These are educational references, not direct measurements of crop performance in lunar or Martian environments.",
+        "Crop growth durations are reference values, not guaranteed mission outcomes."
+      ]
+    },
+    {
+      "mission_id": "M057",
+      "source_ids": [
+        "CSA-CROP-REFERENCE",
+        "CSA-CROP-SELECTION",
+        "CSA-ISS-PLANT-SYSTEMS",
+        "CSA-FARMING-METHODS"
+      ],
+      "evidence_role": "direct_reference",
+      "rationale": "CSA crop and plant-growth references support the mission's plant-growth or greenhouse-planning learning activities.",
+      "limitations": [
+        "These are educational references, not direct measurements of crop performance in lunar or Martian environments.",
+        "Crop growth durations are reference values, not guaranteed mission outcomes."
+      ]
+    },
+    {
+      "mission_id": "M084",
+      "source_ids": [
+        "CSA-CROP-REFERENCE",
+        "CSA-CROP-SELECTION",
+        "CSA-ISS-PLANT-SYSTEMS",
+        "CSA-FARMING-METHODS"
+      ],
+      "evidence_role": "direct_reference",
+      "rationale": "CSA crop and plant-growth references support the mission's plant-growth or greenhouse-planning learning activities.",
+      "limitations": [
+        "These are educational references, not direct measurements of crop performance in lunar or Martian environments.",
+        "Crop growth durations are reference values, not guaranteed mission outcomes."
+      ]
+    },
+    {
+      "mission_id": "M047",
+      "source_ids": [
+        "CSA-WATER-MANAGEMENT",
+        "CSA-LUNAR-AGRICULTURE"
+      ],
+      "evidence_role": "direct_reference",
+      "rationale": "Water-recovery concepts and lunar water-availability challenges support the mission's water-allocation learning activity.",
+      "limitations": [
+        "The references do not provide a numerical water-recovery rate.",
+        "Any player water inventory or allocation values are simulated."
+      ]
+    },
+    {
+      "mission_id": "M086",
+      "source_ids": [
+        "CSA-WATER-MANAGEMENT"
+      ],
+      "evidence_role": "supporting",
+      "rationale": "Supports the water-recovery and recycling portion of the mission.",
+      "limitations": [
+        "Does not establish general waste sorting, waste processing, or overall waste-recycling efficiency."
+      ]
+    },
+    {
+      "mission_id": "M016",
+      "source_ids": [
+        "CSA-ISS-PLANT-SYSTEMS",
+        "CSA-CROP-SELECTION"
+      ],
+      "evidence_role": "supporting",
+      "rationale": "Provides documented examples of plant-growth systems and experimental considerations.",
+      "limitations": [
+        "Classroom experiments and player-controlled outcomes remain educational simulations."
+      ]
+    },
+    {
+      "mission_id": "M018",
+      "source_ids": [
+        "CSA-SPACE-NUTRITION"
+      ],
+      "evidence_role": "background_only",
+      "rationale": "Provides background context for astronaut food requirements and nutrition.",
+      "limitations": []
+    },
+    {
+      "mission_id": "M058",
+      "source_ids": [
+        "CSA-SPACE-NUTRITION"
+      ],
+      "evidence_role": "background_only",
+      "rationale": "Provides background context for balanced food and dietary variety.",
+      "limitations": []
+    },
+    {
+      "mission_id": "M028",
+      "source_ids": [
+        "CSA-CROP-REFERENCE",
+        "CSA-CROP-SELECTION",
+        "CSA-LUNAR-AGRICULTURE"
+      ],
+      "evidence_role": "optional",
+      "rationale": "Can provide an optional example for a collaborative crop-research activity; it is not a core mission mapping.",
+      "limitations": []
+    }
+  ]
+}

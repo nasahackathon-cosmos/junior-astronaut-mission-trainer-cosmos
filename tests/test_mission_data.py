@@ -129,7 +129,7 @@ class MissionDataTests(unittest.TestCase):
             "Expected the OSD-654 limitations to identify mouse research.",
         )
 
-    def test_summary_preserves_old_fields_and_adds_radlab(self):
+    def test_summary_preserves_old_fields_and_adds_radlab_and_csa(self):
         summary = get_data_summary()
         self.assertEqual(summary["mission_count"], 100)
         self.assertEqual(summary["osdr_source_count"], 2)
@@ -140,7 +140,87 @@ class MissionDataTests(unittest.TestCase):
             summary["radlab_mapped_mission_ids"],
             ["M032", "M035", "M036"],
         )
-        self.assertEqual(summary["overall_mapped_mission_count"], 12)
+        self.assertEqual(summary["csa_source_count"], 7)
+        self.assertEqual(summary["csa_mapped_mission_count"], 10)
+        self.assertEqual(
+            summary["csa_mapped_mission_ids"],
+            [
+                "M013", "M016", "M018", "M028", "M047",
+                "M052", "M057", "M058", "M084", "M086",
+            ],
+        )
+        self.assertEqual(summary["overall_mapped_mission_count"], 18)
+
+    def test_csa_datasets_are_loaded_with_original_records(self):
+        data = load_mission_data()
+        crosswalk = data["csa_crosswalk"]
+
+        self.assertEqual(len(crosswalk["sources"]), 7)
+
+        total_records = 0
+        for source in crosswalk["sources"]:
+            with self.subTest(source=source["source_id"]):
+                dataset = source["dataset"]
+                self.assertIsInstance(dataset["records"], list)
+                self.assertTrue(dataset["records"])
+                total_records += len(dataset["records"])
+
+        self.assertEqual(total_records, 38)
+
+    def test_m047_has_direct_csa_water_and_lunar_references(self):
+        result = get_mission_evidence("M047")
+        self.assertEqual(result["evidence_status"], "not_mapped")
+        self.assertEqual(result["overall_evidence_status"], "mapped")
+        self.assertEqual(
+            {item["source_id"] for item in result["csa_evidence"]},
+            {"CSA-WATER-MANAGEMENT", "CSA-LUNAR-AGRICULTURE"},
+        )
+        self.assertTrue(all(
+            item["evidence_role"] == "direct_reference"
+            for item in result["csa_evidence"]
+        ))
+        self.assertIn("csa", result["evidence_by_source"])
+        self.assertIn("csa", result["available_evidence_sources"])
+        self.assertTrue(result["simulation_boundaries"]["csa"])
+
+    def test_m086_csa_mapping_is_limited_to_water_recycling(self):
+        result = get_mission_evidence("M086")
+        self.assertEqual(len(result["csa_evidence"]), 1)
+
+        item = result["csa_evidence"][0]
+        self.assertEqual(item["source_id"], "CSA-WATER-MANAGEMENT")
+        self.assertEqual(item["evidence_role"], "supporting")
+        self.assertTrue(any(
+            "waste sorting" in limitation.lower()
+            for limitation in item["mapping_limitations"]
+        ))
+
+    def test_csa_plant_missions_have_direct_references(self):
+        for mission_id in ("M013", "M052", "M057", "M084"):
+            with self.subTest(mission=mission_id):
+                result = get_mission_evidence(mission_id)
+                self.assertTrue(result["csa_evidence"])
+                self.assertTrue(all(
+                    item["evidence_role"] == "direct_reference"
+                    for item in result["csa_evidence"]
+                ))
+
+    def test_csa_nutrition_missions_are_background_only(self):
+        for mission_id in ("M018", "M058"):
+            with self.subTest(mission=mission_id):
+                result = get_mission_evidence(mission_id)
+                self.assertEqual(
+                    {item["evidence_role"] for item in result["csa_evidence"]},
+                    {"background_only"},
+                )
+
+    def test_m028_csa_mapping_is_optional(self):
+        result = get_mission_evidence("M028")
+        self.assertTrue(result["csa_evidence"])
+        self.assertTrue(all(
+            item["evidence_role"] == "optional"
+            for item in result["csa_evidence"]
+        ))
 
     def test_both_crosswalks_reference_valid_missions_and_sources(self):
         data = load_mission_data()
@@ -148,7 +228,7 @@ class MissionDataTests(unittest.TestCase):
             item["mission_id"] for item in data["catalogue"]["missions"]
         }
 
-        for key in ("crosswalk", "radlab_crosswalk"):
+        for key in ("crosswalk", "radlab_crosswalk", "csa_crosswalk"):
             crosswalk = data[key]
             source_ids = {
                 item["source_id"] for item in crosswalk["sources"]

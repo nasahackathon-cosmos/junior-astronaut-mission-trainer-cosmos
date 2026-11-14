@@ -299,3 +299,85 @@ https://doi.org/10.1038/s41586-024-07927-7
 - M037 and other live-event missions: Current or live solar-event monitoring.
 
 Historical Artemis I measurements must not be presented as live telemetry or as a substitute for dedicated solar-event data sources.
+
+## 10. Dataset C — CSA Food Production Toolkit
+
+**Source organization:** Canadian Space Agency
+
+**Main reference:**
+https://www.asc-csa.gc.ca/eng/youth-educators/toolkits/food-production/
+
+**Processed directory:**
+`data/processed/food_production/`
+
+The collection contains seven JSON files and 38 structured reference records covering crop selection, plant-growth systems, lunar agriculture, water management, farming methods and astronaut nutrition.
+
+### Mission mapping
+
+| Mission IDs | Mission topic | CSA reference | Relationship |
+|---|---|---|---|
+| M013, M052, M057, M084 | Plant growth and greenhouse planning | Crop reference, crop selection criteria, ISS plant-growth systems, space-farming methods | Direct educational reference |
+| M047 | Water allocation challenge | Water management, lunar agriculture challenges | Direct educational reference for water-recovery concepts and crop-water trade-offs |
+| M086 | Close the loop: recycling challenge | Water management | Supporting reference for the water-recycling portion only |
+| M016 | Biology and technology experiment lab | ISS plant-growth systems, crop selection criteria | Supporting examples of documented plant-growth systems and experimental conditions |
+| M018 | Astronaut health and exercise check | Space-food nutrition | Background context for astronaut nutrition and wellbeing |
+| M058 | Healthy astronaut routine | Space-food nutrition | Supporting context for food requirements and dietary variety |
+| M028 | Team science: conduct a joint experiment | Crop reference, crop selection criteria, lunar agriculture challenges | Optional example for a team crop-research activity; not a core mapping |
+
+These mappings identify possible educational uses. They do not imply that every mission must use all seven files.
+
+### Suggested player activities
+
+**Plant growth and greenhouse planning — M013, M052, M057, M084**
+
+1. Let players compare potential crops using reported growth durations and nutritional information.
+2. Ask players to select crops using criteria such as edible biomass, nutritional value, growth time and crew preferences.
+3. Introduce the ISS Veggie and Advanced Plant Habitat as examples of plant-growth research systems.
+4. Ask players to identify environmental requirements for a controlled growing environment.
+5. Explain the challenges of growing plants on the Moon.
+
+**Water and resource management — M047 and M086**
+
+1. Introduce the ISS water-recovery concept and its documented water sources.
+2. Let players identify where water collection, filtration and recycling fit into a resource-management system.
+3. Discuss lunar water availability and the challenges of supplying water for agriculture.
+4. Use simulated water inventories and resource constraints only as clearly labelled game mechanics.
+
+For M086, use CSA material only to explain water recovery and recycling. General waste sorting, waste-processing methods and recycling efficiencies require separate sources or clearly labelled simulation rules.
+
+**Astronaut nutrition — M018 and M058**
+
+1. Introduce the importance of balanced and varied astronaut meals.
+2. Compare crop nutrients and food-selection criteria.
+3. Explain food preservation and preparation methods.
+4. Discuss how food variety and quality contribute to crew wellbeing.
+
+**Biology and technology experiment lab — M016**
+
+Use the ISS Veggie and Advanced Plant Habitat as documented examples when discussing controlled plant-growth experiments. Any classroom experiment or player-controlled outcome remains an educational simulation.
+
+**Optional use — M028**
+
+The crop reference and selection criteria may provide an example for a collaborative crop-research question. The mission's primary scientific content should still come from the relevant OSDR or planetary-science records.
+
+### Important scientific limitations
+
+- CSA educational references are not direct measurements of crop performance in lunar or Martian environments.
+- The crop growth durations are reference values, not guaranteed mission outcomes.
+- The water-recovery material does not establish a numerical recovery rate in the collected reference.
+- Hydroponics and controlled-environment agriculture examples should not be described as proof of a fully operational lunar farm.
+- Do not infer crop yields, water consumption, energy consumption or nutritional sufficiency without supporting data.
+- Keep all game resource values, crop yields, equipment failures and mission outcomes labelled as simulations unless independently supported by measurements.
+
+### Data classification
+
+| Information | Classification |
+|---|---|
+| CSA crop growth durations and reported nutrients | Source-reported reference information |
+| ISS plant-growth systems | Documented space research systems |
+| Naurvik hydroponic project | Documented terrestrial application |
+| Lunar agriculture challenges | Source-based educational reference |
+| Calculated crop rankings or mission recommendations | Derived educational information |
+| Player crop yields, water inventory and greenhouse performance | Simulated game state |
+
+CSA Food Production Toolkit records are cross-mission educational references. They must remain distinct from the archived OSDR experimental datasets and NASA RadLab radiation measurements.

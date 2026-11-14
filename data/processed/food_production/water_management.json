@@ -1,0 +1,59 @@
+{
+  "dataset": "water_management",
+  "description": "Water collection, recovery, recycling and availability for space missions.",
+  "source_organization": "Canadian Space Agency",
+  "records": [
+    {
+      "system": "ISS water recovery system",
+      "location": "International Space Station",
+      "water_sources": [
+        "urine",
+        "sweat",
+        "water_vapour_from_breath",
+        "wash_water"
+      ],
+      "process": [
+        "water_collection",
+        "filtration",
+        "water_recycling"
+      ],
+      "purpose": "Recover and reuse water for crew sustainability.",
+      "relevance_to_deep_space": "Water collection and filtration are essential for long-duration missions to the Moon and Mars.",
+      "quantitative_recovery_rate": null,
+      "source": {
+        "title": "The water cycle presented by David Saint-Jacques",
+        "url": "https://www.asc-csa.gc.ca/eng/multimedia/search/video/18321",
+        "source_type": "video_transcript",
+        "source_date": "2019-06-07"
+      }
+    },
+    {
+      "system": "Natural water cycle",
+      "process": [
+        "evaporation",
+        "cloud_formation",
+        "precipitation",
+        "surface_water_collection"
+      ],
+      "purpose": "Describe the natural recycling of water on Earth.",
+      "space_application": "The ISS uses an engineered system to replicate aspects of natural water recycling.",
+      "source": {
+        "title": "The water cycle presented by David Saint-Jacques",
+        "url": "https://www.asc-csa.gc.ca/eng/multimedia/search/video/18321",
+        "source_type": "video_transcript",
+        "source_date": "2019-06-07"
+      }
+    },
+    {
+      "system": "Lunar water availability",
+      "location": "Moon",
+      "challenge": "Liquid water is not readily available for agriculture.",
+      "context": "Water ice has been identified on the Moon, but it is not currently available in a form or quantity sufficient for food production.",
+      "source": {
+        "title": "Space Brain Hack - Educator Guide",
+        "url": "https://www.asc-csa.gc.ca/pdf/eng/youth-educators/objective-moon/space-brain-hack-educator-guide-2023-2024-v2.pdf",
+        "source_type": "educational_pdf"
+      }
+    }
+  ]
+}

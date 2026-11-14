@@ -5,8 +5,8 @@ import numpy as np
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 
-INPUT = BASE_DIR / "data/processed/jezero_roughness.tif"
-OUTPUT = BASE_DIR / "data/processed/jezero_roughness.json"
+INPUT = BASE_DIR / "data/processed/mars_trek/jezero_roughness.tif"
+OUTPUT = BASE_DIR / "data/processed/mars_trek/jezero_roughness.json"
 
 dataset = gdal.Open(str(INPUT))
 
@@ -63,3 +63,5 @@ with open(OUTPUT, "w") as f:
 print("Roughness conversion completed!")
 print("Dimensions:", height, "x", width)
 print("Saved:", OUTPUT)
+
+\n

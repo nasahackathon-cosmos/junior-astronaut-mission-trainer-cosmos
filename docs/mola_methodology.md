@@ -3,7 +3,7 @@
 
 ## 1. Project Overview
 
-This module processes NASA Mars Orbiter Laser Altimeter (MOLA) elevation data to generate terrain information for the Junior Astronaut Mission Trainer.
+This analysis processes NASA Mars Orbiter Laser Altimeter (MOLA) elevation data to generate terrain information for the Junior Astronaut Mission Trainer.
 
 The purpose is to help create realistic Mars exploration challenges involving rover navigation, terrain assessment and landing-zone selection.
 
@@ -76,7 +76,7 @@ Classification results:
 A terrain classification map was generated using Matplotlib.
 
 Output:
-visualizations/jezero_terrain_map.png
+docs/visualizations/jezero_terrain_map.png
 
 The visualization displays flat, moderate and steep terrain regions using different colours.
 
@@ -100,9 +100,9 @@ The processed terrain data can support:
 
 ## 10. Generated Files
 
-- data/raw/: Original MOLA GeoTIFF
-- data/processed/jezero_terrain.json: Elevation grid
-- data/processed/jezero_slope.json: Slope grid
-- data/processed/jezero_terrain_classification.json: Terrain categories
+- data/raw/mars_trek/: Original MOLA GeoTIFF files (local inputs; excluded from the public release)
+- data/processed/mars_trek/jezero_terrain.json: Elevation grid
+- data/processed/mars_trek/jezero_slope.json: Slope grid
+- data/processed/mars_trek/jezero_terrain_classification.json: Terrain categories
 - scripts/: Processing and visualization scripts
-- visualizations/jezero_terrain_map.png: Terrain map
+- docs/visualizations/jezero_terrain_map.png: Terrain map

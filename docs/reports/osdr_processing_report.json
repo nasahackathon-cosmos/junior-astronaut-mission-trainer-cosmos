@@ -1,0 +1,207 @@
+{
+  "project": "Junior Astronaut Mission Trainer",
+  "processing_scope": "OSDR datasets only",
+  "raw_files_modified": false,
+  "OSD-654": {
+    "source_sha256": "43254281c99ff290eefafb80043aef912233646e1df807981fdc82845f82e0fd",
+    "processed_sha256": "ad3e3ac462d860b34aae7d1c739c38dc4b9415027c81848e950ab25b10185d27",
+    "source_rows": 25,
+    "processed_rows": 25,
+    "measurement_columns": [
+      "trabecular_separation_millimeter",
+      "trabecular_number_1_per_millimeter",
+      "degree_of_anisotropy",
+      "connective_density",
+      "total_perimeter_millimeter",
+      "endocortical_perimeter_millimeter",
+      "medullary_area_millimeter_squared",
+      "eccentricity",
+      "cortical_thickness_millimeter"
+    ],
+    "metadata_rows": 35,
+    "metadata_only_sample_ids": [
+      "1_Flox_HLS",
+      "1_KD_HLS",
+      "2_Flox_HLS",
+      "2_KD_HLS",
+      "3_Flox_HLS",
+      "3_KD_HLS",
+      "4_Flox_HLS",
+      "4_KD_HLS",
+      "5_Flox_HLS",
+      "5_KD_HLS"
+    ],
+    "unmatched_measurement_ids": [],
+    "incomplete_samples": [
+      "F18"
+    ],
+    "measurement_values": {
+      "trabecular_separation_millimeter": {
+        "missing": 1,
+        "finite_numeric": 24,
+        "invalid_non_numeric": 0
+      },
+      "trabecular_number_1_per_millimeter": {
+        "missing": 1,
+        "finite_numeric": 24,
+        "invalid_non_numeric": 0
+      },
+      "degree_of_anisotropy": {
+        "missing": 1,
+        "finite_numeric": 24,
+        "invalid_non_numeric": 0
+      },
+      "connective_density": {
+        "missing": 1,
+        "finite_numeric": 24,
+        "invalid_non_numeric": 0
+      },
+      "total_perimeter_millimeter": {
+        "missing": 1,
+        "finite_numeric": 24,
+        "invalid_non_numeric": 0
+      },
+      "endocortical_perimeter_millimeter": {
+        "missing": 1,
+        "finite_numeric": 24,
+        "invalid_non_numeric": 0
+      },
+      "medullary_area_millimeter_squared": {
+        "missing": 1,
+        "finite_numeric": 24,
+        "invalid_non_numeric": 0
+      },
+      "eccentricity": {
+        "missing": 1,
+        "finite_numeric": 24,
+        "invalid_non_numeric": 0
+      },
+      "cortical_thickness_millimeter": {
+        "missing": 1,
+        "finite_numeric": 24,
+        "invalid_non_numeric": 0
+      }
+    },
+    "status": "PASS"
+  },
+  "OSD-684": {
+    "metadata_rows": 12,
+    "sample_metadata_sha256": "44e703857d52f5eb09c95458f8415032a88fd0f795ee59fb91fc2f352d0e3b65",
+    "normalized_count_sample_ids_match_metadata": true,
+    "condition_counts": {
+      "Ground Control": 6,
+      "Space Flight": 6
+    },
+    "outputs": {
+      "OSD-684_normalized_counts.csv": {
+        "source_sha256": "4777937956888368df5cd6cc2eb17c71771230a935acef2dcc336c06e32cc380",
+        "processed_sha256": "855923fdef0e48ccde4d999b9175783484137f0dc9c8aa9434293cd3edb4a65d",
+        "rows": 22771,
+        "columns": 13
+      },
+      "OSD-684_differential_expression.csv": {
+        "source_sha256": "8086d5588d82805553f33692606c02818c54e568edb3f49e245e7ca7a5550930",
+        "processed_sha256": "120fef66318a43e099be22008c6cc1d0d844592036bd8e4f9bfb73947cfb4d7b",
+        "rows": 22771,
+        "columns": 78
+      },
+      "OSD-684_contrasts.csv": {
+        "source_sha256": "792297652a590d53edbc773edc11771eedd66b7daa48e9b6c5f4c8a9fb91211b",
+        "processed_sha256": "7d659f5e510c5e0bf0e31ad8f5547276a14a8fab1988b226d12c59de17175916",
+        "rows": 2,
+        "columns": 13
+      }
+    },
+    "normalized_counts_numeric_check": {
+      "GSM7469191": {
+        "missing": 0,
+        "finite_numeric": 22771,
+        "invalid_non_numeric": 0
+      },
+      "GSM7469192": {
+        "missing": 0,
+        "finite_numeric": 22771,
+        "invalid_non_numeric": 0
+      },
+      "GSM7469193": {
+        "missing": 0,
+        "finite_numeric": 22771,
+        "invalid_non_numeric": 0
+      },
+      "GSM7469194": {
+        "missing": 0,
+        "finite_numeric": 22771,
+        "invalid_non_numeric": 0
+      },
+      "GSM7469195": {
+        "missing": 0,
+        "finite_numeric": 22771,
+        "invalid_non_numeric": 0
+      },
+      "GSM7469196": {
+        "missing": 0,
+        "finite_numeric": 22771,
+        "invalid_non_numeric": 0
+      },
+      "GSM7469197": {
+        "missing": 0,
+        "finite_numeric": 22771,
+        "invalid_non_numeric": 0
+      },
+      "GSM7469198": {
+        "missing": 0,
+        "finite_numeric": 22771,
+        "invalid_non_numeric": 0
+      },
+      "GSM7469199": {
+        "missing": 0,
+        "finite_numeric": 22771,
+        "invalid_non_numeric": 0
+      },
+      "GSM7469200": {
+        "missing": 0,
+        "finite_numeric": 22771,
+        "invalid_non_numeric": 0
+      },
+      "GSM7469201": {
+        "missing": 0,
+        "finite_numeric": 22771,
+        "invalid_non_numeric": 0
+      },
+      "GSM7469202": {
+        "missing": 0,
+        "finite_numeric": 22771,
+        "invalid_non_numeric": 0
+      }
+    },
+    "differential_expression_missing_values": {
+      "P.value_(21-40 year & Ground Control)v(21-40 year & Space Flight)": 11,
+      "Adj.p.value_(21-40 year & Ground Control)v(21-40 year & Space Flight)": 3985,
+      "P.value_(21-40 year & Ground Control)v(65-80 year & Ground Control)": 11,
+      "Adj.p.value_(21-40 year & Ground Control)v(65-80 year & Ground Control)": 5308,
+      "P.value_(21-40 year & Ground Control)v(65-80 year & Space Flight)": 11,
+      "Adj.p.value_(21-40 year & Ground Control)v(65-80 year & Space Flight)": 3543,
+      "P.value_(21-40 year & Space Flight)v(65-80 year & Ground Control)": 11,
+      "Adj.p.value_(21-40 year & Space Flight)v(65-80 year & Ground Control)": 2660,
+      "P.value_(21-40 year & Space Flight)v(65-80 year & Space Flight)": 11,
+      "Adj.p.value_(21-40 year & Space Flight)v(65-80 year & Space Flight)": 6189,
+      "P.value_(65-80 year & Ground Control)v(65-80 year & Space Flight)": 11,
+      "Adj.p.value_(65-80 year & Ground Control)v(65-80 year & Space Flight)": 3985,
+      "P.value_(21-40 year & Space Flight)v(21-40 year & Ground Control)": 11,
+      "Adj.p.value_(21-40 year & Space Flight)v(21-40 year & Ground Control)": 3985,
+      "P.value_(65-80 year & Ground Control)v(21-40 year & Ground Control)": 11,
+      "Adj.p.value_(65-80 year & Ground Control)v(21-40 year & Ground Control)": 5308,
+      "P.value_(65-80 year & Space Flight)v(21-40 year & Ground Control)": 11,
+      "Adj.p.value_(65-80 year & Space Flight)v(21-40 year & Ground Control)": 3543,
+      "P.value_(65-80 year & Ground Control)v(21-40 year & Space Flight)": 11,
+      "Adj.p.value_(65-80 year & Ground Control)v(21-40 year & Space Flight)": 2660,
+      "P.value_(65-80 year & Space Flight)v(21-40 year & Space Flight)": 11,
+      "Adj.p.value_(65-80 year & Space Flight)v(21-40 year & Space Flight)": 6189,
+      "P.value_(65-80 year & Space Flight)v(65-80 year & Ground Control)": 11,
+      "Adj.p.value_(65-80 year & Space Flight)v(65-80 year & Ground Control)": 3985,
+      "LRT.p.value": 2660
+    },
+    "NA_values_preserved": true,
+    "status": "PASS"
+  }
+}

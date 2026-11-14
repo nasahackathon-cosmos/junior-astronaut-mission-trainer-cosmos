@@ -8,8 +8,8 @@ from matplotlib.patches import Patch
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 
-INPUT = BASE_DIR / "data/processed/jezero_terrain_classification.json"
-OUTPUT = BASE_DIR / "visualizations/jezero_terrain_map.png"
+INPUT = BASE_DIR / "data/processed/mars_trek/jezero_terrain_classification.json"
+OUTPUT = BASE_DIR / "docs/visualizations/jezero_terrain_map.png"
 
 # Load terrain classification
 with open(INPUT) as f:

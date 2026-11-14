@@ -1,0 +1,69 @@
+NASA OSDR DATA VALIDATION
+==========================
+
+FILE: OSD-654/LSDS-66_microCT_uCT_TRANSFORMED.csv
+  Rows: 25 (expected 25)
+  Columns: 10 (expected 10)
+  Empty cells: 9
+  Malformed row lengths: 0
+  Duplicate first-column IDs: 0
+  SHA-256: 43254281c99ff290eefafb80043aef912233646e1df807981fdc82845f82e0fd
+  Numeric cells checked: 216; non-numeric: 0
+  PASS: readable CSV
+
+FILE: OSD-684/GLDS-615_rna_seq_Normalized_Counts_GLbulkRNAseq.csv
+  Rows: 22771 (expected 22771)
+  Columns: 13 (expected 13)
+  Empty cells: 0
+  Malformed row lengths: 0
+  Duplicate first-column IDs: 0
+  SHA-256: 4777937956888368df5cd6cc2eb17c71771230a935acef2dcc336c06e32cc380
+  Numeric cells checked: 273252; non-numeric: 0
+  PASS: readable CSV
+
+FILE: OSD-684/GLDS-615_rna_seq_differential_expression_GLbulkRNAseq.csv
+  Rows: 22771 (expected 22771)
+  Columns: 78 (expected 78)
+  Empty cells: 0
+  Malformed row lengths: 0
+  Duplicate first-column IDs: 0
+  SHA-256: 8086d5588d82805553f33692606c02818c54e568edb3f49e245e7ca7a5550930
+  PASS: readable CSV
+
+FILE: OSD-684/GLDS-615_rna_seq_SampleTable_GLbulkRNAseq.csv
+  Rows: 12 (expected 12)
+  Columns: 2 (expected 2)
+  Empty cells: 0
+  Malformed row lengths: 0
+  Duplicate first-column IDs: 0
+  SHA-256: be6167a59d4621e4e1b893b82a77daa67eae6e3f1ff2f7f9c46cd642b5c1728a
+  Condition groups: {'21.40.year...Ground.Control': 3, '65.80.year...Ground.Control': 3, '21.40.year...Space.Flight': 3, '65.80.year...Space.Flight': 3}
+  PASS: readable CSV
+
+FILE: OSD-684/GLDS-615_rna_seq_contrasts_GLbulkRNAseq.csv
+  Rows: 2 (expected 2)
+  Columns: 13 (expected 13)
+  Empty cells: 0
+  Malformed row lengths: 0
+  Duplicate first-column IDs: 0
+  SHA-256: 792297652a590d53edbc773edc11771eedd66b7daa48e9b6c5f4c8a9fb91211b
+  PASS: readable CSV
+
+ARCHIVE: OSD-654/OSD-654_metadata_OSD-654-ISA.zip
+  Members: 4
+    - a_OSD-654_bone-microstructure_micro-computed-tomography_skyscan 1176 v1 build 12.txt
+    - a_OSD-654_bone-microstructure_dual-energy-x-ray-absorptiometry_osteosys insight.txt
+    - s_OSD-654.txt
+    - i_Investigation.txt
+  PASS: ZIP integrity
+
+ARCHIVE: OSD-684/OSD-684_metadata_OSD-684-ISA.zip
+  Members: 3
+    - s_OSD-684.txt
+    - a_OSD-684_transcription-profiling_rna-sequencing-(rna-seq)_illumina.txt
+    - i_Investigation.txt
+  PASS: ZIP integrity
+
+VALIDATION SUMMARY
+==================
+All structural and archive checks passed.

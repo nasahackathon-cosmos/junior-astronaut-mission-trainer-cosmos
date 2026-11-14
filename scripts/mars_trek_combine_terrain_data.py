@@ -4,7 +4,7 @@ import math
 from pathlib import Path
 
 BASE = Path(__file__).resolve().parents[1]
-DATA = BASE / "data" / "processed"
+DATA = BASE / "data" / "processed" / "mars_trek"
 
 
 def load(filename):

@@ -5,8 +5,8 @@ from osgeo import gdal
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 
-INPUT = BASE_DIR / "data/processed/jezero_tes_dust.tif"
-OUTPUT = BASE_DIR / "data/processed/jezero_tes_dust.json"
+INPUT = BASE_DIR / "data/processed/mars_trek/jezero_tes_dust.tif"
+OUTPUT = BASE_DIR / "data/processed/mars_trek/jezero_tes_dust.json"
 
 dataset = gdal.Open(str(INPUT))
 

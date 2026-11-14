@@ -29,7 +29,7 @@ The two primary mappings are M053 and M054. The other entries are secondary educ
 
 `data/processed/osdr/OSD-654/OSD-654_microCT_with_metadata.csv`
 
-**Raw measurement file:**
+**Local raw measurement input (excluded from this public release):**
 
 `data/raw/osdr/OSD-654/LSDS-66_microCT_uCT_TRANSFORMED.csv`
 
@@ -306,6 +306,9 @@ Historical Artemis I measurements must not be presented as live telemetry or as 
 
 **Main reference:**
 https://www.asc-csa.gc.ca/eng/youth-educators/toolkits/food-production/
+
+**Local raw source input (excluded from this public release):**
+`data/raw/food_production/interplanetary-farming.pdf`
 
 **Processed directory:**
 `data/processed/food_production/`

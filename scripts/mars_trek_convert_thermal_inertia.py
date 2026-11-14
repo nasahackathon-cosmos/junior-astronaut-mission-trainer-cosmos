@@ -5,8 +5,8 @@ from osgeo import gdal
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 
-INPUT = BASE_DIR / "data/processed/jezero_thermal_inertia.tif"
-OUTPUT = BASE_DIR / "data/processed/jezero_thermal_inertia.json"
+INPUT = BASE_DIR / "data/processed/mars_trek/jezero_thermal_inertia.tif"
+OUTPUT = BASE_DIR / "data/processed/mars_trek/jezero_thermal_inertia.json"
 
 dataset = gdal.Open(str(INPUT))
 
@@ -63,3 +63,5 @@ with open(OUTPUT, "w") as f:
 print("Thermal Inertia conversion completed!")
 print("Dimensions:", height, "x", width)
 print("Saved:", OUTPUT)
+
+\n

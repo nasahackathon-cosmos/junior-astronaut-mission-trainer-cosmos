@@ -5,9 +5,9 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 
-SLOPE_INPUT = BASE_DIR / "data/processed/jezero_slope.json"
-TERRAIN_INPUT = BASE_DIR / "data/processed/jezero_terrain.json"
-OUTPUT = BASE_DIR / "data/processed/jezero_terrain_classification.json"
+SLOPE_INPUT = BASE_DIR / "data/processed/mars_trek/jezero_slope.json"
+TERRAIN_INPUT = BASE_DIR / "data/processed/mars_trek/jezero_terrain.json"
+OUTPUT = BASE_DIR / "data/processed/mars_trek/jezero_terrain_classification.json"
 
 # Load slope data
 with open(SLOPE_INPUT) as f:

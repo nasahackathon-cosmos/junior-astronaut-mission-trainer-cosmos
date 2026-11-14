@@ -7,6 +7,7 @@ OUTPUT.mkdir(parents=True, exist_ok=True)
 SOURCE = {
     "title": "Interplanetary Farming",
     "organization": "Canadian Space Agency",
+    "file": "data/raw/food_production/interplanetary-farming.pdf",
     "url": "https://www.asc-csa.gc.ca/eng/youth-educators/toolkits/food-production/",
     "source_type": "educational_reference",
 }

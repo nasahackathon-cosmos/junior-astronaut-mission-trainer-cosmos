@@ -2,6 +2,8 @@
 
 Project: Junior Astronaut Mission Trainer
 Age group: 7–12
+
+**Public-release note:** Original research inputs under `data/raw/` are excluded from this repository. The local paths below describe the research workspace; they are not downloadable files in this release.
 Data source: NASA Open Science Data Repository (OSDR)
 
 ## 1. OSD-654 — Bone microstructure
@@ -86,7 +88,7 @@ score for a child or astronaut.
 | Source | Intended use | Status |
 |---|---|---|
 | NASA RadLab | Artemis I radiation measurements from four Orion instruments | Collected and processed; see Section 5 |
-| Mars Trek | Mars surface and terrain references | Not yet collected |
+| Mars Trek | Mars surface and terrain references | Collected and processed; see the Mars Trek section |
 | NASA APIs | Live or on-demand NASA information | API key obtained; endpoint selection pending |
 
 
@@ -137,6 +139,12 @@ https://doi.org/10.1038/s41586-024-07927-7
 
 **Main reference:** Interplanetary Farming
 https://www.asc-csa.gc.ca/eng/youth-educators/toolkits/food-production/
+
+**Locally downloaded source file (excluded from this public release):**
+`data/raw/food_production/interplanetary-farming.pdf`
+
+**Extracted text:**
+`data/processed/food_production/interplanetary-farming.txt`
 
 ### Structured reference files
 

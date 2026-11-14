@@ -5,8 +5,8 @@ from pathlib import Path
 # Project-relative paths
 BASE_DIR = Path(__file__).resolve().parents[1]
 
-INPUT = BASE_DIR / "data/processed/jezero_terrain.json"
-OUTPUT = BASE_DIR / "data/processed/jezero_slope.json"
+INPUT = BASE_DIR / "data/processed/mars_trek/jezero_terrain.json"
+OUTPUT = BASE_DIR / "data/processed/mars_trek/jezero_slope.json"
 
 with open(INPUT) as f:
     terrain = json.load(f)

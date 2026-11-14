@@ -1,0 +1,12 @@
+spacecraft,environment,instrument_id,record_count,first_timestamp,last_timestamp,status,error
+TGO,Mars cruise,Liulin-MO-AB-Cruise,2163,2016-04-22T13:15:38,2016-09-15T20:00:22,success,
+TGO,Mars cruise,Liulin-MO-CD-Cruise,2163,2016-04-22T13:15:38,2016-09-15T20:00:22,success,
+TGO,Mars orbit,Liulin-MO-AB-Orbit,2407325,2016-11-01T00:06:42,2023-12-31T23:59:05,success,
+TGO,Mars orbit,Liulin-MO-CD-Orbit,2431833,2016-11-01T00:06:42,2023-12-31T23:59:05,success,
+Curiosity,Mars surface,MSL-RAD-Surface,274983,2015-01-01T00:11:01,2024-06-03T10:06:06,success,
+Orion,Lunar flyby,Artemis-I-EAD-MU01,7303,2022-11-16T06:50:00,2022-12-11T15:20:00,success,
+Orion,Lunar flyby,Artemis-I-M42-SN127,7325,2022-11-16T06:55:00,2022-12-11T17:15:00,success,
+Orion,Lunar flyby,Artemis-I-HERA-HSU1,36608,2022-11-16T06:51:00,2022-12-11T16:58:00,success,
+Orion,Lunar flyby,Artemis-I-HERA-HSU2,36608,2022-11-16T06:51:00,2022-12-11T16:58:00,success,
+LRO,Lunar orbit,CRaTER-D1D2,129682,2009-06-26T20:36:34,2024-06-18T23:59:59,success,
+BioSentinel,Heliocentric orbit at 1 AU,BPD,1469555,2022-11-01T00:01:00,2025-11-13T19:44:00,success,

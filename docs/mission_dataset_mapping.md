@@ -178,7 +178,7 @@ Do not map these two datasets as direct evidence for the following missions:
 | M013, M052, M057, M084 | Plant growth and greenhouse planning | Neither downloaded study is a plant-growth experiment |
 | M056 | Immune-system research briefing | Neither downloaded study directly investigates immune-system outcomes |
 | M047, M048, M050, M051, M086 | Water, power, night survival, waste and recycling | These are not life-support resource datasets |
-| M032, M033, M034, M035, M036 | Radiation and shelter planning | These studies do not provide a radiation-dose dataset for these missions |
+| M032, M035, M036 | Radiation and shelter planning | OSDR studies do not provide radiation-dose data; NASA RadLab now provides selected Artemis I evidence for these missions |
 | M038–M044, M049, M070, M072, M077 | Landing sites, terrain, sunlight and rover operations | These are not planetary terrain or environmental datasets |
 | M053 as a human medical assessment | Personal bone-health diagnosis | OSD-654 contains mouse research measurements, not personal human medical data |
 | M054 as a muscle-strength test | Personal or astronaut strength measurement | OSD-684 contains tissue-chip gene-expression data, not strength measurements |
@@ -253,3 +253,49 @@ The existing automated test suite checks dataset dimensions, sample alignment, m
 - NASA RadLab: https://visualization.osdr.nasa.gov/radlab/gui/data-api/
 
 **Mapping status:** The two primary OSDR mappings are identified. Secondary mission uses are contextual and must retain the limitations described above. This document does not claim that all 100 missions have been mapped to OSDR.
+
+
+## 9. NASA RadLab — Artemis I Radiation Evidence
+
+**Source:** [NASA RadLab](https://visualization.osdr.nasa.gov/radlab/gui/data-api/)
+
+**Research reference:** George et al., *Space radiation measurements during the Artemis I lunar mission*, Nature 634, 48–52 (2024).
+https://doi.org/10.1038/s41586-024-07927-7
+
+### Selected instrument datasets
+
+- HERA HSU1
+- HERA HSU2
+- EAD MU01
+- M42 SN127
+
+### Mission crosswalk
+
+| Mission | Evidence relationship | Educational application |
+|---|---|---|
+| M032 | Primary direct evidence | Introduce radiation measurements from Artemis I |
+| M035 | Primary direct evidence | Explore instrument readings and event-window comparisons |
+| M036 | Supporting evidence | Use radiation research as context for simulated shelter scenarios |
+
+### Event coverage
+
+1. Inner radiation-belt passage: selected instrument peak summaries.
+2. Outer radiation-belt passage: time-series measurements from four instruments.
+3. Lunar flybys: instrument measurements around the two Artemis I lunar closest approaches.
+
+### Scientific interpretation boundaries
+
+- Artemis I was uncrewed; its measurements are not astronaut exposure measurements.
+- Absorbed dose rate and dose equivalent rate are different quantities.
+- Instrument comparisons must preserve units, sensor identity, and measurement context.
+- Lunar-flyby event-window percentage changes are derived summaries, not proof of a causal shielding effect.
+- The published research interpretation of reduced galactic cosmic-ray exposure during lunar flybys must not be confused with our calculated event-window averages.
+- M036 shelter effectiveness and protection outcomes remain simulated.
+
+### Missions not supported by these selected RadLab events
+
+- M033: Solar flare monitoring.
+- M034: Solar energetic particle event monitoring.
+- M037 and other live-event missions: Current or live solar-event monitoring.
+
+Historical Artemis I measurements must not be presented as live telemetry or as a substitute for dedicated solar-event data sources.

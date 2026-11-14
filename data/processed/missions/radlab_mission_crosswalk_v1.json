@@ -1,0 +1,325 @@
+{
+  "title": "Junior Astronaut Mission Trainer — RadLab Evidence Crosswalk",
+  "version": "1.0",
+  "created_at_utc": "2026-11-14T08:25:21.021994+00:00",
+  "catalogue": "data/processed/missions/mission_catalog.json",
+  "catalogue_mission_count": 100,
+  "catalogue_sha256": "0fe4d4bccd7c7299b3e8d6b4c0be5373c1bcc0929756c279ec71c8a44db34ecf",
+  "evidence_policy": {
+    "primary_direct": "The source directly provides measured radiation observations relevant to the mission's learning objective.",
+    "supporting": "The source provides real research context, but does not directly validate the simulated engineering outcome.",
+    "background_only": "Contextual reference only; it is not evidence for the simulated operational outcome.",
+    "not_supported": "No direct dataset relationship is claimed."
+  },
+  "sources": [
+    {
+      "source_id": "RADLAB-ARTEMIS-INNER-2022",
+      "title": "A Trip Through a Space Storm",
+      "event_id": "ARTEMIS-I-INNER-PROTON-BELT-2022-11-16",
+      "event_type": "Inner Earth radiation-belt crossing",
+      "event_window_utc": {
+        "start": "2022-11-16T07:12:00",
+        "end": "2022-11-16T07:42:00"
+      },
+      "mission": "Artemis I",
+      "spacecraft": "Orion",
+      "crew_status": "Uncrewed test flight",
+      "measurement_field": "absorbed_dose_rate",
+      "measurement_unit": "microGy/hour",
+      "record_granularity": "instrument_peak_summary",
+      "summary_record_count": 4,
+      "underlying_event_reading_counts": {
+        "Artemis-I-HERA-HSU1": 31,
+        "Artemis-I-HERA-HSU2": 31,
+        "Artemis-I-EAD-MU01": 6,
+        "Artemis-I-M42-SN127": 6
+      },
+      "event_json": {
+        "file": "data/processed/radlab/artemis_i_inner_belt_event_v1.json",
+        "sha256": "aba99bafe98f68f7f9329019178be8f4fb3e6acec96a84175cc50aa691d52a97"
+      },
+      "supporting_raw_files": [
+        {
+          "file": "data/raw/radlab/orion_artemis_i_hera_hsu1_24h.csv",
+          "sha256": "df549f52e3933bf15f607f937668d9dc086b42546c52136e66f5e2c17d4ea850"
+        },
+        {
+          "file": "data/raw/radlab/orion_artemis_i_hera_hsu2_24h.csv",
+          "sha256": "40f8125a4a8af3e88aea0b612f6fb9f369125065d71b02f44e6425d4a38ad892"
+        },
+        {
+          "file": "data/raw/radlab/orion_artemis_i_ead_mu01_24h.csv",
+          "sha256": "f113a2fcf1b24960233468882cbcfa764758dcb60c94f79cd880048c50b1c4f2"
+        },
+        {
+          "file": "data/raw/radlab/orion_artemis_i_m42_sn127_24h.csv",
+          "sha256": "fb96c8e91191be0fb7905e8d3221387fefa1c43b7a7f6ac0fea8dae657abe42d"
+        }
+      ],
+      "research_reference": {
+        "title": "Space radiation measurements during the Artemis I lunar mission",
+        "journal": "Nature",
+        "year": 2024,
+        "doi": "10.1038/s41586-024-07927-7",
+        "url": "https://doi.org/10.1038/s41586-024-07927-7"
+      },
+      "limitations": [
+        "The event JSON contains instrument peak summaries, not individual time-series rows.",
+        "Underlying readings are retained in the separate raw CSV files.",
+        "Artemis I was an uncrewed test flight.",
+        "Absorbed dose rate is not dose equivalent rate.",
+        "Different instruments and sensor positions are not interchangeable."
+      ]
+    },
+    {
+      "source_id": "RADLAB-ARTEMIS-OUTER-2022",
+      "title": "Artemis I Outer Earth Radiation Belt Passage",
+      "event_id": "artemis_i_outer_belt_2022_11_16",
+      "event_window_utc": {
+        "start": "2022-11-16T08:45:00",
+        "end": "2022-11-16T10:45:00",
+        "end_inclusive": true
+      },
+      "mission": {
+        "name": "Artemis I",
+        "crew_status": "uncrewed",
+        "spacecraft": "Orion"
+      },
+      "measurement_field": "absorbed_dose_rate",
+      "measurement_unit": "microGy/hour",
+      "record_granularity": "individual_time_series_readings",
+      "total_readings": 292,
+      "instrument_reading_counts": {
+        "HERA HSU1": 121,
+        "HERA HSU2": 121,
+        "EAD MU01": 25,
+        "M42 SN127": 25
+      },
+      "event_json": {
+        "file": "data/processed/radlab/artemis_i_outer_belt_event_v1.json",
+        "sha256": "0160afca2871ea8a1392bd73737506e7ea3baf214fff1613b48ee3158d8145e6"
+      },
+      "supporting_raw_files": [
+        {
+          "file": "data/raw/radlab/orion_artemis_i_hera_hsu1_24h.csv",
+          "sha256": "df549f52e3933bf15f607f937668d9dc086b42546c52136e66f5e2c17d4ea850"
+        },
+        {
+          "file": "data/raw/radlab/orion_artemis_i_hera_hsu2_24h.csv",
+          "sha256": "40f8125a4a8af3e88aea0b612f6fb9f369125065d71b02f44e6425d4a38ad892"
+        },
+        {
+          "file": "data/raw/radlab/orion_artemis_i_ead_mu01_24h.csv",
+          "sha256": "f113a2fcf1b24960233468882cbcfa764758dcb60c94f79cd880048c50b1c4f2"
+        },
+        {
+          "file": "data/raw/radlab/orion_artemis_i_m42_sn127_24h.csv",
+          "sha256": "fb96c8e91191be0fb7905e8d3221387fefa1c43b7a7f6ac0fea8dae657abe42d"
+        }
+      ],
+      "research_reference": {
+        "title": "Space radiation measurements during the Artemis I lunar mission",
+        "journal": "Nature",
+        "year": 2024,
+        "doi": "10.1038/s41586-024-07927-7",
+        "url": "https://doi.org/10.1038/s41586-024-07927-7"
+      },
+      "limitations": [
+        "Artemis I was an uncrewed test flight.",
+        "Absorbed dose rate is not dose equivalent rate.",
+        "The outer-belt interval is an electron-rich radiation-belt passage.",
+        "Do not interpret this event as a solar energetic particle event.",
+        "The event's contribution to cumulative mission dose was small in the published study."
+      ]
+    },
+    {
+      "source_id": "RADLAB-ARTEMIS-LUNAR-FLYBYS-2022",
+      "title": "Artemis I lunar flyby radiation measurements",
+      "dataset_id": "artemis_i_lunar_flybys_v1",
+      "mission": {
+        "name": "Artemis I",
+        "spacecraft": "Orion",
+        "crew_status": "uncrewed"
+      },
+      "measurement_field": "absorbed_dose_rate",
+      "measurement_unit": "microGy/hour",
+      "record_granularity": "individual_time_series_readings",
+      "total_readings": 3460,
+      "events": {
+        "first_lunar_flyby_20221121": {
+          "name": "First lunar flyby",
+          "closest_approach_utc": "2022-11-21T12:57:00",
+          "distance_km": 130,
+          "event_window_utc": {
+            "start": "2022-11-21T06:57:00",
+            "end": "2022-11-21T18:57:00",
+            "end_inclusive": true
+          },
+          "instrument_reading_counts": {
+            "HERA HSU1": 721,
+            "HERA HSU2": 721,
+            "EAD MU01": 144,
+            "M42 SN127": 144
+          }
+        },
+        "second_lunar_flyby_20221205": {
+          "name": "Second lunar flyby",
+          "closest_approach_utc": "2022-12-05T16:43:00",
+          "distance_km": 128,
+          "event_window_utc": {
+            "start": "2022-12-05T10:43:00",
+            "end": "2022-12-05T22:43:00",
+            "end_inclusive": true
+          },
+          "instrument_reading_counts": {
+            "HERA HSU1": 721,
+            "HERA HSU2": 721,
+            "EAD MU01": 144,
+            "M42 SN127": 144
+          }
+        }
+      },
+      "event_json": {
+        "file": "data/processed/radlab/artemis_i_lunar_flybys_v1.json",
+        "sha256": "069de4944ed7b2afe1b2fef7d39a45277d80588100886570c6af8c9d694dfba5"
+      },
+      "supporting_raw_files": [
+        {
+          "file": "data/raw/radlab/first_lunar_flyby_20221121_HERA_HSU1_12h.csv",
+          "sha256": "b5943c3e559465df9e664be70b49e21d9af07f90fc00f6e75b6eb5c633eaa64b"
+        },
+        {
+          "file": "data/raw/radlab/first_lunar_flyby_20221121_HERA_HSU2_12h.csv",
+          "sha256": "bbce701024d1b5a08bc4fcea60351310beaddf9cbd294b0d9a2010809f7c0b4e"
+        },
+        {
+          "file": "data/raw/radlab/first_lunar_flyby_20221121_EAD_MU01_12h.csv",
+          "sha256": "486e59b60da00cf00b9a590d51a3ac4b38c2ab505e40751e6814bab86af0e3f3"
+        },
+        {
+          "file": "data/raw/radlab/first_lunar_flyby_20221121_M42_SN127_12h.csv",
+          "sha256": "be60ca1c41cdb4ba68de7355c68509d5d2687960447f1a8165f2095c41d9d332"
+        },
+        {
+          "file": "data/raw/radlab/second_lunar_flyby_20221205_HERA_HSU1_12h.csv",
+          "sha256": "5a54cdf862be2817fb5709320235953b3833acb0307182fe0180dfb1e5ca362f"
+        },
+        {
+          "file": "data/raw/radlab/second_lunar_flyby_20221205_HERA_HSU2_12h.csv",
+          "sha256": "4e9c7e3268ca3f61a01ebe2e7e311984ef25d8588b9911b753de7406ae828206"
+        },
+        {
+          "file": "data/raw/radlab/second_lunar_flyby_20221205_EAD_MU01_12h.csv",
+          "sha256": "785d6c12ddb2d059d2cc3776d1abadb788f6841b683b0c4fb20a035a22d9e34c"
+        },
+        {
+          "file": "data/raw/radlab/second_lunar_flyby_20221205_M42_SN127_12h.csv",
+          "sha256": "df73d245641ee829be322433b84f0c19b1d14e690874ad82921e10b0d294af44"
+        }
+      ],
+      "research_reference": {
+        "title": "Space radiation measurements during the Artemis I lunar mission",
+        "journal": "Nature",
+        "year": 2024,
+        "doi": "10.1038/s41586-024-07927-7",
+        "url": "https://doi.org/10.1038/s41586-024-07927-7"
+      },
+      "limitations": [
+        "Artemis I was an uncrewed test flight.",
+        "Absorbed dose rate is not dose equivalent rate.",
+        "Windowed averages in this dataset are not the same calculation as the published approximately one-third GCR reduction.",
+        "The published lunar shielding interpretation concerns part of the incoming galactic cosmic-ray field.",
+        "Do not claim the Moon blocks all space radiation."
+      ]
+    }
+  ],
+  "mappings": [
+    {
+      "mission_id": "M032",
+      "mission_title": "Radiation dose detective",
+      "source_ids": [
+        "RADLAB-ARTEMIS-INNER-2022",
+        "RADLAB-ARTEMIS-OUTER-2022",
+        "RADLAB-ARTEMIS-LUNAR-FLYBYS-2022"
+      ],
+      "evidence_role": "primary_direct",
+      "rationale": "Archived Orion instrument measurements provide real absorbed-dose-rate observations across an inner-belt passage, an outer-belt passage and two lunar flyby periods.",
+      "implementation_note": "Extend the existing ISS-focused activity with a separate historical Artemis I dataset view. Clearly label the spacecraft, instrument, sensor location, date and uncrewed mission status.",
+      "limitations": [
+        "Do not present Artemis I readings as astronaut exposure.",
+        "Do not label Orion readings as ISS, lunar-surface or Mars-surface readings.",
+        "Do not treat absorbed dose rate and dose equivalent rate as interchangeable.",
+        "Keep each instrument's readings and sensor position distinct."
+      ]
+    },
+    {
+      "mission_id": "M035",
+      "mission_title": "Which radiation chart is stronger?",
+      "source_ids": [
+        "RADLAB-ARTEMIS-INNER-2022",
+        "RADLAB-ARTEMIS-OUTER-2022",
+        "RADLAB-ARTEMIS-LUNAR-FLYBYS-2022"
+      ],
+      "evidence_role": "primary_direct",
+      "rationale": "The datasets allow learners to inspect real time-series measurements, compare time windows and understand why instrument, position and measurement definition matter.",
+      "implementation_note": "Use separate charts or clearly labelled series. Compare like-for-like units and identify the sensor before asking which chart is higher.",
+      "limitations": [
+        "Do not compare different instruments as if they were identical sensors.",
+        "Do not compare values with different units as if they were the same quantity.",
+        "The inner-belt event file contains peak summaries; its raw CSV files hold the underlying measurements."
+      ]
+    },
+    {
+      "mission_id": "M036",
+      "mission_title": "Design a radiation-safe shelter",
+      "source_ids": [
+        "RADLAB-ARTEMIS-INNER-2022",
+        "RADLAB-ARTEMIS-OUTER-2022",
+        "RADLAB-ARTEMIS-LUNAR-FLYBYS-2022"
+      ],
+      "evidence_role": "supporting",
+      "rationale": "Real spacecraft radiation observations provide context for discussing why spacecraft layout and shielding matter.",
+      "implementation_note": "Keep shelter construction, material choices and protection outcomes explicitly simulated or conceptual unless a separately validated shielding model is added.",
+      "limitations": [
+        "These datasets do not validate a Moon or Mars shelter design.",
+        "Do not infer shielding effectiveness solely from differences between sensors at different locations.",
+        "Do not present game protection percentages as measured NASA results."
+      ]
+    }
+  ],
+  "not_supported_examples": [
+    {
+      "mission_ids": [
+        "M034"
+      ],
+      "source_ids": [
+        "RADLAB-ARTEMIS-INNER-2022",
+        "RADLAB-ARTEMIS-OUTER-2022"
+      ],
+      "reason": "The Artemis event files describe radiation-belt passages. They do not establish that the observations are measurements of a specific solar energetic particle event. Use a matching DONKI SEP record for the event activity."
+    },
+    {
+      "mission_ids": [
+        "M031",
+        "M033",
+        "M037",
+        "M098"
+      ],
+      "source_ids": [
+        "RADLAB-ARTEMIS-INNER-2022",
+        "RADLAB-ARTEMIS-OUTER-2022",
+        "RADLAB-ARTEMIS-LUNAR-FLYBYS-2022"
+      ],
+      "reason": "These historical RadLab measurements are not solar-flare or CME event records and are not a live space-weather alert feed. Retain the relevant DONKI sources for these missions."
+    }
+  ],
+  "simulation_boundary": [
+    "Artemis I was uncrewed; none of these measurements represent astronaut exposure.",
+    "The measured quantity in these event datasets is absorbed dose rate in microGy/hour.",
+    "Do not infer dose equivalent rate in microSv/hour without a justified radiation weighting or conversion model.",
+    "Do not present these spacecraft measurements as measurements at a fictional lunar or Martian base.",
+    "Shelter designs, material performance and game protection outcomes remain simulated unless separately validated.",
+    "The published approximately one-third GCR reduction during lunar flybys is a research finding and is not the same as the windowed percentage changes calculated in this dataset.",
+    "Keep raw telemetry, derived summaries, published research interpretation and game simulation as separate evidence layers."
+  ]
+}

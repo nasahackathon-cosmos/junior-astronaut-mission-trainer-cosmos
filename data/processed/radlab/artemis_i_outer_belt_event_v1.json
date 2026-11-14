@@ -1,0 +1,1290 @@
+{
+  "event_id": "artemis_i_outer_belt_2022_11_16",
+  "event_name": "Artemis I Outer Earth Radiation Belt Passage",
+  "event_window_utc": {
+    "start": "2022-11-16T08:45:00",
+    "end": "2022-11-16T10:45:00",
+    "end_inclusive": true
+  },
+  "mission": {
+    "name": "Artemis I",
+    "crew_status": "uncrewed",
+    "spacecraft": "Orion"
+  },
+  "event_description": "Published mission research identifies this interval as Orion's passage through Earth's outer radiation belt, an electron-rich region of trapped radiation.",
+  "measurement_definition": {
+    "field": "absorbed_dose_rate",
+    "unit": "microGy/hour",
+    "converted_peak_unit": "microGy/minute",
+    "conversion": "microGy/hour divided by 60",
+    "warning": "Absorbed dose rate is not dose equivalent rate. Do not infer dose equivalent from these measurements."
+  },
+  "instruments": {
+    "HERA HSU1": {
+      "source_file": "orion_artemis_i_hera_hsu1_24h.csv",
+      "source_sha256": "df549f52e3933bf15f607f937668d9dc086b42546c52136e66f5e2c17d4ea850",
+      "reading_count": 121,
+      "first_reading_utc": "2022-11-16T08:45:00",
+      "last_reading_utc": "2022-11-16T10:45:00",
+      "sampling_interval_minutes": 1,
+      "statistics": {
+        "minimum": 11.34324,
+        "median": 27.64428,
+        "mean": 36.72984595041322,
+        "maximum": 90.14880000000001,
+        "peak_time_utc": "2022-11-16T09:21:00",
+        "peak_microGy_per_minute": 1.50248
+      },
+      "readings": [
+        {
+          "timestamp_utc": "2022-11-16T08:45:00",
+          "absorbed_dose_rate": 15.80814
+        },
+        {
+          "timestamp_utc": "2022-11-16T08:46:00",
+          "absorbed_dose_rate": 14.20182
+        },
+        {
+          "timestamp_utc": "2022-11-16T08:47:00",
+          "absorbed_dose_rate": 11.34324
+        },
+        {
+          "timestamp_utc": "2022-11-16T08:48:00",
+          "absorbed_dose_rate": 15.5751
+        },
+        {
+          "timestamp_utc": "2022-11-16T08:49:00",
+          "absorbed_dose_rate": 16.816799999999997
+        },
+        {
+          "timestamp_utc": "2022-11-16T08:50:00",
+          "absorbed_dose_rate": 17.43888
+        },
+        {
+          "timestamp_utc": "2022-11-16T08:51:00",
+          "absorbed_dose_rate": 16.05912
+        },
+        {
+          "timestamp_utc": "2022-11-16T08:52:00",
+          "absorbed_dose_rate": 16.41714
+        },
+        {
+          "timestamp_utc": "2022-11-16T08:53:00",
+          "absorbed_dose_rate": 17.2056
+        },
+        {
+          "timestamp_utc": "2022-11-16T08:54:00",
+          "absorbed_dose_rate": 22.43196
+        },
+        {
+          "timestamp_utc": "2022-11-16T08:55:00",
+          "absorbed_dose_rate": 25.07592
+        },
+        {
+          "timestamp_utc": "2022-11-16T08:56:00",
+          "absorbed_dose_rate": 30.020460000000003
+        },
+        {
+          "timestamp_utc": "2022-11-16T08:57:00",
+          "absorbed_dose_rate": 32.698679999999996
+        },
+        {
+          "timestamp_utc": "2022-11-16T08:58:00",
+          "absorbed_dose_rate": 31.55394
+        },
+        {
+          "timestamp_utc": "2022-11-16T08:59:00",
+          "absorbed_dose_rate": 31.89264
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:00:00",
+          "absorbed_dose_rate": 36.76296
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:01:00",
+          "absorbed_dose_rate": 37.8909
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:02:00",
+          "absorbed_dose_rate": 44.22738
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:03:00",
+          "absorbed_dose_rate": 40.9116
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:04:00",
+          "absorbed_dose_rate": 46.176719999999996
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:05:00",
+          "absorbed_dose_rate": 43.8999
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:06:00",
+          "absorbed_dose_rate": 47.84556
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:07:00",
+          "absorbed_dose_rate": 51.161820000000006
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:08:00",
+          "absorbed_dose_rate": 56.00544
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:09:00",
+          "absorbed_dose_rate": 59.14296
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:10:00",
+          "absorbed_dose_rate": 62.7414
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:11:00",
+          "absorbed_dose_rate": 65.0562
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:12:00",
+          "absorbed_dose_rate": 70.3158
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:13:00",
+          "absorbed_dose_rate": 71.22420000000001
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:14:00",
+          "absorbed_dose_rate": 78.07199999999999
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:15:00",
+          "absorbed_dose_rate": 74.7738
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:16:00",
+          "absorbed_dose_rate": 81.9252
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:17:00",
+          "absorbed_dose_rate": 77.4366
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:18:00",
+          "absorbed_dose_rate": 86.6496
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:19:00",
+          "absorbed_dose_rate": 82.365
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:20:00",
+          "absorbed_dose_rate": 86.211
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:21:00",
+          "absorbed_dose_rate": 90.14880000000001
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:22:00",
+          "absorbed_dose_rate": 81.0966
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:23:00",
+          "absorbed_dose_rate": 79.28999999999999
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:24:00",
+          "absorbed_dose_rate": 77.7144
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:25:00",
+          "absorbed_dose_rate": 72.96539999999999
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:26:00",
+          "absorbed_dose_rate": 68.2836
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:27:00",
+          "absorbed_dose_rate": 71.4384
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:28:00",
+          "absorbed_dose_rate": 68.7714
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:29:00",
+          "absorbed_dose_rate": 62.6292
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:30:00",
+          "absorbed_dose_rate": 63.7968
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:31:00",
+          "absorbed_dose_rate": 61.9554
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:32:00",
+          "absorbed_dose_rate": 58.81308
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:33:00",
+          "absorbed_dose_rate": 57.70662
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:34:00",
+          "absorbed_dose_rate": 53.68452
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:35:00",
+          "absorbed_dose_rate": 49.8858
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:36:00",
+          "absorbed_dose_rate": 54.2703
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:37:00",
+          "absorbed_dose_rate": 47.27682
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:38:00",
+          "absorbed_dose_rate": 45.90996
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:39:00",
+          "absorbed_dose_rate": 42.07314
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:40:00",
+          "absorbed_dose_rate": 41.095859999999995
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:41:00",
+          "absorbed_dose_rate": 41.922360000000005
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:42:00",
+          "absorbed_dose_rate": 42.92946
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:43:00",
+          "absorbed_dose_rate": 40.29654
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:44:00",
+          "absorbed_dose_rate": 34.41672
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:45:00",
+          "absorbed_dose_rate": 38.42922
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:46:00",
+          "absorbed_dose_rate": 34.26948
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:47:00",
+          "absorbed_dose_rate": 35.24604
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:48:00",
+          "absorbed_dose_rate": 35.95944
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:49:00",
+          "absorbed_dose_rate": 31.885920000000002
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:50:00",
+          "absorbed_dose_rate": 33.63462
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:51:00",
+          "absorbed_dose_rate": 29.104680000000002
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:52:00",
+          "absorbed_dose_rate": 31.59762
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:53:00",
+          "absorbed_dose_rate": 27.68904
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:54:00",
+          "absorbed_dose_rate": 27.3174
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:55:00",
+          "absorbed_dose_rate": 29.82006
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:56:00",
+          "absorbed_dose_rate": 27.5028
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:57:00",
+          "absorbed_dose_rate": 30.28998
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:58:00",
+          "absorbed_dose_rate": 24.30204
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:59:00",
+          "absorbed_dose_rate": 27.64428
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:00:00",
+          "absorbed_dose_rate": 25.07052
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:01:00",
+          "absorbed_dose_rate": 27.516360000000002
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:02:00",
+          "absorbed_dose_rate": 26.69238
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:03:00",
+          "absorbed_dose_rate": 22.23048
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:04:00",
+          "absorbed_dose_rate": 22.270020000000002
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:05:00",
+          "absorbed_dose_rate": 25.87602
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:06:00",
+          "absorbed_dose_rate": 26.42652
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:07:00",
+          "absorbed_dose_rate": 22.86318
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:08:00",
+          "absorbed_dose_rate": 22.9854
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:09:00",
+          "absorbed_dose_rate": 26.45142
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:10:00",
+          "absorbed_dose_rate": 22.8885
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:11:00",
+          "absorbed_dose_rate": 26.24604
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:12:00",
+          "absorbed_dose_rate": 20.21238
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:13:00",
+          "absorbed_dose_rate": 23.849880000000002
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:14:00",
+          "absorbed_dose_rate": 18.8664
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:15:00",
+          "absorbed_dose_rate": 22.5096
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:16:00",
+          "absorbed_dose_rate": 20.619
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:17:00",
+          "absorbed_dose_rate": 22.37418
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:18:00",
+          "absorbed_dose_rate": 21.95682
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:19:00",
+          "absorbed_dose_rate": 23.42736
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:20:00",
+          "absorbed_dose_rate": 18.74484
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:21:00",
+          "absorbed_dose_rate": 24.697860000000002
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:22:00",
+          "absorbed_dose_rate": 18.46266
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:23:00",
+          "absorbed_dose_rate": 18.90216
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:24:00",
+          "absorbed_dose_rate": 18.4179
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:25:00",
+          "absorbed_dose_rate": 23.031239999999997
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:26:00",
+          "absorbed_dose_rate": 18.685319999999997
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:27:00",
+          "absorbed_dose_rate": 16.766099999999998
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:28:00",
+          "absorbed_dose_rate": 14.64198
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:29:00",
+          "absorbed_dose_rate": 15.838980000000001
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:30:00",
+          "absorbed_dose_rate": 18.264059999999997
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:31:00",
+          "absorbed_dose_rate": 18.86778
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:32:00",
+          "absorbed_dose_rate": 19.878420000000002
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:33:00",
+          "absorbed_dose_rate": 19.93896
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:34:00",
+          "absorbed_dose_rate": 18.98292
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:35:00",
+          "absorbed_dose_rate": 18.415860000000002
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:36:00",
+          "absorbed_dose_rate": 16.5975
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:37:00",
+          "absorbed_dose_rate": 20.19312
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:38:00",
+          "absorbed_dose_rate": 18.7938
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:39:00",
+          "absorbed_dose_rate": 19.471799999999998
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:40:00",
+          "absorbed_dose_rate": 27.39066
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:41:00",
+          "absorbed_dose_rate": 18.28428
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:42:00",
+          "absorbed_dose_rate": 15.47904
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:43:00",
+          "absorbed_dose_rate": 14.38104
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:44:00",
+          "absorbed_dose_rate": 15.714360000000001
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:45:00",
+          "absorbed_dose_rate": 15.736979999999999
+        }
+      ]
+    },
+    "HERA HSU2": {
+      "source_file": "orion_artemis_i_hera_hsu2_24h.csv",
+      "source_sha256": "40f8125a4a8af3e88aea0b612f6fb9f369125065d71b02f44e6425d4a38ad892",
+      "reading_count": 121,
+      "first_reading_utc": "2022-11-16T08:45:00",
+      "last_reading_utc": "2022-11-16T10:45:00",
+      "sampling_interval_minutes": 1,
+      "statistics": {
+        "minimum": 12.11262,
+        "median": 40.989779999999996,
+        "mean": 60.74232545454545,
+        "maximum": 164.217,
+        "peak_time_utc": "2022-11-16T09:18:00",
+        "peak_microGy_per_minute": 2.73695
+      },
+      "readings": [
+        {
+          "timestamp_utc": "2022-11-16T08:45:00",
+          "absorbed_dose_rate": 12.11262
+        },
+        {
+          "timestamp_utc": "2022-11-16T08:46:00",
+          "absorbed_dose_rate": 12.706259999999999
+        },
+        {
+          "timestamp_utc": "2022-11-16T08:47:00",
+          "absorbed_dose_rate": 15.811620000000001
+        },
+        {
+          "timestamp_utc": "2022-11-16T08:48:00",
+          "absorbed_dose_rate": 13.46016
+        },
+        {
+          "timestamp_utc": "2022-11-16T08:49:00",
+          "absorbed_dose_rate": 21.65244
+        },
+        {
+          "timestamp_utc": "2022-11-16T08:50:00",
+          "absorbed_dose_rate": 14.112119999999999
+        },
+        {
+          "timestamp_utc": "2022-11-16T08:51:00",
+          "absorbed_dose_rate": 15.4068
+        },
+        {
+          "timestamp_utc": "2022-11-16T08:52:00",
+          "absorbed_dose_rate": 17.734499999999997
+        },
+        {
+          "timestamp_utc": "2022-11-16T08:53:00",
+          "absorbed_dose_rate": 20.52306
+        },
+        {
+          "timestamp_utc": "2022-11-16T08:54:00",
+          "absorbed_dose_rate": 40.54746
+        },
+        {
+          "timestamp_utc": "2022-11-16T08:55:00",
+          "absorbed_dose_rate": 32.89296
+        },
+        {
+          "timestamp_utc": "2022-11-16T08:56:00",
+          "absorbed_dose_rate": 36.68412
+        },
+        {
+          "timestamp_utc": "2022-11-16T08:57:00",
+          "absorbed_dose_rate": 43.27566
+        },
+        {
+          "timestamp_utc": "2022-11-16T08:58:00",
+          "absorbed_dose_rate": 44.307539999999996
+        },
+        {
+          "timestamp_utc": "2022-11-16T08:59:00",
+          "absorbed_dose_rate": 52.46652
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:00:00",
+          "absorbed_dose_rate": 58.48368
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:01:00",
+          "absorbed_dose_rate": 64.50959999999999
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:02:00",
+          "absorbed_dose_rate": 65.5578
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:03:00",
+          "absorbed_dose_rate": 65.1246
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:04:00",
+          "absorbed_dose_rate": 73.767
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:05:00",
+          "absorbed_dose_rate": 77.42519999999999
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:06:00",
+          "absorbed_dose_rate": 83.8104
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:07:00",
+          "absorbed_dose_rate": 89.38260000000001
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:08:00",
+          "absorbed_dose_rate": 99.89699999999999
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:09:00",
+          "absorbed_dose_rate": 106.4358
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:10:00",
+          "absorbed_dose_rate": 114.4434
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:11:00",
+          "absorbed_dose_rate": 130.8072
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:12:00",
+          "absorbed_dose_rate": 135.7284
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:13:00",
+          "absorbed_dose_rate": 145.34040000000002
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:14:00",
+          "absorbed_dose_rate": 146.9784
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:15:00",
+          "absorbed_dose_rate": 151.7988
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:16:00",
+          "absorbed_dose_rate": 152.2734
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:17:00",
+          "absorbed_dose_rate": 157.9794
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:18:00",
+          "absorbed_dose_rate": 164.217
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:19:00",
+          "absorbed_dose_rate": 163.536
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:20:00",
+          "absorbed_dose_rate": 161.0934
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:21:00",
+          "absorbed_dose_rate": 161.1774
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:22:00",
+          "absorbed_dose_rate": 154.3014
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:23:00",
+          "absorbed_dose_rate": 150.9456
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:24:00",
+          "absorbed_dose_rate": 151.3494
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:25:00",
+          "absorbed_dose_rate": 147.636
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:26:00",
+          "absorbed_dose_rate": 142.1166
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:27:00",
+          "absorbed_dose_rate": 138.6498
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:28:00",
+          "absorbed_dose_rate": 129.88979999999998
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:29:00",
+          "absorbed_dose_rate": 132.4992
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:30:00",
+          "absorbed_dose_rate": 123.5022
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:31:00",
+          "absorbed_dose_rate": 116.65140000000001
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:32:00",
+          "absorbed_dose_rate": 113.202
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:33:00",
+          "absorbed_dose_rate": 103.93860000000001
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:34:00",
+          "absorbed_dose_rate": 104.6226
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:35:00",
+          "absorbed_dose_rate": 96.948
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:36:00",
+          "absorbed_dose_rate": 92.0892
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:37:00",
+          "absorbed_dose_rate": 86.30340000000001
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:38:00",
+          "absorbed_dose_rate": 82.6968
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:39:00",
+          "absorbed_dose_rate": 79.9218
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:40:00",
+          "absorbed_dose_rate": 77.50800000000001
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:41:00",
+          "absorbed_dose_rate": 71.6838
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:42:00",
+          "absorbed_dose_rate": 70.5798
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:43:00",
+          "absorbed_dose_rate": 67.4454
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:44:00",
+          "absorbed_dose_rate": 66.45599999999999
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:45:00",
+          "absorbed_dose_rate": 61.3092
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:46:00",
+          "absorbed_dose_rate": 66.0864
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:47:00",
+          "absorbed_dose_rate": 57.0654
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:48:00",
+          "absorbed_dose_rate": 55.6158
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:49:00",
+          "absorbed_dose_rate": 52.59816
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:50:00",
+          "absorbed_dose_rate": 53.46
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:51:00",
+          "absorbed_dose_rate": 53.47296
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:52:00",
+          "absorbed_dose_rate": 55.36266
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:53:00",
+          "absorbed_dose_rate": 46.7949
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:54:00",
+          "absorbed_dose_rate": 44.1648
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:55:00",
+          "absorbed_dose_rate": 46.819559999999996
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:56:00",
+          "absorbed_dose_rate": 40.989779999999996
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:57:00",
+          "absorbed_dose_rate": 39.3867
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:58:00",
+          "absorbed_dose_rate": 42.42324
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:59:00",
+          "absorbed_dose_rate": 39.91242
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:00:00",
+          "absorbed_dose_rate": 38.13798
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:01:00",
+          "absorbed_dose_rate": 35.5365
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:02:00",
+          "absorbed_dose_rate": 37.58526
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:03:00",
+          "absorbed_dose_rate": 33.5376
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:04:00",
+          "absorbed_dose_rate": 34.61862
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:05:00",
+          "absorbed_dose_rate": 31.3878
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:06:00",
+          "absorbed_dose_rate": 33.2622
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:07:00",
+          "absorbed_dose_rate": 30.995579999999997
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:08:00",
+          "absorbed_dose_rate": 27.98406
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:09:00",
+          "absorbed_dose_rate": 31.149359999999998
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:10:00",
+          "absorbed_dose_rate": 28.06176
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:11:00",
+          "absorbed_dose_rate": 26.295479999999998
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:12:00",
+          "absorbed_dose_rate": 26.50242
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:13:00",
+          "absorbed_dose_rate": 26.44458
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:14:00",
+          "absorbed_dose_rate": 26.990280000000002
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:15:00",
+          "absorbed_dose_rate": 29.586660000000002
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:16:00",
+          "absorbed_dose_rate": 26.55042
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:17:00",
+          "absorbed_dose_rate": 25.261680000000002
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:18:00",
+          "absorbed_dose_rate": 21.007620000000003
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:19:00",
+          "absorbed_dose_rate": 22.768559999999997
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:20:00",
+          "absorbed_dose_rate": 24.19506
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:21:00",
+          "absorbed_dose_rate": 23.49414
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:22:00",
+          "absorbed_dose_rate": 21.751019999999997
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:23:00",
+          "absorbed_dose_rate": 21.82854
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:24:00",
+          "absorbed_dose_rate": 20.117040000000003
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:25:00",
+          "absorbed_dose_rate": 18.72426
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:26:00",
+          "absorbed_dose_rate": 21.536279999999998
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:27:00",
+          "absorbed_dose_rate": 24.10422
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:28:00",
+          "absorbed_dose_rate": 19.049100000000003
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:29:00",
+          "absorbed_dose_rate": 19.89576
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:30:00",
+          "absorbed_dose_rate": 16.700580000000002
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:31:00",
+          "absorbed_dose_rate": 16.455419999999997
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:32:00",
+          "absorbed_dose_rate": 27.26022
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:33:00",
+          "absorbed_dose_rate": 27.80382
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:34:00",
+          "absorbed_dose_rate": 21.4635
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:35:00",
+          "absorbed_dose_rate": 19.058519999999998
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:36:00",
+          "absorbed_dose_rate": 18.54138
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:37:00",
+          "absorbed_dose_rate": 19.21266
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:38:00",
+          "absorbed_dose_rate": 21.3693
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:39:00",
+          "absorbed_dose_rate": 20.87844
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:40:00",
+          "absorbed_dose_rate": 16.61538
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:41:00",
+          "absorbed_dose_rate": 17.52198
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:42:00",
+          "absorbed_dose_rate": 19.59636
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:43:00",
+          "absorbed_dose_rate": 16.3152
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:44:00",
+          "absorbed_dose_rate": 21.009719999999998
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:45:00",
+          "absorbed_dose_rate": 21.79956
+        }
+      ]
+    },
+    "EAD MU01": {
+      "source_file": "orion_artemis_i_ead_mu01_24h.csv",
+      "source_sha256": "f113a2fcf1b24960233468882cbcfa764758dcb60c94f79cd880048c50b1c4f2",
+      "reading_count": 25,
+      "first_reading_utc": "2022-11-16T08:45:00",
+      "last_reading_utc": "2022-11-16T10:45:00",
+      "sampling_interval_minutes": 5,
+      "statistics": {
+        "minimum": 11.895000000000001,
+        "median": 30.847500000000004,
+        "mean": 45.654912,
+        "maximum": 119.325,
+        "peak_time_utc": "2022-11-16T09:20:00",
+        "peak_microGy_per_minute": 1.98875
+      },
+      "readings": [
+        {
+          "timestamp_utc": "2022-11-16T08:45:00",
+          "absorbed_dose_rate": 14.010000000000002
+        },
+        {
+          "timestamp_utc": "2022-11-16T08:50:00",
+          "absorbed_dose_rate": 11.895000000000001
+        },
+        {
+          "timestamp_utc": "2022-11-16T08:55:00",
+          "absorbed_dose_rate": 21.1725
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:00:00",
+          "absorbed_dose_rate": 36.487500000000004
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:05:00",
+          "absorbed_dose_rate": 54.855000000000004
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:10:00",
+          "absorbed_dose_rate": 67.9728
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:15:00",
+          "absorbed_dose_rate": 102.86999999999999
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:20:00",
+          "absorbed_dose_rate": 119.325
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:25:00",
+          "absorbed_dose_rate": 113.7228
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:30:00",
+          "absorbed_dose_rate": 97.5972
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:35:00",
+          "absorbed_dose_rate": 84.375
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:40:00",
+          "absorbed_dose_rate": 66.13499999999999
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:45:00",
+          "absorbed_dose_rate": 52.1325
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:50:00",
+          "absorbed_dose_rate": 44.970000000000006
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:55:00",
+          "absorbed_dose_rate": 37.7025
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:00:00",
+          "absorbed_dose_rate": 30.15
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:05:00",
+          "absorbed_dose_rate": 30.847500000000004
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:10:00",
+          "absorbed_dose_rate": 23.8725
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:15:00",
+          "absorbed_dose_rate": 22.7775
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:20:00",
+          "absorbed_dose_rate": 19.47
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:25:00",
+          "absorbed_dose_rate": 18.2025
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:30:00",
+          "absorbed_dose_rate": 17.085
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:35:00",
+          "absorbed_dose_rate": 17.009999999999998
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:40:00",
+          "absorbed_dose_rate": 19.3275
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:45:00",
+          "absorbed_dose_rate": 17.407500000000002
+        }
+      ]
+    },
+    "M42 SN127": {
+      "source_file": "orion_artemis_i_m42_sn127_24h.csv",
+      "source_sha256": "fb96c8e91191be0fb7905e8d3221387fefa1c43b7a7f6ac0fea8dae657abe42d",
+      "reading_count": 25,
+      "first_reading_utc": "2022-11-16T08:45:00",
+      "last_reading_utc": "2022-11-16T10:45:00",
+      "sampling_interval_minutes": 5,
+      "statistics": {
+        "minimum": 13.725000000000001,
+        "median": 27.75,
+        "mean": 34.395,
+        "maximum": 75.89999999999999,
+        "peak_time_utc": "2022-11-16T09:20:00",
+        "peak_microGy_per_minute": 1.265
+      },
+      "readings": [
+        {
+          "timestamp_utc": "2022-11-16T08:45:00",
+          "absorbed_dose_rate": 13.725000000000001
+        },
+        {
+          "timestamp_utc": "2022-11-16T08:50:00",
+          "absorbed_dose_rate": 15.374999999999998
+        },
+        {
+          "timestamp_utc": "2022-11-16T08:55:00",
+          "absorbed_dose_rate": 17.849999999999998
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:00:00",
+          "absorbed_dose_rate": 27.75
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:05:00",
+          "absorbed_dose_rate": 36.825
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:10:00",
+          "absorbed_dose_rate": 48.375
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:15:00",
+          "absorbed_dose_rate": 61.650000000000006
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:20:00",
+          "absorbed_dose_rate": 75.89999999999999
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:25:00",
+          "absorbed_dose_rate": 73.425
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:30:00",
+          "absorbed_dose_rate": 68.47500000000001
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:35:00",
+          "absorbed_dose_rate": 55.425
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:40:00",
+          "absorbed_dose_rate": 46.65
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:45:00",
+          "absorbed_dose_rate": 38.775
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:50:00",
+          "absorbed_dose_rate": 33.075
+        },
+        {
+          "timestamp_utc": "2022-11-16T09:55:00",
+          "absorbed_dose_rate": 32.475
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:00:00",
+          "absorbed_dose_rate": 28.799999999999997
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:05:00",
+          "absorbed_dose_rate": 24.525
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:10:00",
+          "absorbed_dose_rate": 20.925
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:15:00",
+          "absorbed_dose_rate": 22.275000000000002
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:20:00",
+          "absorbed_dose_rate": 21.975
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:25:00",
+          "absorbed_dose_rate": 21.0
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:30:00",
+          "absorbed_dose_rate": 19.275
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:35:00",
+          "absorbed_dose_rate": 19.424999999999997
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:40:00",
+          "absorbed_dose_rate": 18.15
+        },
+        {
+          "timestamp_utc": "2022-11-16T10:45:00",
+          "absorbed_dose_rate": 17.775000000000002
+        }
+      ]
+    }
+  },
+  "quality_and_interpretation_notes": [
+    "All four instruments have measurements throughout the selected event window.",
+    "HERA HSU1 and HSU2 have one-minute sampling in these files.",
+    "EAD MU01 and M42 SN127 have five-minute sampling in these files.",
+    "Peak times from five-minute instruments have lower time precision.",
+    "Instrument positions and shielding differ; peak values should not be treated as directly interchangeable measurements.",
+    "The event window and interpretation come from published Artemis I research; the readings are retained from the RadLab source files.",
+    "Artemis I was uncrewed. These measurements are not measurements of a crew member's personal exposure.",
+    "The data do not establish the effectiveness of any protective action in a simulated game scenario."
+  ],
+  "research_reference": {
+    "title": "Space radiation measurements during the Artemis I lunar mission",
+    "authors": "George et al.",
+    "journal": "Nature",
+    "publication_year": 2024,
+    "doi": "10.1038/s41586-024-07927-7",
+    "url": "https://doi.org/10.1038/s41586-024-07927-7",
+    "full_text": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11446838/"
+  },
+  "provenance": {
+    "source_system": "NASA OSDR RadLab",
+    "api_base": "https://visualization.osdr.nasa.gov/radlab/api/",
+    "raw_files_modified": false,
+    "generated_at_utc": "2026-11-14T08:20:51.334798+00:00",
+    "total_readings": 292
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "version": 2,
+  "base_version": "data/processed/radlab/radlab_combined_measurements_v1.csv",
+  "base_record_count": 1781,
+  "new_source_files": [
+    "orion_artemis_i_hera_hsu2_24h.csv",
+    "orion_artemis_i_ead_mu01_24h.csv",
+    "orion_artemis_i_m42_sn127_24h.csv"
+  ],
+  "new_record_count": 2017,
+  "combined_record_count": 3798,
+  "instrument_group_count": 10,
+  "duplicate_instrument_timestamp_keys": 0,
+  "missing_instrument_ids": 0,
+  "missing_timestamps": 0,
+  "source_sha256": {
+    "radlab_combined_measurements_v1.csv": "54fbd983611958e7431da89ad0313e16e7ca327e7b9ec42bdcb54a347689a10b",
+    "orion_artemis_i_hera_hsu2_24h.csv": "40f8125a4a8af3e88aea0b612f6fb9f369125065d71b02f44e6425d4a38ad892",
+    "orion_artemis_i_ead_mu01_24h.csv": "f113a2fcf1b24960233468882cbcfa764758dcb60c94f79cd880048c50b1c4f2",
+    "orion_artemis_i_m42_sn127_24h.csv": "fb96c8e91191be0fb7905e8d3221387fefa1c43b7a7f6ac0fea8dae657abe42d"
+  },
+  "combined_csv_sha256": "7683f19eef8c74b323361bf380dc4ea56b9ebc478ee37011fe74a99de215e63b",
+  "instrument_counts": {
+    "Artemis-I-EAD-MU01": 288,
+    "Artemis-I-HERA-HSU1": 1441,
+    "Artemis-I-HERA-HSU2": 1441,
+    "Artemis-I-M42-SN127": 288,
+    "CRaTER-D1D2": 24,
+    "DosTel1": 85,
+    "DosTel2": 97,
+    "Liulin-MO-AB-Cruise": 25,
+    "Liulin-MO-AB-Orbit": 24,
+    "MSL-RAD-Surface": 85
+  },
+  "artemis_event_comparison": [
+    {
+      "instrument_id": "Artemis-I-HERA-HSU1",
+      "sensor_location": "Orion storm shelter",
+      "event_reading_count": 31,
+      "radlab_peak_timestamp": "2022-11-16T07:27:00",
+      "radlab_peak_microGy_per_hour": 8012.58,
+      "radlab_peak_microGy_per_minute": 133.543,
+      "published_approximate_peak_microGy_per_minute": 134,
+      "difference_from_published_percent": -0.34104477611939826
+    },
+    {
+      "instrument_id": "Artemis-I-HERA-HSU2",
+      "sensor_location": "Orion crew-cabin wall",
+      "event_reading_count": 31,
+      "radlab_peak_timestamp": "2022-11-16T07:28:00",
+      "radlab_peak_microGy_per_hour": 17250.66,
+      "radlab_peak_microGy_per_minute": 287.511,
+      "published_approximate_peak_microGy_per_minute": 287,
+      "difference_from_published_percent": 0.17804878048781328
+    },
+    {
+      "instrument_id": "Artemis-I-EAD-MU01",
+      "sensor_location": "Orion wall",
+      "event_reading_count": 6,
+      "radlab_peak_timestamp": "2022-11-16T07:30:00",
+      "radlab_peak_microGy_per_hour": 14393.34,
+      "radlab_peak_microGy_per_minute": 239.889,
+      "published_approximate_peak_microGy_per_minute": 240,
+      "difference_from_published_percent": -0.046249999999995836
+    },
+    {
+      "instrument_id": "Artemis-I-M42-SN127",
+      "sensor_location": "Behind the Helga test phantom",
+      "event_reading_count": 6,
+      "radlab_peak_timestamp": "2022-11-16T07:30:00",
+      "radlab_peak_microGy_per_hour": 4122.378,
+      "radlab_peak_microGy_per_minute": 68.7063,
+      "published_approximate_peak_microGy_per_minute": 69,
+      "difference_from_published_percent": -0.4256521739130452
+    }
+  ]
+}

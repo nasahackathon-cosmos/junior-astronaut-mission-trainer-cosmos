@@ -1,0 +1,133 @@
+{
+  "dataset": "NASA RadLab non-ISS instrument coverage inventory",
+  "source": "https://visualization.osdr.nasa.gov/radlab/api/",
+  "retrieved_at_utc": "2026-11-14T08:07:05.729364+00:00",
+  "query_scope": "Timestamp-only coverage discovery",
+  "instrument_count": 11,
+  "successful_instruments": 11,
+  "empty_instruments": 0,
+  "failed_instruments": 0,
+  "results": [
+    {
+      "spacecraft": "TGO",
+      "instrument_id": "Liulin-MO-AB-Cruise",
+      "environment": "Mars cruise",
+      "record_count": 2163,
+      "first_timestamp": "2016-04-22T13:15:38",
+      "last_timestamp": "2016-09-15T20:00:22",
+      "status": "success",
+      "error": null,
+      "http_status": 200
+    },
+    {
+      "spacecraft": "TGO",
+      "instrument_id": "Liulin-MO-CD-Cruise",
+      "environment": "Mars cruise",
+      "record_count": 2163,
+      "first_timestamp": "2016-04-22T13:15:38",
+      "last_timestamp": "2016-09-15T20:00:22",
+      "status": "success",
+      "error": null,
+      "http_status": 200
+    },
+    {
+      "spacecraft": "TGO",
+      "instrument_id": "Liulin-MO-AB-Orbit",
+      "environment": "Mars orbit",
+      "record_count": 2407325,
+      "first_timestamp": "2016-11-01T00:06:42",
+      "last_timestamp": "2023-12-31T23:59:05",
+      "status": "success",
+      "error": null,
+      "http_status": 200
+    },
+    {
+      "spacecraft": "TGO",
+      "instrument_id": "Liulin-MO-CD-Orbit",
+      "environment": "Mars orbit",
+      "record_count": 2431833,
+      "first_timestamp": "2016-11-01T00:06:42",
+      "last_timestamp": "2023-12-31T23:59:05",
+      "status": "success",
+      "error": null,
+      "http_status": 200
+    },
+    {
+      "spacecraft": "Curiosity",
+      "instrument_id": "MSL-RAD-Surface",
+      "environment": "Mars surface",
+      "record_count": 274983,
+      "first_timestamp": "2015-01-01T00:11:01",
+      "last_timestamp": "2024-06-03T10:06:06",
+      "status": "success",
+      "error": null,
+      "http_status": 200
+    },
+    {
+      "spacecraft": "Orion",
+      "instrument_id": "Artemis-I-EAD-MU01",
+      "environment": "Lunar flyby",
+      "record_count": 7303,
+      "first_timestamp": "2022-11-16T06:50:00",
+      "last_timestamp": "2022-12-11T15:20:00",
+      "status": "success",
+      "error": null,
+      "http_status": 200
+    },
+    {
+      "spacecraft": "Orion",
+      "instrument_id": "Artemis-I-M42-SN127",
+      "environment": "Lunar flyby",
+      "record_count": 7325,
+      "first_timestamp": "2022-11-16T06:55:00",
+      "last_timestamp": "2022-12-11T17:15:00",
+      "status": "success",
+      "error": null,
+      "http_status": 200
+    },
+    {
+      "spacecraft": "Orion",
+      "instrument_id": "Artemis-I-HERA-HSU1",
+      "environment": "Lunar flyby",
+      "record_count": 36608,
+      "first_timestamp": "2022-11-16T06:51:00",
+      "last_timestamp": "2022-12-11T16:58:00",
+      "status": "success",
+      "error": null,
+      "http_status": 200
+    },
+    {
+      "spacecraft": "Orion",
+      "instrument_id": "Artemis-I-HERA-HSU2",
+      "environment": "Lunar flyby",
+      "record_count": 36608,
+      "first_timestamp": "2022-11-16T06:51:00",
+      "last_timestamp": "2022-12-11T16:58:00",
+      "status": "success",
+      "error": null,
+      "http_status": 200
+    },
+    {
+      "spacecraft": "LRO",
+      "instrument_id": "CRaTER-D1D2",
+      "environment": "Lunar orbit",
+      "record_count": 129682,
+      "first_timestamp": "2009-06-26T20:36:34",
+      "last_timestamp": "2024-06-18T23:59:59",
+      "status": "success",
+      "error": null,
+      "http_status": 200
+    },
+    {
+      "spacecraft": "BioSentinel",
+      "instrument_id": "BPD",
+      "environment": "Heliocentric orbit at 1 AU",
+      "record_count": 1469555,
+      "first_timestamp": "2022-11-01T00:01:00",
+      "last_timestamp": "2025-11-13T19:44:00",
+      "status": "success",
+      "error": null,
+      "http_status": 200
+    }
+  ]
+}

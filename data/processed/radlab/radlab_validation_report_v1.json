@@ -1,0 +1,776 @@
+{
+  "dataset": "NASA OSDR RadLab selected mission samples",
+  "processing_version": 1,
+  "method": "Original API values retained; no unit conversion, imputation, normalisation or cross-instrument scaling.",
+  "total_records": 1781,
+  "source_count": 6,
+  "instrument_group_count": 7,
+  "sources": [
+    {
+      "file": "iss_dostel_unfiltered_20220401_2300_20220402_0105.csv",
+      "spacecraft": "ISS",
+      "records": 182,
+      "columns": [
+        "timestamp",
+        "instrument_id",
+        "absorbed_dose_rate",
+        "altitude",
+        "b",
+        "dose_equivalent_rate",
+        "flux",
+        "instrument",
+        "l",
+        "latitude",
+        "longitude",
+        "spacecraft"
+      ]
+    },
+    {
+      "file": "tgo_liulin_mo_ab_cruise_24h.csv",
+      "spacecraft": "TGO",
+      "records": 25,
+      "columns": [
+        "timestamp",
+        "instrument_id",
+        "absorbed_dose_rate",
+        "altitude",
+        "b",
+        "dose_equivalent_rate",
+        "flux",
+        "l",
+        "latitude",
+        "longitude",
+        "spacecraft"
+      ]
+    },
+    {
+      "file": "tgo_liulin_mo_ab_orbit_24h.csv",
+      "spacecraft": "TGO",
+      "records": 24,
+      "columns": [
+        "timestamp",
+        "instrument_id",
+        "absorbed_dose_rate",
+        "altitude",
+        "b",
+        "dose_equivalent_rate",
+        "flux",
+        "l",
+        "latitude",
+        "longitude",
+        "spacecraft"
+      ]
+    },
+    {
+      "file": "curiosity_msl_rad_surface_24h.csv",
+      "spacecraft": "Curiosity",
+      "records": 85,
+      "columns": [
+        "timestamp",
+        "instrument_id",
+        "absorbed_dose_rate",
+        "altitude",
+        "b",
+        "dose_equivalent_rate",
+        "flux",
+        "l",
+        "latitude",
+        "longitude",
+        "spacecraft"
+      ]
+    },
+    {
+      "file": "orion_artemis_i_hera_hsu1_24h.csv",
+      "spacecraft": "Orion",
+      "records": 1441,
+      "columns": [
+        "timestamp",
+        "instrument_id",
+        "absorbed_dose_rate",
+        "altitude",
+        "b",
+        "dose_equivalent_rate",
+        "flux",
+        "l",
+        "latitude",
+        "longitude",
+        "spacecraft"
+      ]
+    },
+    {
+      "file": "lro_crater_d1d2_24h.csv",
+      "spacecraft": "LRO",
+      "records": 24,
+      "columns": [
+        "timestamp",
+        "instrument_id",
+        "absorbed_dose_rate",
+        "altitude",
+        "b",
+        "dose_equivalent_rate",
+        "flux",
+        "l",
+        "latitude",
+        "longitude",
+        "spacecraft"
+      ]
+    }
+  ],
+  "instrument_validation": [
+    {
+      "source_file": "curiosity_msl_rad_surface_24h.csv",
+      "instrument_id": "MSL-RAD-Surface",
+      "record_count": 85,
+      "first_timestamp": "2015-01-01T00:11:01",
+      "last_timestamp": "2015-01-02T00:10:45",
+      "invalid_timestamp_count": 0,
+      "duplicate_timestamp_count": 0,
+      "median_gap_seconds": 1021.0,
+      "maximum_gap_seconds": 1615.0,
+      "fields": {
+        "absorbed_dose_rate": {
+          "valid_count": 85,
+          "missing_count": 0,
+          "invalid_count": 0,
+          "min": 5.064985,
+          "mean": 5.879603951764706,
+          "median": 5.8346577,
+          "p95": 6.509415,
+          "max": 7.3034263
+        },
+        "dose_equivalent_rate": {
+          "valid_count": 0,
+          "missing_count": 85,
+          "invalid_count": 0,
+          "min": null,
+          "mean": null,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "flux": {
+          "valid_count": 0,
+          "missing_count": 85,
+          "invalid_count": 0,
+          "min": null,
+          "mean": null,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "latitude": {
+          "valid_count": 0,
+          "missing_count": 85,
+          "invalid_count": 0,
+          "min": null,
+          "mean": null,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "longitude": {
+          "valid_count": 0,
+          "missing_count": 85,
+          "invalid_count": 0,
+          "min": null,
+          "mean": null,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "altitude": {
+          "valid_count": 0,
+          "missing_count": 85,
+          "invalid_count": 0,
+          "min": null,
+          "mean": null,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "b": {
+          "valid_count": 0,
+          "missing_count": 85,
+          "invalid_count": 0,
+          "min": null,
+          "mean": null,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "l": {
+          "valid_count": 0,
+          "missing_count": 85,
+          "invalid_count": 0,
+          "min": null,
+          "mean": null,
+          "median": null,
+          "p95": null,
+          "max": null
+        }
+      }
+    },
+    {
+      "source_file": "iss_dostel_unfiltered_20220401_2300_20220402_0105.csv",
+      "instrument_id": "DosTel1",
+      "record_count": 85,
+      "first_timestamp": "2022-04-01T23:00:00",
+      "last_timestamp": "2022-04-02T01:05:00",
+      "invalid_timestamp_count": 0,
+      "duplicate_timestamp_count": 0,
+      "median_gap_seconds": 100.0,
+      "maximum_gap_seconds": 1055.0,
+      "fields": {
+        "absorbed_dose_rate": {
+          "valid_count": 85,
+          "missing_count": 0,
+          "invalid_count": 0,
+          "min": 1.657364,
+          "mean": 6.195536756041363,
+          "median": 5.941985,
+          "p95": 11.658574,
+          "max": 12.616413
+        },
+        "dose_equivalent_rate": {
+          "valid_count": 0,
+          "missing_count": 85,
+          "invalid_count": 0,
+          "min": null,
+          "mean": null,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "flux": {
+          "valid_count": 85,
+          "missing_count": 0,
+          "invalid_count": 0,
+          "min": 0.1001621968,
+          "mean": 0.29870576826088474,
+          "median": 0.2793514478,
+          "p95": 0.545602406007692,
+          "max": 0.5550272187
+        },
+        "latitude": {
+          "valid_count": 85,
+          "missing_count": 0,
+          "invalid_count": 0,
+          "min": -51.792342,
+          "mean": -1.6266281058823528,
+          "median": -9.237615,
+          "p95": 50.656245,
+          "max": 51.669982
+        },
+        "longitude": {
+          "valid_count": 85,
+          "missing_count": 0,
+          "invalid_count": 0,
+          "min": -179.896353,
+          "mean": 32.15867477647059,
+          "median": 32.140154,
+          "p95": 166.11776,
+          "max": 179.041731
+        },
+        "altitude": {
+          "valid_count": 85,
+          "missing_count": 0,
+          "invalid_count": 0,
+          "min": 414.85056,
+          "mean": 423.55528471764706,
+          "median": 422.616133,
+          "p95": 433.529945,
+          "max": 434.130117
+        },
+        "b": {
+          "valid_count": 85,
+          "missing_count": 0,
+          "invalid_count": 0,
+          "min": 22159.5,
+          "mean": 36230.93647058823,
+          "median": 36578.2,
+          "p95": 49602.5,
+          "max": 51369.2
+        },
+        "l": {
+          "valid_count": 85,
+          "missing_count": 0,
+          "invalid_count": 0,
+          "min": 1.01037,
+          "mean": 2.143915529411765,
+          "median": 1.72353,
+          "p95": 4.32253,
+          "max": 4.59616
+        }
+      }
+    },
+    {
+      "source_file": "iss_dostel_unfiltered_20220401_2300_20220402_0105.csv",
+      "instrument_id": "DosTel2",
+      "record_count": 97,
+      "first_timestamp": "2022-04-01T23:00:00",
+      "last_timestamp": "2022-04-02T01:05:00",
+      "invalid_timestamp_count": 0,
+      "duplicate_timestamp_count": 0,
+      "median_gap_seconds": 100.0,
+      "maximum_gap_seconds": 195.0,
+      "fields": {
+        "absorbed_dose_rate": {
+          "valid_count": 97,
+          "missing_count": 0,
+          "invalid_count": 0,
+          "min": 1.68612,
+          "mean": 5.5612066892593335,
+          "median": 4.360734,
+          "p95": 11.681332,
+          "max": 12.26892
+        },
+        "dose_equivalent_rate": {
+          "valid_count": 0,
+          "missing_count": 97,
+          "invalid_count": 0,
+          "min": null,
+          "mean": null,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "flux": {
+          "valid_count": 97,
+          "missing_count": 0,
+          "invalid_count": 0,
+          "min": 0.1258919354,
+          "mean": 0.30983131951632936,
+          "median": 0.2591352246,
+          "p95": 0.5844326343,
+          "max": 0.602811019
+        },
+        "latitude": {
+          "valid_count": 97,
+          "missing_count": 0,
+          "invalid_count": 0,
+          "min": -51.79699,
+          "mean": 0.6341815876288661,
+          "median": 2.743348,
+          "p95": 50.539968,
+          "max": 51.706145
+        },
+        "longitude": {
+          "valid_count": 97,
+          "missing_count": 0,
+          "invalid_count": 0,
+          "min": -179.896353,
+          "mean": 18.340847144329896,
+          "median": 16.750217,
+          "p95": 173.106014,
+          "max": 178.946164
+        },
+        "altitude": {
+          "valid_count": 97,
+          "missing_count": 0,
+          "invalid_count": 0,
+          "min": 414.852245,
+          "mean": 422.71113079381445,
+          "median": 422.075316,
+          "p95": 433.486228,
+          "max": 434.131335
+        },
+        "b": {
+          "valid_count": 97,
+          "missing_count": 0,
+          "invalid_count": 0,
+          "min": 21908.5,
+          "mean": 35352.878350515464,
+          "median": 34094.0,
+          "p95": 49602.5,
+          "max": 51369.2
+        },
+        "l": {
+          "valid_count": 97,
+          "missing_count": 0,
+          "invalid_count": 0,
+          "min": 1.01037,
+          "mean": 2.034839381443299,
+          "median": 1.62577,
+          "p95": 4.29499,
+          "max": 4.58627
+        }
+      }
+    },
+    {
+      "source_file": "lro_crater_d1d2_24h.csv",
+      "instrument_id": "CRaTER-D1D2",
+      "record_count": 24,
+      "first_timestamp": "2009-06-26T20:36:34",
+      "last_timestamp": "2009-06-27T19:59:59",
+      "invalid_timestamp_count": 0,
+      "duplicate_timestamp_count": 0,
+      "median_gap_seconds": 3600.0,
+      "maximum_gap_seconds": 5005.0,
+      "fields": {
+        "absorbed_dose_rate": {
+          "valid_count": 24,
+          "missing_count": 0,
+          "invalid_count": 0,
+          "min": 11.472083333333334,
+          "mean": 12.418715277777778,
+          "median": 12.184791666666667,
+          "p95": 13.707916666666666,
+          "max": 13.973333333333334
+        },
+        "dose_equivalent_rate": {
+          "valid_count": 0,
+          "missing_count": 24,
+          "invalid_count": 0,
+          "min": null,
+          "mean": null,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "flux": {
+          "valid_count": 0,
+          "missing_count": 24,
+          "invalid_count": 0,
+          "min": null,
+          "mean": null,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "latitude": {
+          "valid_count": 0,
+          "missing_count": 24,
+          "invalid_count": 0,
+          "min": null,
+          "mean": null,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "longitude": {
+          "valid_count": 0,
+          "missing_count": 24,
+          "invalid_count": 0,
+          "min": null,
+          "mean": null,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "altitude": {
+          "valid_count": 0,
+          "missing_count": 24,
+          "invalid_count": 0,
+          "min": null,
+          "mean": null,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "b": {
+          "valid_count": 0,
+          "missing_count": 24,
+          "invalid_count": 0,
+          "min": null,
+          "mean": null,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "l": {
+          "valid_count": 0,
+          "missing_count": 24,
+          "invalid_count": 0,
+          "min": null,
+          "mean": null,
+          "median": null,
+          "p95": null,
+          "max": null
+        }
+      }
+    },
+    {
+      "source_file": "orion_artemis_i_hera_hsu1_24h.csv",
+      "instrument_id": "Artemis-I-HERA-HSU1",
+      "record_count": 1441,
+      "first_timestamp": "2022-11-16T06:51:00",
+      "last_timestamp": "2022-11-17T06:51:00",
+      "invalid_timestamp_count": 0,
+      "duplicate_timestamp_count": 0,
+      "median_gap_seconds": 60.0,
+      "maximum_gap_seconds": 60.0,
+      "fields": {
+        "absorbed_dose_rate": {
+          "valid_count": 1441,
+          "missing_count": 0,
+          "invalid_count": 0,
+          "min": 1.52478,
+          "mean": 80.19349591811242,
+          "median": 17.3484,
+          "p95": 35.95944,
+          "max": 8012.58
+        },
+        "dose_equivalent_rate": {
+          "valid_count": 0,
+          "missing_count": 1441,
+          "invalid_count": 0,
+          "min": null,
+          "mean": null,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "flux": {
+          "valid_count": 0,
+          "missing_count": 1441,
+          "invalid_count": 0,
+          "min": null,
+          "mean": null,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "latitude": {
+          "valid_count": 0,
+          "missing_count": 1441,
+          "invalid_count": 0,
+          "min": null,
+          "mean": null,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "longitude": {
+          "valid_count": 0,
+          "missing_count": 1441,
+          "invalid_count": 0,
+          "min": null,
+          "mean": null,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "altitude": {
+          "valid_count": 0,
+          "missing_count": 1441,
+          "invalid_count": 0,
+          "min": null,
+          "mean": null,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "b": {
+          "valid_count": 0,
+          "missing_count": 1441,
+          "invalid_count": 0,
+          "min": null,
+          "mean": null,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "l": {
+          "valid_count": 0,
+          "missing_count": 1441,
+          "invalid_count": 0,
+          "min": null,
+          "mean": null,
+          "median": null,
+          "p95": null,
+          "max": null
+        }
+      }
+    },
+    {
+      "source_file": "tgo_liulin_mo_ab_cruise_24h.csv",
+      "instrument_id": "Liulin-MO-AB-Cruise",
+      "record_count": 25,
+      "first_timestamp": "2016-04-22T13:15:38",
+      "last_timestamp": "2016-04-23T13:15:37",
+      "invalid_timestamp_count": 0,
+      "duplicate_timestamp_count": 0,
+      "median_gap_seconds": 3600.0,
+      "maximum_gap_seconds": 3600.0,
+      "fields": {
+        "absorbed_dose_rate": {
+          "valid_count": 25,
+          "missing_count": 0,
+          "invalid_count": 0,
+          "min": 13.7,
+          "mean": 14.7824,
+          "median": 14.72,
+          "p95": 15.55,
+          "max": 15.91
+        },
+        "dose_equivalent_rate": {
+          "valid_count": 0,
+          "missing_count": 25,
+          "invalid_count": 0,
+          "min": null,
+          "mean": null,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "flux": {
+          "valid_count": 25,
+          "missing_count": 0,
+          "invalid_count": 0,
+          "min": 0.46154933496649647,
+          "mean": 0.4724355330739822,
+          "median": 0.4726901809829292,
+          "p95": 0.48064792813752394,
+          "max": 0.4822394775684429
+        },
+        "latitude": {
+          "valid_count": 0,
+          "missing_count": 25,
+          "invalid_count": 0,
+          "min": null,
+          "mean": null,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "longitude": {
+          "valid_count": 0,
+          "missing_count": 25,
+          "invalid_count": 0,
+          "min": null,
+          "mean": null,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "altitude": {
+          "valid_count": 0,
+          "missing_count": 25,
+          "invalid_count": 0,
+          "min": null,
+          "mean": null,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "b": {
+          "valid_count": 0,
+          "missing_count": 25,
+          "invalid_count": 0,
+          "min": null,
+          "mean": null,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "l": {
+          "valid_count": 0,
+          "missing_count": 25,
+          "invalid_count": 0,
+          "min": null,
+          "mean": null,
+          "median": null,
+          "p95": null,
+          "max": null
+        }
+      }
+    },
+    {
+      "source_file": "tgo_liulin_mo_ab_orbit_24h.csv",
+      "instrument_id": "Liulin-MO-AB-Orbit",
+      "record_count": 24,
+      "first_timestamp": "2016-11-01T00:06:42",
+      "last_timestamp": "2016-11-02T00:06:42",
+      "invalid_timestamp_count": 0,
+      "duplicate_timestamp_count": 0,
+      "median_gap_seconds": 3600.0,
+      "maximum_gap_seconds": 7200.0,
+      "fields": {
+        "absorbed_dose_rate": {
+          "valid_count": 24,
+          "missing_count": 0,
+          "invalid_count": 0,
+          "min": 14.77,
+          "mean": 16.657916666666665,
+          "median": 16.75,
+          "p95": 17.53,
+          "max": 17.88
+        },
+        "dose_equivalent_rate": {
+          "valid_count": 0,
+          "missing_count": 24,
+          "invalid_count": 0,
+          "min": null,
+          "mean": null,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "flux": {
+          "valid_count": 24,
+          "missing_count": 0,
+          "invalid_count": 0,
+          "min": 0.45518313724282067,
+          "mean": 0.5077042684631462,
+          "median": 0.5092958178940651,
+          "p95": 0.5156620156177409,
+          "max": 0.5188451144795788
+        },
+        "latitude": {
+          "valid_count": 0,
+          "missing_count": 24,
+          "invalid_count": 0,
+          "min": null,
+          "mean": null,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "longitude": {
+          "valid_count": 0,
+          "missing_count": 24,
+          "invalid_count": 0,
+          "min": null,
+          "mean": null,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "altitude": {
+          "valid_count": 0,
+          "missing_count": 24,
+          "invalid_count": 0,
+          "min": null,
+          "mean": null,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "b": {
+          "valid_count": 0,
+          "missing_count": 24,
+          "invalid_count": 0,
+          "min": null,
+          "mean": null,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "l": {
+          "valid_count": 0,
+          "missing_count": 24,
+          "invalid_count": 0,
+          "min": null,
+          "mean": null,
+          "median": null,
+          "p95": null,
+          "max": null
+        }
+      }
+    }
+  ],
+  "outputs": {
+    "combined_csv": "data/processed/radlab/radlab_combined_measurements_v1.csv",
+    "summary_csv": "data/processed/radlab/radlab_measurement_summary_v1.csv"
+  }
+}

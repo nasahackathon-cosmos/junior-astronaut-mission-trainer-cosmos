@@ -1,0 +1,62 @@
+{
+  "event_id": "ARTEMIS-I-INNER-PROTON-BELT-2022-11-16",
+  "mission": "Artemis I",
+  "spacecraft": "Orion",
+  "crew_status": "Uncrewed test flight",
+  "scientific_event": "Inner Earth radiation-belt crossing",
+  "educational_title": "A Trip Through a Space Storm",
+  "start_utc": "2022-11-16T07:12:00",
+  "end_utc": "2022-11-16T07:42:00",
+  "description_for_children": "Orion passed through an area around Earth where invisible space particles were more common. Different sensors recorded different readings depending on where they were placed.",
+  "instrument_comparisons": [
+    {
+      "instrument_id": "Artemis-I-HERA-HSU1",
+      "sensor_location": "Orion storm shelter",
+      "event_reading_count": 31,
+      "radlab_peak_timestamp": "2022-11-16T07:27:00",
+      "radlab_peak_microGy_per_hour": 8012.58,
+      "radlab_peak_microGy_per_minute": 133.543,
+      "published_approximate_peak_microGy_per_minute": 134,
+      "difference_from_published_percent": -0.34104477611939826
+    },
+    {
+      "instrument_id": "Artemis-I-HERA-HSU2",
+      "sensor_location": "Orion crew-cabin wall",
+      "event_reading_count": 31,
+      "radlab_peak_timestamp": "2022-11-16T07:28:00",
+      "radlab_peak_microGy_per_hour": 17250.66,
+      "radlab_peak_microGy_per_minute": 287.511,
+      "published_approximate_peak_microGy_per_minute": 287,
+      "difference_from_published_percent": 0.17804878048781328
+    },
+    {
+      "instrument_id": "Artemis-I-EAD-MU01",
+      "sensor_location": "Orion wall",
+      "event_reading_count": 6,
+      "radlab_peak_timestamp": "2022-11-16T07:30:00",
+      "radlab_peak_microGy_per_hour": 14393.34,
+      "radlab_peak_microGy_per_minute": 239.889,
+      "published_approximate_peak_microGy_per_minute": 240,
+      "difference_from_published_percent": -0.046249999999995836
+    },
+    {
+      "instrument_id": "Artemis-I-M42-SN127",
+      "sensor_location": "Behind the Helga test phantom",
+      "event_reading_count": 6,
+      "radlab_peak_timestamp": "2022-11-16T07:30:00",
+      "radlab_peak_microGy_per_hour": 4122.378,
+      "radlab_peak_microGy_per_minute": 68.7063,
+      "published_approximate_peak_microGy_per_minute": 69,
+      "difference_from_published_percent": -0.4256521739130452
+    }
+  ],
+  "reference": {
+    "title": "Space radiation measurements during the Artemis I lunar mission",
+    "journal": "Nature",
+    "year": 2024,
+    "doi": "10.1038/s41586-024-07927-7",
+    "url": "https://doi.org/10.1038/s41586-024-07927-7"
+  },
+  "measurement_unit": "microGy/hour in RadLab; converted to microGy/minute for comparison",
+  "caution": "Published peaks are approximate. This comparison does not make the different detector types or locations interchangeable."
+}

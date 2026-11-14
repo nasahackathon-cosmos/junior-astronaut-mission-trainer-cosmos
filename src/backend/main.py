@@ -1,6 +1,5 @@
 """FastAPI application for the Junior Astronaut Mission Trainer."""
 
-
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import JSONResponse
 
@@ -15,10 +14,11 @@ from .mission_data import (
 app = FastAPI(
     title="Junior Astronaut Mission Trainer API",
     description=(
-        "Educational mission catalogue and NASA OSDR research references. "
-        "Research evidence is distinguished from simulated game state."
+        "Educational mission catalogue with NASA OSDR and RadLab "
+        "research references. Research evidence is distinguished "
+        "from derived summaries and simulated game state."
     ),
-    version="1.0.0",
+    version="1.1.0",
 )
 
 
@@ -43,7 +43,7 @@ def health():
 
 @app.get("/api/data-summary", tags=["Data"])
 def data_summary():
-    """Return catalogue and OSDR crosswalk counts."""
+    """Return catalogue and OSDR/RadLab evidence counts."""
     return get_data_summary()
 
 
@@ -59,7 +59,7 @@ def missions():
 
 @app.get("/api/missions/{mission_id}/evidence", tags=["Evidence"])
 def mission_evidence(mission_id: str):
-    """Return OSDR evidence mappings and their scientific limitations."""
+    """Return independent OSDR and RadLab evidence for a mission."""
     result = get_mission_evidence(mission_id)
 
     if result is None:

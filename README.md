@@ -229,12 +229,6 @@ The mission catalogue contains 100 missions. This does not mean every mission cu
 - [x] NASA CCMC DONKI event integration for FLR, CME, GST, and SEP.
 - [x] Backend API, data, terrain, and integration tests.
 
-### Remaining development
-
-- [ ] Deeper integration of all processed terrain layers into interactive gameplay.
-- [ ] Additional NASA and partner-agency dataset integrations.
-- [ ] Further expansion and refinement of mission-specific learning activities.
-
 The presence of a dataset or API route does not imply that every dataset
 is currently used directly by a gameplay mechanic. The Science Feed and
 mission evidence interfaces provide access to research independently of

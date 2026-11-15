@@ -1,0 +1,48 @@
+{
+  "source": "NASA OSDR RadLab API",
+  "api_endpoint": "https://visualization.osdr.nasa.gov/radlab/api/",
+  "spacecraft": "LRO",
+  "instrument_id": "CRaTER-D1D2",
+  "requested_window_start": "2009-06-26T20:36:34",
+  "requested_window_end_exclusive": "2009-06-27T20:36:34",
+  "query_lower_bound_exclusive": "2009-06-26T20:36:33",
+  "retrieved_at_utc": "2026-11-14T08:12:39.175830+00:00",
+  "record_count": 24,
+  "first_returned_timestamp": "2009-06-26T20:36:34",
+  "last_returned_timestamp": "2009-06-27T19:59:59",
+  "columns": [
+    "timestamp",
+    "instrument_id",
+    "absorbed_dose_rate",
+    "altitude",
+    "b",
+    "dose_equivalent_rate",
+    "flux",
+    "l",
+    "latitude",
+    "longitude",
+    "spacecraft"
+  ],
+  "requested_fields": [
+    "absorbed_dose_rate",
+    "dose_equivalent_rate",
+    "flux",
+    "latitude",
+    "longitude",
+    "altitude",
+    "B",
+    "L"
+  ],
+  "nonempty_field_counts": {
+    "absorbed_dose_rate": 24,
+    "dose_equivalent_rate": 0,
+    "flux": 0,
+    "latitude": 0,
+    "longitude": 0,
+    "altitude": 0,
+    "B": 0,
+    "L": 0
+  },
+  "csv_sha256": "ef69798e19e5ed5f681d7d0ee94393868c4a7cd7baaa4d5b8bb2c3a65dfb3849",
+  "csv_file": "lro_crater_d1d2_24h.csv"
+}

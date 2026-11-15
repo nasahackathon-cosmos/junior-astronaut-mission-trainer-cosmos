@@ -1,0 +1,48 @@
+{
+  "source": "NASA OSDR RadLab API",
+  "api_endpoint": "https://visualization.osdr.nasa.gov/radlab/api/",
+  "spacecraft": "TGO",
+  "instrument_id": "Liulin-MO-AB-Orbit",
+  "requested_window_start": "2016-11-01T00:06:42",
+  "requested_window_end_exclusive": "2016-11-02T00:06:42",
+  "query_lower_bound_exclusive": "2016-11-01T00:06:41",
+  "retrieved_at_utc": "2026-11-14T08:12:34.640698+00:00",
+  "record_count": 24,
+  "first_returned_timestamp": "2016-11-01T00:06:42",
+  "last_returned_timestamp": "2016-11-02T00:06:42",
+  "columns": [
+    "timestamp",
+    "instrument_id",
+    "absorbed_dose_rate",
+    "altitude",
+    "b",
+    "dose_equivalent_rate",
+    "flux",
+    "l",
+    "latitude",
+    "longitude",
+    "spacecraft"
+  ],
+  "requested_fields": [
+    "absorbed_dose_rate",
+    "dose_equivalent_rate",
+    "flux",
+    "latitude",
+    "longitude",
+    "altitude",
+    "B",
+    "L"
+  ],
+  "nonempty_field_counts": {
+    "absorbed_dose_rate": 24,
+    "dose_equivalent_rate": 0,
+    "flux": 24,
+    "latitude": 0,
+    "longitude": 0,
+    "altitude": 0,
+    "B": 0,
+    "L": 0
+  },
+  "csv_sha256": "0be5dd0da73569329d8bfae7e71c501e47f8c213aead783d37f5d534985a0611",
+  "csv_file": "tgo_liulin_mo_ab_orbit_24h.csv"
+}

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#050816" />
+    <meta name="description" content="COSMOS — an interactive junior astronaut mission trainer grounded in real space science." />
+    <title>COSMOS — Junior Astronaut Mission Trainer</title>
+    <link rel="icon" href="/static/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/static/styles.css" />
+    <link rel="stylesheet" href="/static/adventure.css" />
+    <link rel="stylesheet" href="/static/opening.css" />
+    <script type="importmap">
+    {
+      "imports": {
+        "three": "/static/vendor/three.module.js",
+        "three/addons/": "/static/vendor/"
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <main id="app" aria-live="polite"></main>
+    <noscript><p class="noscript">COSMOS needs JavaScript enabled to run the mission simulator.</p></noscript>
+    <script type="module" src="/static/app.js"></script>
+  </body>
+</html>

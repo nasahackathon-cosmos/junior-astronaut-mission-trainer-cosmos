@@ -2,8 +2,6 @@
 
 Project: Junior Astronaut Mission Trainer
 Age group: 7–12
-
-**Public-release note:** Original research inputs under `data/raw/` are excluded from this repository. The local paths below describe the research workspace; they are not downloadable files in this release.
 Data source: NASA Open Science Data Repository (OSDR)
 
 ## 1. OSD-654 — Bone microstructure
@@ -88,7 +86,7 @@ score for a child or astronaut.
 | Source | Intended use | Status |
 |---|---|---|
 | NASA RadLab | Artemis I radiation measurements from four Orion instruments | Collected and processed; see Section 5 |
-| Mars Trek | Mars surface and terrain references | Collected and processed; see the Mars Trek section |
+| Mars Trek | NASA MOLA and TES Jezero terrain references | Collected and processed; see Section 7 |
 | NASA APIs | Live or on-demand NASA information | API key obtained; endpoint selection pending |
 
 
@@ -140,7 +138,7 @@ https://doi.org/10.1038/s41586-024-07927-7
 **Main reference:** Interplanetary Farming
 https://www.asc-csa.gc.ca/eng/youth-educators/toolkits/food-production/
 
-**Locally downloaded source file (excluded from this public release):**
+**Downloaded source file:**
 `data/raw/food_production/interplanetary-farming.pdf`
 
 **Extracted text:**
@@ -189,3 +187,24 @@ The collection supports educational explanations and mission-planning activities
 - CSA challenge concepts and terrestrial demonstrations must not be presented as systems already deployed on the Moon or Mars.
 
 Use this collection as cross-mission educational reference material. Keep simulated game resources and outcomes separate from source-backed scientific facts.
+
+## 7. NASA Mars Trek — MOLA and TES Jezero Terrain
+
+The processed Mars Trek collection contains NASA Mars Global Surveyor MOLA
+elevation data and derived Jezero terrain products, plus TES environmental
+layers. It covers Jezero Crater and is mapped to ten mission activities.
+
+| Processed layer | Contents |
+|---|---|
+| `jezero_terrain.json` | MOLA elevation |
+| `jezero_slope.json` | Derived slope |
+| `jezero_terrain_classification.json` | Derived terrain classification |
+| `jezero_roughness.json` | Surface roughness |
+| `jezero_thermal_inertia.json` | TES thermal inertia |
+| `jezero_tes_dust.json` | TES dust map |
+
+These references support educational comparisons of elevation, slope, terrain
+classes, roughness and environmental context. They do not provide
+small-obstacle detection, certified landing safety or actual rover commands.
+The extraction region, derived calculations and additional scientific
+limitations are documented in [MOLA Terrain Methodology](mola_methodology.md).

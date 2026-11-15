@@ -1,0 +1,638 @@
+/* COSMOS 3D Exploration & Gameplay HUD Styles */
+:root {
+  --blue: #38bdf8;
+  --mars: #fb7185;
+  --line: rgba(56, 189, 248, 0.2);
+  --muted: #94a3b8;
+  --dim: #64748b;
+  --ink: #f8fafc;
+}
+
+.game-shell {
+  height: 100vh;
+  min-height: 650px;
+  position: relative;
+  overflow: hidden;
+  background: #050816;
+}
+
+.pico-talk-button {
+  position: absolute;
+  right: 28px;
+  bottom: 128px;
+  z-index: 12;
+  border: 1px solid rgba(56, 189, 248, .45);
+  border-radius: 999px;
+  padding: 10px 14px;
+  background: rgba(8, 18, 35, .86);
+  color: #dff8ff;
+  font: 700 11px var(--mono);
+  letter-spacing: .08em;
+  cursor: pointer;
+}
+
+.pico-talk-button span { color: #38bdf8; margin-left: 8px; }
+
+.pico-conversation {
+  position: absolute;
+  right: 28px;
+  bottom: 164px;
+  z-index: 20;
+  width: min(430px, calc(100vw - 56px));
+  padding: 16px;
+  border: 1px solid rgba(56, 189, 248, .38);
+  border-radius: 14px;
+  background: rgba(5, 12, 28, .94);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, .42), 0 0 30px rgba(56, 189, 248, .1);
+  backdrop-filter: blur(16px);
+}
+
+.pico-conversation[hidden] { display: none; }
+.pico-conversation-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
+.pico-conversation-head strong { display: block; margin-top: 5px; color: #f8fafc; }
+.pico-response { min-height: 62px; margin: 14px 0 10px; color: #dbeafe; line-height: 1.55; }
+.pico-suggestions { display: flex; flex-wrap: wrap; gap: 7px; }
+.pico-suggestions button, .pico-replay {
+  border: 1px solid rgba(56, 189, 248, .24);
+  border-radius: 999px;
+  padding: 7px 10px;
+  background: rgba(15, 35, 58, .8);
+  color: #bae6fd;
+  font: 600 10px var(--mono);
+  cursor: pointer;
+}
+.pico-input-row { display: flex; gap: 8px; margin-top: 12px; }
+.pico-input-row input { min-width: 0; flex: 1; border: 1px solid rgba(148, 163, 184, .3); border-radius: 7px; padding: 10px; background: rgba(15, 23, 42, .9); color: #f8fafc; }
+.pico-mic { border: 1px solid rgba(56, 189, 248, .3); border-radius: 7px; background: rgba(15, 35, 58, .9); color: #bae6fd; cursor: pointer; padding: 0 10px; }
+.pico-replay { margin-top: 10px; }
+.objective.guided { border-color: rgba(250, 204, 21, .65); box-shadow: inset 3px 0 #facc15; }
+
+.game-shell canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Top Aerospace HUD Navigation */
+.hud-top {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 68px;
+  padding: 14px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(180deg, rgba(5, 8, 22, 0.95) 0%, rgba(5, 8, 22, 0.6) 75%, transparent 100%);
+  border-bottom: 1px solid rgba(56, 189, 248, 0.15);
+  backdrop-filter: blur(8px);
+  z-index: 10;
+}
+
+.hud-brand {
+  font-family: var(--sans);
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.hud-brand span {
+  color: #38bdf8;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  margin-left: 6px;
+}
+
+.crew {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  font-family: var(--mono);
+}
+
+.crew strong {
+  color: #f1f5f9;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+}
+
+.crew span {
+  color: #f43f5e;
+  letter-spacing: 0.15em;
+  font-size: 14px;
+}
+
+.hud-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.hud-btn {
+  min-width: 36px;
+  height: 36px;
+  padding: 0 10px;
+  border: 1px solid var(--line);
+  background: rgba(15, 23, 42, 0.8);
+  color: #94a3b8;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.hud-btn:hover {
+  background: rgba(30, 41, 59, 0.95);
+  color: #ffffff;
+  border-color: #38bdf8;
+}
+
+.hud-btn[data-action="store"] {
+  color: #fbbf24;
+  border-color: rgba(251, 191, 36, 0.4);
+  background: rgba(24, 20, 10, 0.85);
+}
+
+.hud-btn[data-action="store"]:hover {
+  border-color: #fbbf24;
+  background: rgba(45, 36, 12, 0.95);
+  box-shadow: 0 0 12px rgba(251, 191, 36, 0.3);
+}
+
+.resource-corner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-left: 18px;
+}
+
+.resource-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: #94a3b8;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(56, 189, 248, 0.15);
+}
+
+.resource-chip small {
+  font-size: 9px;
+  color: #64748b;
+  margin-right: 4px;
+  letter-spacing: 0.08em;
+}
+
+.resource-chip b {
+  color: #f8fafc;
+  font-weight: 800;
+}
+
+.coin-glyph {
+  color: #fbbf24;
+}
+
+.booster-glyph {
+  color: #38bdf8;
+}
+
+
+/* Mission Indicator Strip */
+.mission-strip {
+  position: absolute;
+  left: 28px;
+  top: 82px;
+  display: grid;
+  gap: 3px;
+  padding: 8px 14px;
+  background: rgba(8, 14, 28, 0.85);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 6px;
+  backdrop-filter: blur(8px);
+  z-index: 5;
+}
+
+.mission-strip strong {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  color: #38bdf8;
+}
+
+.mission-strip small {
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+/* Facility Legend */
+.facility-legend {
+  position: absolute;
+  left: 28px;
+  top: 142px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 12px;
+  background: rgba(8, 14, 28, 0.75);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: 4px;
+  font: 700 9px/1 var(--mono);
+  color: #94a3b8;
+  letter-spacing: 0.08em;
+  z-index: 5;
+}
+
+.rover-controls {
+  position: absolute;
+  left: 28px;
+  top: 178px;
+  display: grid;
+  gap: 5px;
+  min-width: 172px;
+  padding: 10px 12px;
+  background: rgba(8, 14, 28, .82);
+  border: 1px solid rgba(251, 164, 74, .42);
+  border-radius: 8px;
+  color: #cbd5e1;
+  font: 600 10px/1.25 var(--mono);
+  letter-spacing: .04em;
+  z-index: 5;
+}
+
+.rover-controls b { color: #ffb36b; font-size: 9px; letter-spacing: .14em; }
+
+/* Physical Objectives Right Panel */
+.objectives {
+  position: absolute;
+  right: 28px;
+  top: 82px;
+  width: 320px;
+  padding: 20px 22px;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(8, 14, 28, 0.85) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: 12px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(14px);
+  z-index: 5;
+}
+
+.objectives .eyebrow {
+  color: #38bdf8;
+  font: 800 10px/1 var(--mono);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.objective {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  color: #94a3b8;
+  transition: all 0.25s ease;
+}
+
+.objective:last-of-type {
+  border-bottom: none;
+}
+
+.objective span {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  min-width: 22px;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 50%;
+  font: 700 10px/1 var(--mono);
+  color: #94a3b8;
+}
+
+.objective b {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #e2e8f0;
+  margin-bottom: 2px;
+}
+
+.objective small {
+  display: block;
+  font-size: 10.5px;
+  color: #64748b;
+  line-height: 1.35;
+}
+
+.objective.done {
+  color: #34d399;
+}
+
+.objective.done span {
+  border-color: #34d399;
+  background: rgba(52, 211, 153, 0.15);
+  color: #34d399;
+}
+
+.objective.done b {
+  color: #a7f3d0;
+  text-decoration: line-through rgba(52, 211, 153, 0.4);
+}
+
+.hint {
+  margin-top: 14px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  color: #64748b;
+  font: 500 10px/1.4 var(--mono);
+}
+
+/* PICO-7 Dialogue Box (Bottom Left) */
+.dialogue {
+  position: absolute;
+  left: 28px;
+  bottom: 28px;
+  width: min(540px, calc(100% - 56px));
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 18px 22px;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(8, 14, 28, 0.9) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 12px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(14px);
+  z-index: 5;
+}
+
+.dialogue b {
+  font: 800 11px/1 var(--mono);
+  color: #38bdf8;
+  letter-spacing: 0.14em;
+}
+
+.dialogue p {
+  margin: 6px 0 0;
+  font-size: 13.5px;
+  line-height: 1.45;
+  color: #f1f5f9;
+}
+
+/* Floating Interaction Prompt (Screen Center) */
+.interaction-prompt {
+  position: absolute;
+  left: 50%;
+  bottom: 20%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 24px;
+  background: rgba(15, 23, 42, 0.92);
+  border: 1px solid #38bdf8;
+  border-radius: 8px;
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.35), 0 12px 28px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(12px);
+  z-index: 5;
+  animation: promptPulse 2.5s infinite alternate;
+}
+
+@keyframes promptPulse {
+  from { box-shadow: 0 0 20px rgba(56, 189, 248, 0.25); }
+  to { box-shadow: 0 0 35px rgba(56, 189, 248, 0.5); }
+}
+
+.interaction-prompt b {
+  color: #00f0ff;
+  font: 800 12px/1 var(--mono);
+  letter-spacing: 0.14em;
+  background: rgba(0, 240, 255, 0.15);
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 240, 255, 0.4);
+}
+
+.interaction-prompt span {
+  color: #f8fafc;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+/* Destination Chooser Screen (Earth -> Mars / Moon) */
+.choice-shell {
+  width: min(1180px, calc(100% - 72px));
+  margin: auto;
+  padding: 60px 0;
+}
+
+.choice-shell h1 {
+  font-size: clamp(3rem, 5vw, 5rem);
+  font-weight: 900;
+  line-height: 1.0;
+  margin: 16px 0;
+}
+
+.choice-shell em {
+  font-style: normal;
+  color: var(--mars);
+}
+
+.destination-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.destination {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  text-align: left;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.destination:hover {
+  transform: translateY(-4px);
+  border-color: #38bdf8;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+}
+
+.destination-art {
+  min-height: 260px;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.4s ease;
+}
+
+.destination:hover .destination-art {
+  transform: scale(1.02);
+}
+
+.destination.mars .destination-art {
+  background-image: linear-gradient(180deg, rgba(5, 8, 22, 0.15) 0%, rgba(5, 8, 22, 0.8) 100%), url('/static/assets/images/destination_mars_jezero.jpg');
+}
+
+.destination.moon .destination-art {
+  background-image: linear-gradient(180deg, rgba(5, 8, 22, 0.15) 0%, rgba(5, 8, 22, 0.8) 100%), url('/static/assets/images/destination_moon_apollo.jpg');
+}
+
+.destination-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(8, 14, 28, 0.85);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  border-radius: 4px;
+  padding: 5px 10px;
+  color: #38bdf8;
+  font: 700 9px/1 var(--mono);
+  letter-spacing: 0.14em;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.destination-coords {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  right: 14px;
+  color: #f1f5f9;
+  font: 600 10px/1.3 var(--mono);
+  letter-spacing: 0.1em;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+}
+
+.destination-content,
+.destination > div:last-child {
+  padding: 30px 26px;
+  display: flex;
+  flex-direction: column;
+}
+
+.destination h2 {
+  font-size: 1.8rem;
+  margin: 12px 0 8px;
+  color: #ffffff;
+}
+
+.destination strong {
+  display: inline-block;
+  margin-top: 24px;
+  color: #38bdf8;
+  font: 800 11px/1 var(--mono);
+  letter-spacing: 0.14em;
+}
+
+/* Space Travel Cinematic Banner */
+.travel-cinematic-banner {
+  position: absolute;
+  left: 32px;
+  bottom: 40px;
+  max-width: 620px;
+  background: rgba(5, 10, 24, 0.88);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  border-radius: 12px;
+  padding: 24px 28px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 30px rgba(56, 189, 248, 0.12);
+  z-index: 20;
+}
+
+.travel-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font: 700 10px/1 var(--mono);
+  color: #38bdf8;
+  letter-spacing: 0.16em;
+  margin-bottom: 12px;
+}
+
+.travel-badge .pulse-dot {
+  width: 7px;
+  height: 7px;
+  background: #38bdf8;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #38bdf8;
+  animation: pulseDot 1.4s ease-in-out infinite;
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 0.4; transform: scale(0.85); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+.travel-cinematic-banner h1 {
+  font-family: var(--sans);
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 0.04em;
+  margin: 0 0 8px;
+  text-transform: uppercase;
+}
+
+.travel-cinematic-banner p {
+  color: #94a3b8;
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 0 0 18px;
+  font-family: var(--mono);
+}
+
+.travel-skip-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  font: 700 11px var(--mono);
+  letter-spacing: 0.12em;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .objectives {
+    right: 15px;
+    top: auto;
+    bottom: 140px;
+    width: calc(100% - 30px);
+  }
+  .dialogue {
+    left: 15px;
+    bottom: 15px;
+    width: calc(100% - 30px);
+  }
+  .destination-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.journey-screen{position:relative;width:100vw;height:100vh;overflow:hidden;background:#02040b}.journey-screen canvas{position:absolute;inset:0;width:100%;height:100%}.journey-overlay{position:absolute;z-index:5;left:clamp(22px,7vw,100px);bottom:clamp(30px,9vh,100px);width:min(470px,calc(100% - 44px));padding:22px 24px;border-left:2px solid #7deaff;background:linear-gradient(90deg,#040b18e8,transparent);text-shadow:0 2px 18px #000}.journey-overlay .kicker{color:#89edff;font:800 9px var(--mono);letter-spacing:.18em}.journey-overlay h1{font:900 clamp(3rem,6vw,6rem)/.82 var(--sans);letter-spacing:-.08em;margin:14px 0}.journey-overlay h1 em{font-style:normal;color:#f3a16c}.journey-overlay p{max-width:400px;color:#c6d8e2;font:500 14px/1.5 var(--sans)}.journey-readout{display:flex;flex-wrap:wrap;gap:18px;margin-top:18px;padding-top:12px;border-top:1px solid #bfeeff2e;color:#7793a4;font:700 8px var(--mono);letter-spacing:.1em}.journey-readout b{display:block;color:#e6faff;margin-top:5px}.return-complete{position:relative;display:grid;place-items:center;min-height:100vh;overflow:hidden;background:radial-gradient(circle at 50% 28%,#155d8f 0,#071428 25%,#02040b 65%);color:#f7fbff;text-align:center;padding:24px}.return-stars{position:absolute;inset:0;background-image:radial-gradient(#fff 1px,transparent 1px),radial-gradient(#72e8ff 1px,transparent 1px);background-size:73px 73px,119px 119px;opacity:.36}.return-complete section{position:relative;max-width:670px;padding:44px 30px;border:1px solid #98eaff3d;background:#061122b8;box-shadow:0 20px 100px #0009;backdrop-filter:blur(10px)}.return-complete h1{font:900 clamp(3rem,8vw,7rem)/.82 var(--sans);letter-spacing:-.1em;margin:18px 0}.return-complete h1 em{font-style:normal;color:#7deaff}.return-complete p{color:#bfd4df;font:500 15px/1.6 var(--sans)}.return-stats{display:flex;justify-content:center;gap:36px;margin:26px 0 30px}.return-stats b{font:900 22px var(--mono);color:#fff}.return-stats small{display:block;margin-top:7px;color:#7c9aa9;font:700 8px var(--mono);letter-spacing:.1em}@media(max-width:650px){.journey-overlay{bottom:70px}.return-stats{gap:15px}.return-stats b{font-size:16px}}
+
+/* New world-first mission shell. No dashboard panels are used in the active
+   adventure renderer; only small flight-deck annotations remain over the 3D scene. */
+.immersion-shell{position:relative;width:100vw;height:100vh;min-height:620px;overflow:hidden;background:#02040b;color:#effaff}.immersion-shell>canvas{position:absolute;inset:0;width:100%;height:100%;display:block}.immersion-top{position:absolute;z-index:8;inset:0 0 auto;height:70px;display:flex;align-items:center;gap:20px;padding:0 clamp(18px,4vw,54px);background:linear-gradient(180deg,#02050ce8,transparent);pointer-events:none}.world-mark,.flight-chip button{pointer-events:auto}.world-mark{background:none;color:#f4fbff;font:900 17px var(--sans);letter-spacing:.2em}.world-location{color:#a9c8d5;font:700 9px var(--mono);letter-spacing:.15em}.flight-chip{margin-left:auto;display:flex;align-items:center;gap:12px;color:#bdeaf4;font:700 9px var(--mono);letter-spacing:.1em}.flight-chip span{color:#ff9a8c;letter-spacing:.12em}.flight-chip button{padding:8px 10px;background:#061524aa;border:1px solid #bcefff33;color:#a8ddea;font:800 8px var(--mono);letter-spacing:.1em}.mission-ribbon{position:absolute;z-index:7;left:clamp(18px,4vw,54px);top:94px;max-width:min(480px,52vw);display:grid;gap:6px;padding:0 0 0 14px;border-left:2px solid #8eeeff;background:linear-gradient(90deg,#020b16c9,transparent);text-shadow:0 2px 14px #000}.mission-ribbon strong{font:900 clamp(17px,2.3vw,28px)/1 var(--sans);letter-spacing:-.04em}.mission-ribbon small{color:#c3d8e0;font:500 12px/1.4 var(--sans)}.ribbon-day,.ribbon-label{color:#85ecff;font:800 8px var(--mono);letter-spacing:.17em}.objectives-ribbon{top:auto;bottom:112px;max-width:340px;padding:12px 16px;border:1px solid #bcefff2b;border-left:2px solid #f2b27b;background:#030a13b8;backdrop-filter:blur(8px)}.objectives-ribbon #objective-list{margin-top:8px}.objectives-ribbon .objective{border:0;padding:0;color:#f1fbff}.objectives-ribbon .objective small{display:block;color:#b4cbd3;margin-top:5px}.control-line{margin-top:12px;color:#7595a3;font:700 8px var(--mono);letter-spacing:.06em}.companion-caption{position:absolute;z-index:8;right:clamp(18px,4vw,54px);bottom:34px;display:flex;align-items:flex-end;gap:10px;max-width:330px;padding:11px 14px;background:#03101ad9;border-bottom:1px solid #a6efff44}.companion-caption b{color:#83ecff;font:900 9px var(--mono);letter-spacing:.15em}.companion-caption p{margin:5px 0 0;color:#d5e8ee;font:500 12px/1.4 var(--sans)}.companion-caption .pico-face{position:relative;inset:auto;width:42px;height:42px;min-width:42px;padding:0;border:1px solid #68e6ff66;background:#092a3a;display:grid;place-items:center}.companion-caption .pico-face i{width:5px;height:8px;background:#74edff;box-shadow:13px 0 #74edff}.companion-button{position:absolute;z-index:9;right:clamp(18px,4vw,54px);bottom:125px;background:#061827e6;border:1px solid #8ceeff55;color:#bcefff;padding:9px 11px;font:800 8px var(--mono);letter-spacing:.11em}.companion-button span{color:#fff1a8;margin-left:8px}.world-status{position:absolute;z-index:8;right:clamp(18px,4vw,54px);top:100px;display:flex;align-items:center;gap:8px;color:#9fbac6;font:700 8px var(--mono);letter-spacing:.1em}.world-status b{color:#effaff}.world-status i{width:42px;height:3px;background:linear-gradient(90deg,#8eeeff var(--meter),#ffffff22 var(--meter));display:inline-block}.interaction-prompt{position:absolute;z-index:10;left:50%;bottom:35px;transform:translateX(-50%);padding:9px 14px;background:#020811d9;border:1px solid #e5f9ff66;color:#effcff;font:800 9px var(--mono);letter-spacing:.1em;text-align:center;pointer-events:none}.interaction-prompt span{color:#b6cad4}.immersion-shell .pico-conversation{z-index:20;right:clamp(18px,4vw,54px);bottom:170px;width:min(360px,calc(100vw - 36px))}.immersion-shell .resource-corner,.immersion-shell .facility-legend{display:none}@media(max-width:700px){.world-location{display:none}.flight-chip{gap:6px}.mission-ribbon{max-width:calc(100vw - 36px);top:83px}.world-status{top:74px;right:18px}.objectives-ribbon{bottom:105px;left:18px;right:18px;max-width:none}.companion-caption{left:18px;right:18px;bottom:18px;max-width:none}.companion-button{right:18px;bottom:112px}.interaction-prompt{bottom:90px}}

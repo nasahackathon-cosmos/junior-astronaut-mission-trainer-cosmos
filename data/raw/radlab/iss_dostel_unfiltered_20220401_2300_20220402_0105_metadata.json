@@ -1,0 +1,84 @@
+{
+  "dataset": "NASA RadLab ISS DosTel unfiltered sample",
+  "source": "https://visualization.osdr.nasa.gov/radlab/api/",
+  "retrieved_at_utc": "2026-11-14T07:55:19.772861+00:00",
+  "http_status": 200,
+  "content_type": "text/plain",
+  "request_parameters": [
+    [
+      "spacecraft",
+      "ISS"
+    ],
+    [
+      "instrument",
+      "DosTel"
+    ],
+    [
+      "timestamp>",
+      "2022-04-01T23:00"
+    ],
+    [
+      "timestamp<",
+      "2022-04-02T01:05"
+    ],
+    [
+      "absorbed_dose_rate",
+      ""
+    ],
+    [
+      "dose_equivalent_rate",
+      ""
+    ],
+    [
+      "flux",
+      ""
+    ],
+    [
+      "latitude",
+      ""
+    ],
+    [
+      "longitude",
+      ""
+    ],
+    [
+      "altitude",
+      ""
+    ],
+    [
+      "B",
+      ""
+    ],
+    [
+      "L",
+      ""
+    ],
+    [
+      "format",
+      "csv"
+    ]
+  ],
+  "request_url": "https://visualization.osdr.nasa.gov/radlab/api/?spacecraft=ISS&instrument=DosTel&timestamp%3E=2022-04-01T23%3A00&timestamp%3C=2022-04-02T01%3A05&absorbed_dose_rate=&dose_equivalent_rate=&flux=&latitude=&longitude=&altitude=&B=&L=&format=csv",
+  "record_count": 182,
+  "columns": [
+    "timestamp",
+    "instrument_id",
+    "absorbed_dose_rate",
+    "altitude",
+    "b",
+    "dose_equivalent_rate",
+    "flux",
+    "instrument",
+    "l",
+    "latitude",
+    "longitude",
+    "spacecraft"
+  ],
+  "sha256": "864ae17924c15ad95949512096cdde82654a18f8203b2a4fdf4b9ba5fbfd1dcc",
+  "storage_type": "raw_api_response",
+  "notes": [
+    "No absorbed dose rate threshold applied.",
+    "dose_equivalent_rate requested separately from absorbed_dose_rate.",
+    "Original API CSV preserved without transformations."
+  ]
+}

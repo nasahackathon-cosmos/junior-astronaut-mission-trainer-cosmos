@@ -1,0 +1,35 @@
+{
+  "dataset": "NASA OSDR RadLab Artemis I lunar flyby sample",
+  "event_id": "first_lunar_flyby_20221121",
+  "instrument_label": "HERA_HSU1",
+  "instrument_id": "Artemis-I-HERA-HSU1",
+  "closest_approach_utc": "2022-11-21T12:57:00",
+  "closest_approach_distance_km": 130,
+  "requested_window_utc": {
+    "start_inclusive": "2022-11-21T06:57:00",
+    "end_exclusive": "2022-11-21T18:57:00",
+    "duration_hours": 12
+  },
+  "returned_rows": 722,
+  "valid_absorbed_dose_rate_rows": 722,
+  "columns": [
+    "timestamp",
+    "instrument_id",
+    "absorbed_dose_rate",
+    "dose_equivalent_rate",
+    "instrument",
+    "spacecraft"
+  ],
+  "units": {
+    "absorbed_dose_rate": "microGy/hour",
+    "dose_equivalent_rate": "microSv/hour"
+  },
+  "source_api": "https://visualization.osdr.nasa.gov/radlab/api/",
+  "source_query": {
+    "instrument_id": "Artemis-I-HERA-HSU1",
+    "timestamp_greater_than": "2022-11-21T06:56",
+    "timestamp_less_than": "2022-11-21T18:57"
+  },
+  "sha256": "b5943c3e559465df9e664be70b49e21d9af07f90fc00f6e75b6eb5c633eaa64b",
+  "raw_source_preserved": true
+}

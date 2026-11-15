@@ -1,0 +1,48 @@
+{
+  "source": "NASA OSDR RadLab API",
+  "api_endpoint": "https://visualization.osdr.nasa.gov/radlab/api/",
+  "spacecraft": "Orion",
+  "instrument_id": "Artemis-I-HERA-HSU1",
+  "requested_window_start": "2022-11-16T06:51:00",
+  "requested_window_end_exclusive": "2022-11-17T06:51:00",
+  "query_lower_bound_exclusive": "2022-11-16T06:50:59",
+  "retrieved_at_utc": "2026-11-14T08:12:38.006015+00:00",
+  "record_count": 1441,
+  "first_returned_timestamp": "2022-11-16T06:51:00",
+  "last_returned_timestamp": "2022-11-17T06:51:00",
+  "columns": [
+    "timestamp",
+    "instrument_id",
+    "absorbed_dose_rate",
+    "altitude",
+    "b",
+    "dose_equivalent_rate",
+    "flux",
+    "l",
+    "latitude",
+    "longitude",
+    "spacecraft"
+  ],
+  "requested_fields": [
+    "absorbed_dose_rate",
+    "dose_equivalent_rate",
+    "flux",
+    "latitude",
+    "longitude",
+    "altitude",
+    "B",
+    "L"
+  ],
+  "nonempty_field_counts": {
+    "absorbed_dose_rate": 1441,
+    "dose_equivalent_rate": 0,
+    "flux": 0,
+    "latitude": 0,
+    "longitude": 0,
+    "altitude": 0,
+    "B": 0,
+    "L": 0
+  },
+  "csv_sha256": "df549f52e3933bf15f607f937668d9dc086b42546c52136e66f5e2c17d4ea850",
+  "csv_file": "orion_artemis_i_hera_hsu1_24h.csv"
+}

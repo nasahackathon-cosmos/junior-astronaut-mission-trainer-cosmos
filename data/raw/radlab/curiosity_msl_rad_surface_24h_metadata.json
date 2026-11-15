@@ -1,0 +1,48 @@
+{
+  "source": "NASA OSDR RadLab API",
+  "api_endpoint": "https://visualization.osdr.nasa.gov/radlab/api/",
+  "spacecraft": "Curiosity",
+  "instrument_id": "MSL-RAD-Surface",
+  "requested_window_start": "2015-01-01T00:11:01",
+  "requested_window_end_exclusive": "2015-01-02T00:11:01",
+  "query_lower_bound_exclusive": "2015-01-01T00:11:00",
+  "retrieved_at_utc": "2026-11-14T08:12:36.120514+00:00",
+  "record_count": 85,
+  "first_returned_timestamp": "2015-01-01T00:11:01",
+  "last_returned_timestamp": "2015-01-02T00:10:45",
+  "columns": [
+    "timestamp",
+    "instrument_id",
+    "absorbed_dose_rate",
+    "altitude",
+    "b",
+    "dose_equivalent_rate",
+    "flux",
+    "l",
+    "latitude",
+    "longitude",
+    "spacecraft"
+  ],
+  "requested_fields": [
+    "absorbed_dose_rate",
+    "dose_equivalent_rate",
+    "flux",
+    "latitude",
+    "longitude",
+    "altitude",
+    "B",
+    "L"
+  ],
+  "nonempty_field_counts": {
+    "absorbed_dose_rate": 85,
+    "dose_equivalent_rate": 0,
+    "flux": 0,
+    "latitude": 0,
+    "longitude": 0,
+    "altitude": 0,
+    "B": 0,
+    "L": 0
+  },
+  "csv_sha256": "81a6a2b7973b6e3a970f4e0a0359fabc696e82209f8a573552857491a604722f",
+  "csv_file": "curiosity_msl_rad_surface_24h.csv"
+}

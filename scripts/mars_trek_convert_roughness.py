@@ -64,4 +64,3 @@ print("Roughness conversion completed!")
 print("Dimensions:", height, "x", width)
 print("Saved:", OUTPUT)
 
-\n

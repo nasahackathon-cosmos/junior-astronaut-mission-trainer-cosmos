@@ -64,4 +64,3 @@ print("Thermal Inertia conversion completed!")
 print("Dimensions:", height, "x", width)
 print("Saved:", OUTPUT)
 
-\n
